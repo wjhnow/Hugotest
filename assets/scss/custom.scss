@@ -193,3 +193,90 @@ body {
   display: block;
 }
 
+/* =========================================
+   AD Middle East - Black Buttons & Accent Styles
+   ========================================= */
+
+/* Solid Black Buttons (Subscribe, Newsletter, Primary CTAs) */
+.btn,
+.button,
+.subscribe-btn,
+a.btn-black,
+input[type="submit"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  border-radius: 0 !important; /* Sharp corners - no rounded pills */
+  font-family: var(--sans-ui) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  padding: 0.8rem 1.6rem !important;
+  text-decoration: none !important;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+}
+
+/* Inverted White Hover State */
+.btn:hover,
+.button:hover,
+.subscribe-btn:hover,
+a.btn-black:hover,
+input[type="submit"]:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Solid Black Topic Badges / Tags */
+.article-tags a,
+.tag-badge {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-family: var(--sans-ui) !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  padding: 5px 10px !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.article-tags a:hover,
+.tag-badge:hover {
+  background-color: #333333 !important;
+}
+
+/* Section Headers with Thick Black Top Rule (e.g., "LATEST STORIES") */
+.section-title,
+.category-header {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  color: #000000 !important;
+  border-top: 3px solid #000000 !important; /* Signature AD thick top line */
+  padding-top: 0.75rem !important;
+  margin-top: 3rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Editorial Blockquotes / Pull Quotes */
+blockquote {
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.85rem !important;
+  font-style: italic !important;
+  line-height: 1.25 !important;
+  color: #000000 !important;
+  border-left: none !important;
+  border-top: 1px solid #000000 !important;
+  border-bottom: 1px solid #000000 !important;
+  padding: 1.75rem 0 !important;
+  margin: 3rem 0 !important;
+  text-align: center;
+}
+
