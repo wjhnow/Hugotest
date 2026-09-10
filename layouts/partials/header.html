@@ -1,10 +1,35 @@
 <header class="ad-header">
   <div class="header-container">
-    <button class="hamburger-menu" aria-label="Toggle Menu">
+    <button class="hamburger-menu" id="menuToggle" aria-label="Toggle Menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
     <a href="/" class="ad-logo">AD</a>
   </div>
+
+  <!-- Navigation Drawer -->
+  <nav class="nav-drawer" id="navDrawer">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/categories/architecture/">Architecture</a></li>
+      <li><a href="/categories/interiors/">Interiors</a></li>
+      <li><a href="/categories/style/">Style</a></li>
+      <li><a href="/categories/celebrity-homes/">Celebrity Homes</a></li>
+    </ul>
+  </nav>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggleBtn = document.getElementById("menuToggle");
+    const navDrawer = document.getElementById("navDrawer");
+
+    if (toggleBtn && navDrawer) {
+      toggleBtn.addEventListener("click", function() {
+        toggleBtn.classList.toggle("active");
+        navDrawer.classList.toggle("active");
+      });
+    }
+  });
+</script>
