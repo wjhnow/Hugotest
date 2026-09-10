@@ -152,3 +152,44 @@ body {
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
 }
+/* =========================================
+   AD Masthead & Header Logo Styling
+   ========================================= */
+
+.site-header,
+.header {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #111111; /* Solid thin divider under header */
+  margin-bottom: 3rem;
+}
+
+/* "AD" / "ARCHITECTURAL DIGEST" Masthead Font */
+.site-title,
+.logo,
+.brand-logo a {
+  font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif !important;
+  font-size: 3.25rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.05em !important; /* Extremely tight tracking typical of AD's logo mark */
+  color: #111111 !important;
+  text-decoration: none !important;
+  line-height: 0.9 !important;
+  display: inline-block;
+}
+
+/* Sub-brand tag (e.g., "MIDDLE EAST") directly under the logo */
+.site-subtitle,
+.logo-subtitle {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.25em !important; /* Wide tracking for sub-heading */
+  color: #111111 !important;
+  margin-top: 0.5rem;
+  display: block;
+}
+
