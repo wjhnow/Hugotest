@@ -296,3 +296,9 @@ footer.site-footer ~ footer.site-footer,
   display: none !important;
 }
 
+/* Hide nested article footers so only the global bottom footer renders */
+.main-container .site-footer,
+.article-page .site-footer,
+article .site-footer {
+  display: none !important;
+}
