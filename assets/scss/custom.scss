@@ -1,3 +1,68 @@
-/*
-    You can add your own custom styles here.
-*/
+/* ==============================
+   Clean White Style - AD Inspired
+   ============================== */
+
+:root {
+  /* Pure white backgrounds */
+  --body-background: #ffffff;
+  --card-background: #ffffff;
+  --card-background-selected: #fafafa;
+
+  /* Soft, almost invisible shadows */
+  --shadow-l1: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-l2: 0 4px 16px rgba(0, 0, 0, 0.06);
+
+  /* Text colors */
+  --card-text-color-main: #1a1a1a;
+  --card-text-color-secondary: #666666;
+  --accent-color: #111111;
+
+  /* Clean modern fonts */
+  --base-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --article-font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Force pure white body */
+body {
+  background-color: #ffffff !important;
+}
+
+/* Make cards cleaner and more editorial */
+.article-list article,
+.article-list--compact article {
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+  box-shadow: var(--shadow-l1);
+  transition: all 0.25s ease;
+}
+
+.article-list article:hover,
+.article-list--compact article:hover {
+  box-shadow: var(--shadow-l2);
+  transform: translateY(-3px);
+}
+
+/* More breathing room */
+.main {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+/* Cleaner headings */
+.article-title,
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Soften category tags */
+.article-category a {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Optional: make sidebar cleaner */
+.sidebar {
+  background: #ffffff;
+}
