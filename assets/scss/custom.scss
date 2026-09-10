@@ -289,3 +289,10 @@ figcaption {
   letter-spacing: 0.12em !important;
 }
 
+/* Suppress duplicate footer instances */
+.main-container .site-footer,
+footer.site-footer ~ footer.site-footer,
+.site-footer:nth-of-type(n+2) {
+  display: none !important;
+}
+
