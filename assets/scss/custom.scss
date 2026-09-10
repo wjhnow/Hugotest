@@ -1,117 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
 /* =========================================
-   AD Middle East Style - Refined
+   AD Middle East (Verso System) Production CSS
    ========================================= */
 
 :root {
   --body-background: #ffffff;
   --card-background: #ffffff;
-  
-  --card-text-color-main: #111111;
-  --card-text-color-secondary: #666666;
-  --accent-color: #000000;
 
-  /* Editorial Font Stacks */
-  --serif-font: "Playfair Display", "GT Sectra", "Didot", "Bodoni MT", "Georgia", serif;
-  --sans-font: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-  
-  --base-font-family: var(--sans-font);
-  --article-font-family: var(--serif-font);
+  --text-main: #111111;
+  --text-muted: #666666;
+  --text-light: #888888;
+  --border-color: #e5e5e5;
+
+  /* Fonts matching Condé Nast Verso Design System */
+  --serif-editorial: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
+  --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+  --base-font-family: var(--sans-ui);
+  --article-font-family: var(--serif-editorial);
 }
 
-/* Page Background */
+/* Base resets & typography optimization */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #ffffff !important;
-  color: #111111;
-  font-family: var(--base-font-family);
+  background-color: var(--body-background) !important;
+  color: var(--text-main) !important;
+  font-family: var(--sans-ui) !important;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
-/* Hide sidebars */
+/* Hide legacy sidebar layouts */
 .left-sidebar,
 .sidebar,
 .right-sidebar {
   display: none !important;
 }
 
-/* Main Container */
+/* Main Layout Wrapper - Centered Editorial Measure */
 .main,
 #main-content {
-  max-width: 1140px !important;
+  max-width: 1120px !important;
   margin: 0 auto !important;
-  padding: 3rem 1.5rem 6rem !important;
+  padding: 2.5rem 1.5rem 5rem !important;
   width: 100% !important;
 }
 
-/* Article Cards - Flat, Frameless Magazine Look */
+/* Article Cards - Frameless Magazine Layout */
 .article-list article {
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  margin-bottom: 4rem !important;
-  background: #ffffff !important;
-  border-bottom: 1px solid #e8e8e8 !important; /* Hairline separator */
-  padding-bottom: 2.5rem !important;
+  margin-bottom: 3.5rem !important;
+  background: transparent !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding-bottom: 3rem !important;
+  transition: opacity 0.2s ease;
 }
 
-/* Remove hover shadow effect to match print editorial feel */
 .article-list article:hover {
   box-shadow: none !important;
 }
 
-/* Article Image Styling */
+/* Featured Media Styling */
+.article-image {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
 .article-image img {
   width: 100%;
-  max-height: 480px;
+  height: auto;
+  max-height: 520px;
   object-fit: cover;
   border-radius: 0 !important;
   display: block;
 }
 
-/* Inner Details Container */
+/* Inner Details Layout */
 .article-details {
-  padding: 1.5rem 0 0 0 !important; /* Flush with image edges */
+  padding: 0 !important;
 }
 
-/* Category Label - Classic AD Uppercase Style */
-.article-category a {
-  background: none !important;
-  color: #111111 !important;
-  border-radius: 0 !important;
-  font-family: var(--sans-font);
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-  padding: 0 !important;
-  display: inline-block;
+/* Eyebrow / Category Tag - AD High-Fashion Uppercase */
+.article-category {
   margin-bottom: 0.5rem;
 }
 
-/* Headline - Editorial Serif */
+.article-category a {
+  background: none !important;
+  color: var(--text-main) !important;
+  border-radius: 0 !important;
+  font-family: var(--sans-ui) !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  padding: 0 !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.article-category a:hover {
+  text-decoration: underline;
+}
+
+/* Article Headlines - Elegant Display Serif */
 .article-title,
 .article-list h2 a {
-  font-family: var(--serif-font) !important;
-  font-size: 2rem !important;
-  font-weight: 400 !important; /* Editorial titles favor regular/medium weight */
-  letter-spacing: -0.01em !important;
-  color: #111111 !important;
-  line-height: 1.2 !important;
-  margin-top: 0.4rem !important;
+  font-family: var(--serif-editorial) !important;
+  font-size: 2.25rem !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.015em !important;
+  color: var(--text-main) !important;
+  line-height: 1.15 !important;
+  margin-top: 0.35rem !important;
   margin-bottom: 0.75rem !important;
   text-decoration: none;
+  display: block;
 }
 
 .article-title:hover,
 .article-list h2 a:hover {
-  color: #555555 !important;
+  color: var(--text-muted) !important;
 }
 
-/* Author & Date Meta Information */
+/* Subtitles / Excerpts */
+.article-excerpt,
+.article-summary {
+  font-family: var(--sans-ui);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Author & Meta Timestamp */
 .article-time,
-.article-duration {
-  font-family: var(--sans-font);
-  color: #767676 !important;
-  font-size: 0.8rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.article-duration,
+.article-meta {
+  font-family: var(--sans-ui) !important;
+  color: var(--text-light) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
 }
