@@ -145,3 +145,64 @@ body {
   letter-spacing: 0.15em !important;
   padding: 0.8rem 1.6rem !important;
 }
+/* =========================================
+   Navigation Drawer & Toggle Styles
+   ========================================= */
+
+/* Full-width overlay drawer */
+.nav-drawer {
+  position: fixed;
+  top: 52px; /* Sits right beneath the sticky header */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 52px);
+  background-color: #ffffff;
+  display: none;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  z-index: 999;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Open State */
+.nav-drawer.active {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.nav-links li {
+  margin-bottom: 1.5rem !important;
+}
+
+.nav-links a {
+  font-family: var(--sans-ui) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+/* Transform hamburger into an 'X' when active */
+.hamburger-menu span {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
