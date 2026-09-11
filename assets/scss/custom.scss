@@ -361,20 +361,19 @@ footer.site-footer ~ footer.site-footer,
     margin-bottom: 1.75rem !important;
   }
 }
-
 @media (max-width: 768px) {
+  /* Tighten summary bottom spacing to pull up next card */
+  .article-list .article-subtitle,
   .article-list .article-summary,
   .article-list article p {
     line-height: 1.32 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 0.5rem !important;
   }
-}
 
-@media (max-width: 768px) {
-  /* Reduce bottom margin and add faint card divider line */
+  /* Compact gap between feed cards */
   .article-list article {
     margin-bottom: 1.25rem !important;
-    padding-bottom: 1.25rem !important;
+    padding-bottom: 0 !important;
     border-bottom: 1px solid #f0f0f0 !important;
   }
 }
