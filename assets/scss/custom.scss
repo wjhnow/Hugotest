@@ -309,6 +309,17 @@ svg.lucide-clock {
   margin-bottom: 1rem !important;
 }
 
+/* 5.8 Captions and Credits */
+figcaption, .caption, .photo-credit {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.75rem !important;
+  color: #666666 !important;
+  line-height: 1.4 !important;
+  margin-top: 0.6rem !important;
+  border-left: 2px solid #000000 !important;
+  padding-left: 0.75rem !important;
+  text-align: left !important;
+}
 /* 5.7 Drop Cap Alignment */
 .article-content > p:first-of-type::first-letter,
 .entry-content > p:first-of-type::first-letter,
@@ -325,19 +336,24 @@ svg.lucide-clock {
   font-weight: 700 !important;
 }
 
-/* 5.8 Captions and Credits */
-figcaption, .caption, .photo-credit {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.75rem !important;
-  color: #666666 !important;
-  line-height: 1.4 !important;
-  margin-top: 0.6rem !important;
-  border-left: 2px solid #000000 !important;
-  padding-left: 0.75rem !important;
-  text-align: left !important;
+/* Prevent subheadings from taking on drop cap formatting */
+.article-body h2::first-letter,
+.article-body h3::first-letter,
+.entry-content h2::first-letter,
+.entry-content h3::first-letter,
+.article-content h2::first-letter,
+.article-content h3::first-letter,
+h2::first-letter,
+h3::first-letter {
+  font-size: inherit !important;
+  float: none !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* --- 6. Global Footer --- */
+
+/* -- 6. Global Footer --- */
 .site-footer {
   background-color: #ffffff !important;
   border-top: 1px solid var(--border-color) !important;
