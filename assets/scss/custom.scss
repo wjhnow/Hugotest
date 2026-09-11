@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
-   AD Middle East - Consolidated Master Stylesheet
+   WJHnow - AD Middle East Match Stylesheet
    ========================================================================== */
 
 :root {
@@ -9,7 +9,7 @@
   --text-main: #111111;
   --text-muted: #666666;
   --border-color: #e5e5e5;
-  --serif-editorial: "Didot", "Bodoni MT", "Cormorant Garamond", "Playfair Display", "Georgia", serif;
+  --serif-editorial: "Playfair Display", "Cormorant Garamond", "Didot", "Georgia", serif;
   --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 768px) {
   .main, #main-content, .main-container {
-    padding: 1rem 12px 2.5rem !important;
+    padding: 1.25rem 16px 2.5rem !important;
   }
 }
 
@@ -52,7 +52,7 @@ body {
   background-color: #ffffff;
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
-  padding: 0.6rem 1.25rem;
+  padding: 0.8rem 1.25rem;
 }
 
 .header-container {
@@ -87,13 +87,13 @@ body {
 .hamburger-menu.active span:nth-child(2) { opacity: 0; }
 .hamburger-menu.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-.ad-logo {
-  font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif !important;
-  font-size: 2.75rem !important;
-  font-weight: 700 !important;
+.ad-logo, .site-title, .logo {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 3rem !important;
+  font-weight: 900 !important;
   color: #000000 !important;
   text-decoration: none !important;
-  letter-spacing: -0.09em !important;
+  letter-spacing: -0.05em !important;
   line-height: 0.8 !important;
   display: inline-block;
   margin-top: -2px;
@@ -124,7 +124,7 @@ body {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.12em !important;
-  color: #000000 !important;
+  color: #000 !important;
   text-decoration: none !important;
 }
 
@@ -135,14 +135,16 @@ body {
   box-shadow: none !important;
   margin-bottom: 2.5rem !important;
   background: transparent !important;
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 1.5rem !important;
+  border-bottom: 1px solid #f2f2f2 !important;
 }
 
 .article-image img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 0 !important;
+  margin-bottom: 1rem !important;
 }
 
 /* Hide Meta from Main Feed Stream */
@@ -154,7 +156,7 @@ body {
   display: none !important;
 }
 
-/* Thin, High-Fashion Editorial Headlines */
+/* Thin, High-Fashion Editorial Headlines - MATCH AD */
 .article-title,
 .article-title a,
 h1.article-title,
@@ -163,37 +165,39 @@ h1.entry-title,
 .article-list article .article-details h2,
 .article-list article h2 a {
   font-family: var(--serif-editorial) !important;
-  font-size: 2.2rem !important;
-  font-weight: 400 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.01em !important;
+  font-size: 2.4rem !important; /* Bigger */
+  font-weight: 700 !important; /* Bolder like AD */
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
   color: #111111 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.75rem !important;
   text-decoration: none !important;
   display: block !important;
 }
 
+/* Stronger divider like AD */
 .article-list article .article-title::after,
 .article-list article h2::after {
   content: "" !important;
   display: block !important;
-  width: 50px !important;
-  height: 1px !important;
+  width: 60px !important; /* Wider */
+  height: 2px !important; /* Thicker */
   background-color: #111111 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
 }
 
 .article-list .article-subtitle,
 .article-list .article-summary,
 .article-list article p {
   font-family: var(--sans-ui) !important;
-  font-size: 1.08rem !important;
-  line-height: 1.45 !important;
-  color: #111111 !important;
+  font-size: 1.05rem !important; /* Slightly smaller for AD feel */
+  line-height: 1.6 !important; /* More breathing room */
+  color: #333333 !important; /* Softer black */
+  font-weight: 400 !important;
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 0 !important;
 }
 
 /* --- 5. Single Article Page Overrides --- */
@@ -232,8 +236,8 @@ a[href*="/categories/"] {
 .article-details .article-subtitle {
   text-transform: none !important;
   font-family: var(--sans-ui) !important;
-  font-size: 16px !important;
-  line-height: 1.45 !important;
+  font-size: 17px !important; /* Slightly bigger */
+  line-height: 1.55 !important;
   color: #333333 !important;
   letter-spacing: normal !important;
   margin-bottom: 18px !important;
@@ -281,8 +285,8 @@ svg.lucide-clock {
 .post-content p,
 .article-content p {
   font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.05rem !important;
-  line-height: 1.6 !important;
+  font-size: 1.125rem !important;
+  line-height: 1.7 !important;
   font-weight: 400 !important;
   color: #222222 !important;
   margin-bottom: 1.25rem !important;
@@ -307,7 +311,7 @@ svg.lucide-clock {
 .article-content h2,
 .article-content h3 {
   font-family: var(--serif-editorial) !important;
-  font-size: 22px !important;
+  font-size: 24px !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
   color: #111111 !important;
@@ -319,7 +323,7 @@ svg.lucide-clock {
 figcaption, .caption, .photo-credit {
   font-family: var(--sans-ui) !important;
   font-size: 0.75rem !important;
-  color: #666666 !important;
+  color: #666 !important;
   line-height: 1.4 !important;
   margin-top: 0.6rem !important;
   border-left: 2px solid #000000 !important;
@@ -396,13 +400,12 @@ h3::first-letter {
   color: #111111 !important;
   margin-top: 5rem !important;
 }
-
 .site-footer::before {
-  content: "AD";
-  font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif;
+  content: "WJH"; /* Changed from AD to WJH */
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: -0.09em;
+  font-weight: 900;
+  letter-spacing: -0.05em;
   display: block;
   margin-bottom: 1.25rem;
   color: #000000;
@@ -417,7 +420,6 @@ h3::first-letter {
   text-transform: uppercase !important;
   letter-spacing: 0.12em !important;
 }
-
 /* Suppress Duplicate Article Footers */
 .main-container .site-footer,
 .article-page .site-footer,
@@ -427,7 +429,7 @@ footer.site-footer ~ footer.site-footer,
   display: none !important;
 }
 
-/* --- 7. Precision Mobile Overrides --- */
+/* --- 7. Precision Mobile Overrides - MATCH AD SCREENSHOT --- */
 
 @media (max-width: 768px) {
   .article-list article .article-title,
@@ -437,12 +439,12 @@ footer.site-footer ~ footer.site-footer,
   h1.article-title,
   h1.entry-title {
     font-family: var(--serif-editorial) !important;
-    font-size: 30px !important;
-    font-weight: 400 !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.015em !important;
-    color: #111111 !important;
-    margin-top: 12px !important;
+    font-size: 32px !important; /* AD size */
+    font-weight: 700 !important; /* AD weight */
+    line-height: 1.18 !important;
+    letter-spacing: -0.02em !important;
+    color: #111 !important;
+    margin-top: 14px !important;
     margin-bottom: 10px !important;
   }
 
@@ -451,32 +453,28 @@ footer.site-footer ~ footer.site-footer,
   .article-title::after {
     content: "" !important;
     display: block !important;
-    width: 56px !important;
-    height: 1px !important;
+    width: 60px !important; /* AD divider */
+    height: 2px !important;
     background-color: #111111 !important;
     margin-top: 10px !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 14px !important;
   }
 
   .article-list .article-subtitle,
   .article-list .article-summary,
   .article-list article p {
     font-family: var(--sans-ui) !important;
-    font-size: 15.5px !important;
-    line-height: 1.35 !important;
-    color: #111111 !important;
+    font-size: 16px !important; /* AD excerpt size */
+    line-height: 1.55 !important;
+    color: #333 !important;
     margin-top: 0 !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
   }
 
   .article-list article {
-    margin-bottom: 1.25rem !important;
-    padding-bottom: 0 !important;
+    margin-bottom: 1.75rem !important;
+    padding-bottom: 1.25rem !important;
     border-bottom: 1px solid #f0f0f0 !important;
-  }
-
-  .article-list article + article {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
   }
 }
