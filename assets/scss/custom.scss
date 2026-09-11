@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
    AD Middle East - Consolidated Master Stylesheet
@@ -9,7 +9,7 @@
   --text-main: #111111;
   --text-muted: #666666;
   --border-color: #e5e5e5;
-  --serif-editorial: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
+  --serif-editorial: "Didot", "Bodoni MT", "Cormorant Garamond", "Playfair Display", "Georgia", serif;
   --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
@@ -128,7 +128,7 @@ body {
   text-decoration: none !important;
 }
 
-/* --- 4. Stream Feed Cards --- */
+/* --- 4. Stream Feed Cards & Universal Headline Formatting --- */
 .article-list article {
   border: none !important;
   border-radius: 0 !important;
@@ -154,14 +154,19 @@ body {
   display: none !important;
 }
 
+/* Thin, High-Fashion Editorial Headlines */
+.article-title,
+.article-title a,
+h1.article-title,
+h1.entry-title,
 .article-list article .article-title,
 .article-list article .article-details h2,
 .article-list article h2 a {
   font-family: var(--serif-editorial) !important;
   font-size: 2.2rem !important;
-  font-weight: 500 !important;
-  line-height: 1.12 !important;
-  letter-spacing: -0.025em !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em !important;
   color: #111111 !important;
   margin-top: 0.85rem !important;
   margin-bottom: 0.85rem !important;
@@ -193,7 +198,7 @@ body {
 
 /* --- 5. Single Article Page Overrides --- */
 
-/* 5.1 Category Tag (Strips Green Background Box Across All Common Themes) */
+/* 5.1 Category Tag */
 .category-badge,
 .article-category,
 .entry-category,
@@ -235,7 +240,7 @@ a[href*="/categories/"] {
   font-weight: 400 !important;
 }
 
-/* 5.3 Framed Metadata Strip (Hairline Top & Bottom Borders) */
+/* 5.3 Framed Metadata Strip */
 .single-post .article-meta,
 .single-post .post-meta,
 .article-header .meta,
@@ -269,16 +274,18 @@ svg.lucide-calendar,
 svg.lucide-clock {
   display: none !important;
 }
+
 /* 5.5 Post Body Serif Typography & Links */
 .article-body p,
 .entry-content p,
 .post-content p,
 .article-content p {
   font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
-  font-size: 18.5px !important;
-  line-height: 1.68 !important;
-  color: #111111 !important;
-  margin-bottom: 1.5rem !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  color: #222222 !important;
+  margin-bottom: 1.25rem !important;
 }
 
 /* Editorial Underlined Body Links */
@@ -319,6 +326,7 @@ figcaption, .caption, .photo-credit {
   padding-left: 0.75rem !important;
   text-align: left !important;
 }
+
 /* 5.7 Drop Cap Alignment */
 .article-content > p:first-of-type::first-letter,
 .entry-content > p:first-of-type::first-letter,
@@ -334,6 +342,7 @@ figcaption, .caption, .photo-credit {
   color: #000000 !important;
   font-weight: 700 !important;
 }
+
 /* Reset drop cap on bold subheadings and intro lines */
 .article-content > p:first-of-type strong::first-letter,
 .entry-content > p:first-of-type strong::first-letter,
@@ -378,8 +387,7 @@ h3::first-letter {
   margin: 0 !important;
 }
 
-
-/* -- 6. Global Footer --- */
+/* --- 6. Global Footer --- */
 .site-footer {
   background-color: #ffffff !important;
   border-top: 1px solid var(--border-color) !important;
