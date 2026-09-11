@@ -273,60 +273,86 @@ footer.site-footer ~ footer.site-footer,
 .site-footer:nth-of-type(n+2) {
   display: none !important;
 }
-
 /* =========================================
-   AD Hyper-Scale Typography & Layout Match
+   AD Middle East - Final Editorial Polish
    ========================================= */
 
-/* 1. Expand Text Alignment to Match Image Margins */
-@media (max-width: 768px) {
-  .main, #main-content, .main-container {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-    padding-top: 0.25rem !important;
-  }
-
-  .article-list article,
-  .article-details {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* 2. Headline Font - Massive Editorial Display Serif */
-  .article-list article .article-title,
-  .article-list article .article-details h2,
-  .article-list article h2 a,
-  .article-title,
-  .article-title a {
-    font-size: 2.75rem !important;
-    font-weight: 400 !important;
-    line-height: 1.08 !important;
-    letter-spacing: -0.03em !important;
-    color: #000000 !important;
-    margin-top: 0.8rem !important;
-    margin-bottom: 0.8rem !important;
-  }
-
-  /* 3. Hairline Rule Placement & Width */
-  .article-list article .article-title::after,
-  .article-list article h2::after {
-    width: 65px !important;
-    height: 1px !important;
-    background-color: #000000 !important;
-    margin-top: 0.9rem !important;
-    margin-bottom: 0.9rem !important;
-  }
-
-  /* 4. Deck / Summary Text - Dark, Heavy Sans */
-  .article-list .article-subtitle,
-  .article-list .article-summary,
-  .article-list .article-excerpt,
-  .article-list article p {
-    font-size: 1.15rem !important;
-    line-height: 1.4 !important;
-    font-weight: 500 !important;
-    color: #000000 !important;
-    margin-top: 0 !important;
-    margin-bottom: 2rem !important;
-  }
+/* Signature AD Drop-Cap on First Paragraph */
+.article-content > p:first-of-type::first-letter {
+  font-family: var(--serif-editorial) !important;
+  font-size: 4.2rem !important;
+  float: left !important;
+  line-height: 0.8 !important;
+  padding-top: 4px !important;
+  padding-right: 12px !important;
+  padding-bottom: 0 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
 }
+
+/* Hide Theme Stack Tech Artifacts (Avatars, Dark Mode, Reading Time Icons) */
+#dark-mode-toggle,
+.article-avatar,
+.avatar,
+.article-time svg,
+.article-translations,
+.sidebar-container {
+  display: none !important;
+}
+
+/* Condé Nast Byline & Meta Styling */
+.article-subtitle,
+.article-time,
+.article-author,
+.article-meta {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  color: var(--text-muted) !important;
+}
+
+/* Editorial Image Captions */
+figcaption {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.75rem !important;
+  color: #666666 !important;
+  line-height: 1.4 !important;
+  margin-top: 0.75rem !important;
+  border-left: 2px solid #000000 !important;
+  padding-left: 0.75rem !important;
+  text-align: left !important;
+}
+
+/* Minimalist Centered Footer with AD Monogram */
+.site-footer {
+  background-color: #ffffff !important;
+  border-top: 1px solid var(--border-color) !important;
+  padding: 4rem 1.5rem 3rem !important;
+  text-align: center !important;
+  color: #111111 !important;
+  margin-top: 5rem !important;
+}
+
+.site-footer::before {
+  content: "AD";
+  font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.09em;
+  display: block;
+  margin-bottom: 1.25rem;
+  color: #000000;
+  line-height: 0.8;
+}
+
+.site-footer a {
+  color: #111111 !important;
+  text-decoration: none !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+}
+
