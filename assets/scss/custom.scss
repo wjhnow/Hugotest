@@ -1,167 +1,21 @@
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
-  color: #111111 !important;
-  margin-top: 2.2rem !important;
-  margin-bottom: 1rem !important;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   AD Middle East - Consolidated Master Stylesheet
+   ========================================================================== */
+
+:root {
+  --body-background: #ffffff;
+  --text-main: #111111;
+  --text-muted: #666666;
+  --border-color: #e5e5e5;
+  --serif-editorial: "Didot", "Bodoni MT", "Cormorant Garamond", "Playfair Display", "Georgia", serif;
+  --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
-/* 5.8 Captions and Credits */
-figcaption, .caption, .photo-credit {
+/* --- 1. Global Reset & Layout Containers --- */
+body {
+  background-color: var(--body-background) !important;
+  color: var(--text-main) !important;
   font-family: var(--sans-ui) !important;
-  font-size: 0.75rem !important;
-  color: #666 !important;
-  line-height: 1.4 !important;
-  margin-top: 0.6rem !important;
-  border-left: 2px solid #000000 !important;
-  padding-left: 0.75rem !important;
-  text-align: left !important;
-}
-
-/* 5.7 Drop Cap Alignment */
-.article-content > p:first-of-type::first-letter,
-.entry-content > p:first-of-type::first-letter,
-.article-body > p:first-of-type::first-letter {
-  font-family: var(--serif-editorial) !important;
-  font-size: 3.8rem !important;
-  float: left !important;
-  line-height: 0.75 !important;
-  padding-top: 4px !important;
-  padding-right: 10px !important;
-  padding-bottom: 0 !important;
-  margin-left: -2px !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-
-/* Reset drop cap on bold subheadings and intro lines */
-.article-content > p:first-of-type strong::first-letter,
-.entry-content > p:first-of-type strong::first-letter,
-.article-body > p:first-of-type strong::first-letter,
-.article-content > p:has(strong):first-of-type::first-letter,
-.entry-content > p:has(strong):first-of-type::first-letter {
-  font-size: inherit !important;
-  float: none !important;
-  line-height: inherit !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Target the first real body paragraph after a bold heading */
-.article-content h2 + p::first-letter,
-.article-content h3 + p::first-letter,
-.article-content p:has(strong) + p::first-letter,
-.entry-content p:has(strong) + p::first-letter {
-  font-family: var(--serif-editorial) !important;
-  font-size: 3.8rem !important;
-  float: left !important;
-  line-height: 0.75 !important;
-  padding-top: 4px !important;
-  padding-right: 10px !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-
-/* Prevent subheadings from taking on drop cap formatting */
-.article-body h2::first-letter,
-.article-body h3::first-letter,
-.entry-content h2::first-letter,
-.entry-content h3::first-letter,
-.article-content h2::first-letter,
-.article-content h3::first-letter,
-h2::first-letter,
-h3::first-letter {
-  font-size: inherit !important;
-  float: none !important;
-  line-height: inherit !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* --- 6. Global Footer --- */
-.site-footer {
-  background-color: #ffffff !important;
-  border-top: 1px solid var(--border-color) !important;
-  padding: 4rem 1.5rem 3rem !important;
-  text-align: center !important;
-  color: #111111 !important;
-  margin-top: 5rem !important;
-}
-.site-footer::before {
-  content: "WJH"; /* Changed from AD to WJH */
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 3.5rem;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  display: block;
-  margin-bottom: 1.25rem;
-  color: #000000;
-  line-height: 0.8;
-}
-
-.site-footer a {
-  color: #111111 !important;
-  text-decoration: none !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-}
-/* Suppress Duplicate Article Footers */
-.main-container .site-footer,
-.article-page .site-footer,
-article .site-footer,
-footer.site-footer ~ footer.site-footer,
-.site-footer:nth-of-type(n+2) {
-  display: none !important;
-}
-
-/* --- 7. Precision Mobile Overrides - MATCH AD SCREENSHOT --- */
-
-@media (max-width: 768px) {
-  .article-list article .article-title,
-  .article-list article h2,
-  .article-title,
-  .article-title a,
-  h1.article-title,
-  h1.entry-title {
-    font-family: var(--serif-editorial) !important;
-    font-size: 32px !important; /* AD size */
-    font-weight: 700 !important; /* AD weight */
-    line-height: 1.18 !important;
-    letter-spacing: -0.02em !important;
-    color: #111 !important;
-    margin-top: 14px !important;
-    margin-bottom: 10px !important;
-  }
-
-  .article-list article .article-title::after,
-  .article-list article h2::after,
-  .article-title::after {
-    content: "" !important;
-    display: block !important;
-    width: 60px !important; /* AD divider */
-    height: 2px !important;
-    background-color: #111111 !important;
-    margin-top: 10px !important;
-    margin-bottom: 14px !important;
-  }
-
-  .article-list .article-subtitle,
-  .article-list .article-summary,
-  .article-list article p {
-    font-family: var(--sans-ui) !important;
-    font-size: 16px !important; /* AD excerpt size */
-    line-height: 1.55 !important;
-    color: #333 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    font-weight: 400 !important;
-  }
-
-  .article-list article {
-    margin-bottom: 1.75rem !important;
-    padding-bottom: 1.25rem !important;
-    border-bottom: 1px solid #f0f0f0 !important;
-  }
-}
+  -webkit-font-smoothing: antialiased;
