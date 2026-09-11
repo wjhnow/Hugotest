@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
-/* =========================================
-   AD Middle East Master Stylesheet
-   ========================================= */
+/* ==========================================================================
+   AD Middle East - Consolidated Master Stylesheet
+   ========================================================================== */
 
 :root {
   --body-background: #ffffff;
   --text-main: #111111;
   --text-muted: #666666;
-  --text-light: #888888;
   --border-color: #e5e5e5;
-
   --serif-editorial: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
   --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
+/* --- 1. Global Reset & Theme Overrides --- */
 body {
   background-color: var(--body-background) !important;
   color: var(--text-main) !important;
@@ -24,20 +23,27 @@ body {
   padding: 0;
 }
 
-/* Hide sidebars */
-.left-sidebar, .sidebar, .right-sidebar {
+/* Hide Sidebars & Technical Theme Artifacts */
+.left-sidebar, .sidebar, .right-sidebar, .sidebar-container,
+#dark-mode-toggle, .article-avatar, .avatar, .article-time svg, .article-translations {
   display: none !important;
 }
 
-/* Main Layout Container */
-.main, #main-content {
+/* Main Layout Container Width & Mobile Spacing */
+.main, #main-content, .main-container {
   max-width: 1120px !important;
   margin: 0 auto !important;
   padding: 2.5rem 1.5rem 5rem !important;
   width: 100% !important;
 }
 
-/* Sticky Header Bar */
+@media (max-width: 768px) {
+  .main, #main-content, .main-container {
+    padding: 1rem 1rem 2.5rem !important;
+  }
+}
+
+/* --- 2. Sticky Header Bar & Monogram Logo --- */
 .ad-header {
   position: sticky;
   top: 0;
@@ -57,7 +63,6 @@ body {
   margin: 0 auto;
 }
 
-/* Hamburger Icon */
 .hamburger-menu {
   background: none;
   border: none;
@@ -75,9 +80,13 @@ body {
   width: 100%;
   height: 1.5px;
   background-color: #111111;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* Monogram Logo */
+.hamburger-menu.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger-menu.active span:nth-child(2) { opacity: 0; }
+.hamburger-menu.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 .ad-logo {
   font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif !important;
   font-size: 2.75rem !important;
@@ -90,68 +99,10 @@ body {
   margin-top: -2px;
 }
 
-/* Article List Cards */
-.article-list article {
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  margin-bottom: 3.5rem !important;
-  background: transparent !important;
-  border-bottom: 1px solid var(--border-color) !important;
-  padding-bottom: 3rem !important;
-}
-
-.article-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 0 !important;
-}
-
-/* Category & Title Styles */
-.article-category a {
-  background: none !important;
-  color: var(--text-main) !important;
-  font-size: 0.7rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
-  padding: 0 !important;
-  text-decoration: none;
-}
-
-.article-title, .article-list h2 a {
-  font-family: var(--serif-editorial) !important;
-  font-size: 2.25rem !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.015em !important;
-  color: var(--text-main) !important;
-  line-height: 1.15 !important;
-  margin-top: 0.35rem !important;
-  margin-bottom: 0.75rem !important;
-  text-decoration: none;
-  display: block;
-}
-
-/* Solid Black Buttons */
-.btn, .subscribe-btn, input[type="submit"] {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border-radius: 0 !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
-  padding: 0.8rem 1.6rem !important;
-}
-/* =========================================
-   Navigation Drawer & Toggle Styles
-   ========================================= */
-
-/* Full-width overlay drawer */
+/* --- 3. Navigation Drawer --- */
 .nav-drawer {
   position: fixed;
-  top: 52px; /* Sits right beneath the sticky header */
+  top: 52px;
   left: 0;
   width: 100%;
   height: calc(100vh - 52px);
@@ -163,21 +114,10 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* Open State */
-.nav-drawer.active {
-  display: flex;
-}
+.nav-drawer.active { display: flex; }
 
-.nav-links {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.nav-links li {
-  margin-bottom: 1.5rem !important;
-}
-
+.nav-links { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+.nav-links li { margin-bottom: 1.5rem !important; }
 .nav-links a {
   font-family: var(--sans-ui) !important;
   font-size: 1.15rem !important;
@@ -188,28 +128,80 @@ body {
   text-decoration: none !important;
 }
 
-/* Transform hamburger into an 'X' when active */
-.hamburger-menu span {
-  transition: transform 0.25s ease, opacity 0.25s ease;
+/* --- 4. Main Feed Cards & Typography (High Specificity) --- */
+.article-list article {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-bottom: 2.5rem !important;
+  background: transparent !important;
+  padding-bottom: 0.5rem !important;
 }
 
-.hamburger-menu.active span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
+.article-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0 !important;
 }
 
-.hamburger-menu.active span:nth-child(2) {
-  opacity: 0;
+/* Hide Categories, Dates, and Clock Icons in Stream */
+.article-list .article-category,
+.article-list .article-meta,
+.article-list .article-date,
+.article-list .article-time,
+.article-list svg {
+  display: none !important;
 }
 
-.hamburger-menu.active span:nth-child(3) {
-  transform: translateY(-6.5px) rotate(-45deg);
+/* Article Title Serif Sizing */
+.article-list article .article-title,
+.article-list article .article-details h2,
+.article-list article h2 a,
+.article-title,
+.article-title a {
+  font-family: var(--serif-editorial) !important;
+  font-size: 2.2rem !important;
+  font-weight: 500 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.025em !important;
+  color: #111111 !important;
+  margin-top: 0.85rem !important;
+  margin-bottom: 0.85rem !important;
+  text-decoration: none !important;
+  display: block !important;
 }
 
-/* =========================================
-   AD Middle East - Final Editorial Polish
-   ========================================= */
+/* Hairline Line Directly Under Headline */
+.article-list article .article-title::after,
+.article-list article h2::after {
+  content: "" !important;
+  display: block !important;
+  width: 50px !important;
+  height: 1px !important;
+  background-color: #111111 !important;
+  margin-top: 0.85rem !important;
+  margin-bottom: 0.85rem !important;
+}
 
-/* Signature AD Drop-Cap on First Paragraph */
+/* Article Subtitle / Deck Paragraph */
+.article-list .article-subtitle,
+.article-list .article-summary,
+.article-list .article-excerpt,
+.article-list article p {
+  font-family: var(--sans-ui) !important;
+  font-size: 1.08rem !important;
+  line-height: 1.45 !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  color: #111111 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* --- 5. Single Article Page & Editorial Polish --- */
 .article-content > p:first-of-type::first-letter {
   font-family: var(--serif-editorial) !important;
   font-size: 4.2rem !important;
@@ -222,30 +214,15 @@ body {
   font-weight: 700 !important;
 }
 
-/* Hide Theme Stack Tech Artifacts (Avatars, Dark Mode, Reading Time Icons) */
-#dark-mode-toggle,
-.article-avatar,
-.avatar,
-.article-time svg,
-.article-translations,
-.sidebar-container {
-  display: none !important;
-}
-
-/* Condé Nast Byline & Meta Styling */
-.article-subtitle,
-.article-time,
-.article-author,
-.article-meta {
+.article-subtitle, .article-time, .article-author, .article-meta {
   font-family: var(--sans-ui) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.72rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.15em !important;
   color: var(--text-muted) !important;
 }
 
-/* Editorial Image Captions */
 figcaption {
   font-family: var(--sans-ui) !important;
   font-size: 0.75rem !important;
@@ -257,7 +234,7 @@ figcaption {
   text-align: left !important;
 }
 
-/* Minimalist Centered Footer with AD Monogram */
+/* --- 6. Global Footer --- */
 .site-footer {
   background-color: #ffffff !important;
   border-top: 1px solid var(--border-color) !important;
@@ -288,166 +265,11 @@ figcaption {
   letter-spacing: 0.12em !important;
 }
 
-/* Suppress duplicate footer instances */
+/* Suppress Duplicate Article Footers */
 .main-container .site-footer,
+.article-page .site-footer,
+article .site-footer,
 footer.site-footer ~ footer.site-footer,
 .site-footer:nth-of-type(n+2) {
   display: none !important;
-}
-
-/* Hide nested article footers so only the global bottom footer renders */
-.main-container .site-footer,
-.article-page .site-footer,
-article .site-footer {
-  display: none !important;
-}
-
-
-/* =========================================
-   AD Middle East Layout Tightening
-   ========================================= */
-
-/* 1. Hide Date, Clock, Calendar, and Reading Time in Main Feed */
-.article-list .article-meta,
-.article-list .article-date,
-.article-list .article-time,
-.article-list svg {
-  display: none !important;
-}
-
-/* 2. Narrow Mobile Side Margins */
-@media (max-width: 768px) {
-  .main, #main-content, .main-container {
-    padding: 1rem 1rem 2.5rem !important;
-  }
-}
-
-/* 3. Tighten Gap Between Articles */
-.article-list article {
-  margin-bottom: 2rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
-/* 4. Format Subtitle/Dek to Sentence Case */
-.article-list .article-subtitle,
-.article-list .article-summary,
-.article-list p {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.95rem !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  text-transform: none !important;
-  letter-spacing: normal !important;
-  color: #222222 !important;
-  line-height: 1.4 !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.8rem !important;
-}
-
-/* 5. AD Signature Short Hairline Accent Rule */
-.article-list article::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 1px;
-  background-color: #111111;
-  margin-top: 1rem;
-}
-
-
-/* =========================================
-   AD Precision Typography & Alignment Fix
-   ========================================= */
-
-/* 1. Hide category tags on feed cards */
-.article-list .article-category {
-  display: none !important;
-}
-
-/* 2. Headline Font Sizing & Tight Line Height */
-.article-list .article-title, 
-.article-list h2 a, 
-.article-title a {
-  font-family: "Playfair Display", "Didot", "Bodoni MT", serif !important;
-  font-size: 1.65rem !important;
-  font-weight: 500 !important;
-  line-height: 1.12 !important;
-  letter-spacing: -0.02em !important;
-  color: #111111 !important;
-  margin-top: 0.65rem !important;
-  margin-bottom: 0.65rem !important;
-  display: block !important;
-}
-
-/* 3. Move Short Accent Line DIRECTLY Under Title */
-.article-list article::after {
-  display: none !important; /* Remove bottom-of-card line */
-}
-
-.article-list .article-title::after,
-.article-list h2::after {
-  content: "" !important;
-  display: block !important;
-  width: 45px !important;
-  height: 1px !important;
-  background-color: #111111 !important;
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-/* 4. Deck / Summary Text Alignment */
-.article-list .article-subtitle,
-.article-list .article-summary,
-.article-list p {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.35 !important;
-  color: #222222 !important;
-  margin-top: 0 !important;
-  margin-bottom: 1rem !important;
-}
-
-/* 5. Mobile Layout Padding & Card Margins */
-@media (max-width: 768px) {
-  .main, #main-content, .main-container {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    padding-top: 0.5rem !important;
-  }
-  
-  .article-list article {
-    margin-bottom: 2rem !important;
-    padding-bottom: 0 !important;
-    border-bottom: none !important;
-  }
-}
-
-
-/* =========================================
-   AD Mobile Font Size & Scale Upgrade
-   ========================================= */
-
-/* 1. Scale Up Main Article Headline */
-.article-list .article-title, 
-.article-list h2 a, 
-.article-title a {
-  font-size: 2.1rem !important;
-  font-weight: 500 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.025em !important;
-  color: #111111 !important;
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
-}
-
-/* 2. Scale Up & Darken Article Summary (Deck) */
-.article-list .article-subtitle,
-.article-list .article-summary,
-.article-list p {
-  font-size: 1.05rem !important;
-  line-height: 1.45 !important;
-  color: #111111 !important;
-  font-weight: 400 !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 1.5rem !important;
 }
