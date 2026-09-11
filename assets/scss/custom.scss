@@ -301,3 +301,56 @@ footer.site-footer ~ footer.site-footer,
 article .site-footer {
   display: none !important;
 }
+
+
+/* =========================================
+   AD Middle East Layout Tightening
+   ========================================= */
+
+/* 1. Hide Date, Clock, Calendar, and Reading Time in Main Feed */
+.article-list .article-meta,
+.article-list .article-date,
+.article-list .article-time,
+.article-list svg {
+  display: none !important;
+}
+
+/* 2. Narrow Mobile Side Margins */
+@media (max-width: 768px) {
+  .main, #main-content, .main-container {
+    padding: 1rem 1rem 2.5rem !important;
+  }
+}
+
+/* 3. Tighten Gap Between Articles */
+.article-list article {
+  margin-bottom: 2rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* 4. Format Subtitle/Dek to Sentence Case */
+.article-list .article-subtitle,
+.article-list .article-summary,
+.article-list p {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.95rem !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  color: #222222 !important;
+  line-height: 1.4 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+/* 5. AD Signature Short Hairline Accent Rule */
+.article-list article::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #111111;
+  margin-top: 1rem;
+}
+
