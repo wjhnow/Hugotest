@@ -133,7 +133,7 @@ body {
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  margin-bottom: 2.5rem !important;
+  margin-bottom: 3rem !important;
   background: transparent !important;
   padding-bottom: 0.5rem !important;
 }
@@ -163,13 +163,13 @@ h1.entry-title,
 .article-list article .article-details h2,
 .article-list article h2 a {
   font-family: var(--serif-editorial) !important;
-  font-size: 2.2rem !important;
+  font-size: 2.5rem !important;
   font-weight: 400 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.01em !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.015em !important;
   color: #111111 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 0.7rem !important;
+  margin-bottom: 0.6rem !important;
   text-decoration: none !important;
   display: block !important;
 }
@@ -178,22 +178,22 @@ h1.entry-title,
 .article-list article h2::after {
   content: "" !important;
   display: block !important;
-  width: 50px !important;
+  width: 48px !important;
   height: 1px !important;
   background-color: #111111 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 0.9rem !important;
+  margin-bottom: 1.1rem !important;
 }
 
 .article-list .article-subtitle,
 .article-list .article-summary,
 .article-list article p {
   font-family: var(--sans-ui) !important;
-  font-size: 1.08rem !important;
-  line-height: 1.45 !important;
-  color: #111111 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.5 !important;
+  color: #1a1a1a !important;
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.75rem !important;
 }
 
 /* --- 5. Single Article Page Overrides --- */
@@ -437,13 +437,13 @@ footer.site-footer ~ footer.site-footer,
   h1.article-title,
   h1.entry-title {
     font-family: var(--serif-editorial) !important;
-    font-size: 30px !important;
+    font-size: 32px !important;
     font-weight: 400 !important;
-    line-height: 1.15 !important;
+    line-height: 1.1 !important;
     letter-spacing: -0.015em !important;
     color: #111111 !important;
-    margin-top: 12px !important;
-    margin-bottom: 10px !important;
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
   }
 
   .article-list article .article-title::after,
@@ -454,19 +454,19 @@ footer.site-footer ~ footer.site-footer,
     width: 56px !important;
     height: 1px !important;
     background-color: #111111 !important;
-    margin-top: 10px !important;
-    margin-bottom: 12px !important;
+    margin-top: 12px !important;
+    margin-bottom: 16px !important;
   }
 
   .article-list .article-subtitle,
   .article-list .article-summary,
   .article-list article p {
     font-family: var(--sans-ui) !important;
-    font-size: 15.5px !important;
-    line-height: 1.35 !important;
-    color: #111111 !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: #1a1a1a !important;
     margin-top: 0 !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .article-list article {
@@ -480,3 +480,4 @@ footer.site-footer ~ footer.site-footer,
     padding-top: 0 !important;
   }
 }
+
