@@ -326,55 +326,83 @@ footer.site-footer ~ footer.site-footer,
    ========================================= */
 
 @media (max-width: 768px) {
-  /* 1. Flush Side Padding with Image Edges */
-  .main, #main-content, .main-container {
+  /* 1. Main Page Container & Side Alignment */
+  .main, 
+  #main-content, 
+  .main-container {
     padding-left: 12px !important;
     padding-right: 12px !important;
+    padding-top: 0.25rem !important;
   }
 
-  /* 2. Headline Divider Width Extension */
+  .article-list article,
+  .article-details {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 2. Headline Display Serif Scale */
+  .article-list article .article-title,
+  .article-list article h2,
+  .article-list article h2 a,
+  .article-title,
+  .article-title a,
+  h2.entry-title,
+  h2.post-title {
+    font-family: "Playfair Display", "Didot", "Bodoni MT", Georgia, serif !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+    color: #111111 !important;
+    margin-top: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* 3. Hairline Accent Divider Rule */
   .article-list article .article-title::after,
   .article-list article h2::after,
   .article-title::after {
+    content: "" !important;
+    display: block !important;
     width: 56px !important;
     height: 1px !important;
     background-color: #111111 !important;
-    margin-top: 12px !important;
-    margin-bottom: 14px !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
   }
 
-  /* 3. Tight, Dense Deck Typography */
+  /* 4. Deck / Summary Text Typography */
   .article-list .article-subtitle,
   .article-list .article-summary,
   .article-list .article-excerpt,
   .article-list article p,
   .entry-summary p {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-size: 15.5px !important;
-    line-height: 1.36 !important;
+    line-height: 1.32 !important;
     letter-spacing: -0.01em !important;
     color: #111111 !important;
-    margin-bottom: 1.25rem !important;
-  }
-
-  /* 4. Reduce Gap Between Feed Cards */
-  .article-list article {
-    margin-bottom: 1.75rem !important;
-  }
-}
-@media (max-width: 768px) {
-  /* Tighten summary bottom spacing to pull up next card */
-  .article-list .article-subtitle,
-  .article-list .article-summary,
-  .article-list article p {
-    line-height: 1.32 !important;
+    margin-top: 0 !important;
     margin-bottom: 0.5rem !important;
   }
 
-  /* Compact gap between feed cards */
+  /* 5. Article Card Spacing & Bottom Border */
   .article-list article {
     margin-bottom: 1.25rem !important;
     padding-bottom: 0 !important;
     border-bottom: 1px solid #f0f0f0 !important;
   }
-}
 
+  /* 6. Collapse Top Spacing Between Consecutive Feed Cards */
+  .article-list article + article,
+  .article-list article:not(:first-child) {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .article-list article .article-image,
+  .article-list article img {
+    margin-top: 0 !important;
+  }
+}
