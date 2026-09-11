@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AD Middle East - Consolidated Master Stylesheet
+   AD Middle East - Consolidated Master Stylesheet (With Header Tagline)
    ========================================================================== */
 
 :root {
@@ -28,11 +28,11 @@ body {
   display: none !important;
 }
 
-/* Container Spacing */
+/* Main Container Spacing */
 .main, #main-content, .main-container {
   max-width: 1120px !important;
   margin: 0 auto !important;
-  padding: 2.5rem 1.5rem 5rem !important;
+  padding: 2rem 1.5rem 5rem !important;
   width: 100% !important;
   overflow: visible !important;
 }
@@ -99,7 +99,37 @@ body {
   margin-top: -2px;
 }
 
-/* --- 3. Navigation Drawer --- */
+/* --- 3. Header Masthead Tagline (Below Main Logo) --- */
+.site-masthead-tagline {
+  max-width: 1120px;
+  margin: 0 auto 2rem auto;
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.site-masthead-tagline .tagline-title {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  color: #111111 !important;
+  margin-bottom: 0.35rem !important;
+  display: block;
+}
+
+.site-masthead-tagline .tagline-text {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.45 !important;
+  color: #555555 !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  max-width: 580px;
+}
+
+/* --- 4. Navigation Drawer --- */
 .nav-drawer {
   position: fixed;
   top: 52px;
@@ -128,7 +158,7 @@ body {
   text-decoration: none !important;
 }
 
-/* --- 4. Stream Feed Cards & Universal Headline Formatting --- */
+/* --- 5. Stream Feed Cards & Universal Headline Formatting --- */
 .article-list article {
   border: none !important;
   border-radius: 0 !important;
@@ -172,7 +202,7 @@ body {
   display: none !important;
 }
 
-/* Article Hero Title (Explicitly Cleaned - No Accent Bar) */
+/* Main Article Titles (Clean Alignment - No Accent Bar) */
 .article-title,
 .article-title a,
 h1.article-title,
@@ -220,9 +250,9 @@ h1.entry-title,
   margin-bottom: 1.75rem !important;
 }
 
-/* --- 5. Single Article Page Overrides --- */
+/* --- 6. Single Article Page Overrides --- */
 
-/* 5.1 Category & Tags */
+/* 6.1 Category & Tags */
 .category-badge,
 .article-category,
 .entry-category,
@@ -233,12 +263,9 @@ h1.entry-title,
 .badge,
 a[href*="/categories/"] {
   background: transparent !important;
-  background-color: transparent !important;
   color: #111111 !important;
   padding: 0 !important;
   border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
   font-family: var(--sans-ui) !important;
   font-size: 10px !important;
   font-weight: 700 !important;
@@ -248,7 +275,7 @@ a[href*="/categories/"] {
   display: inline-block !important;
 }
 
-.article-tags, .post-tags, .tags, .tag-cloud {
+.article-tags, .post-tags, .tags {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   display: flex !important;
@@ -256,19 +283,18 @@ a[href*="/categories/"] {
   gap: 10px 8px !important;
 }
 
-.article-tags a, .post-tags a, .tags a, .tag-cloud a, .tag {
+.article-tags a, .post-tags a, .tags a, .tag {
   font-family: var(--sans-ui) !important;
   font-size: 11px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
   padding: 6px 12px !important;
-  line-height: 1.3 !important;
   display: inline-block !important;
   border-radius: 3px !important;
 }
 
-/* 5.2 Top Hero Subtitle / Deck (Explicitly Cleaned - No Accent Bar) */
+/* 6.2 Top Hero Subtitle / Deck (Clean Alignment) */
 .single-post .article-subtitle,
 .single-post .entry-subtitle,
 .single-post .deck,
@@ -287,12 +313,11 @@ a[href*="/categories/"] {
   margin-left: 0 !important;
 }
 
-/* 5.3 Metadata Strip & Icon Hiding */
+/* 6.3 Metadata Strip */
 .single-post .article-meta,
 .single-post .post-meta,
 .article-header .meta,
-.article-meta,
-.post-meta {
+.article-meta {
   border-top: 1px solid var(--border-color) !important;
   border-bottom: 1px solid var(--border-color) !important;
   padding: 10px 0 !important;
@@ -309,12 +334,11 @@ a[href*="/categories/"] {
   flex-wrap: wrap !important;
 }
 
-.article-meta svg, .article-meta i, .post-meta svg, .post-meta i,
-.article-time svg, .lucide, time svg, svg.lucide-calendar, svg.lucide-clock {
+.article-meta svg, .post-meta svg, .article-time svg, .lucide {
   display: none !important;
 }
 
-/* 5.4 Regular Paragraph Typography */
+/* 6.4 Regular Paragraph Typography */
 .article-body p,
 .entry-content p,
 .post-content p,
@@ -325,7 +349,6 @@ a[href*="/categories/"] {
   font-weight: 400 !important;
   color: #222222 !important;
   margin-bottom: 1.6rem !important;
-  overflow: visible !important;
   border-left: none !important;
   padding-left: 0 !important;
 }
@@ -338,7 +361,7 @@ a[href*="/categories/"] {
   font-weight: 500 !important;
 }
 
-/* 5.5 Section Subheadings INSIDE Article Body ONLY (Left Accent Bar Fix) */
+/* 6.5 Subheadings & Bold Intro Lines Inside Article Body (Left Accent Bar) */
 .article-body h2, .article-body h3, .article-body h4,
 .entry-content h2, .entry-content h3, .entry-content h4,
 .article-content h2, .article-content h3, .article-content h4,
@@ -352,17 +375,13 @@ a[href*="/categories/"] {
   color: #111111 !important;
   margin-top: 2.2rem !important;
   margin-bottom: 1.2rem !important;
-  
-  /* Accent Vertical Line Styling for Body Subtitles */
   border-left: 3px solid var(--accent-bar) !important;
   padding-left: 14px !important;
   margin-left: 0 !important;
-  
   display: block !important;
   overflow: visible !important;
 }
 
-/* Unset strong tag font adjustments inside headings */
 .article-body p:has(> strong:only-child) strong,
 .entry-content p:has(> strong:only-child) strong,
 .article-content p:has(> strong:only-child) strong {
@@ -371,7 +390,7 @@ a[href*="/categories/"] {
   font-size: inherit !important;
 }
 
-/* 5.6 Captions and Credits */
+/* 6.6 Captions and Credits */
 figcaption, .caption, .photo-credit {
   font-family: var(--sans-ui) !important;
   font-size: 0.8rem !important;
@@ -383,33 +402,10 @@ figcaption, .caption, .photo-credit {
   text-align: left !important;
 }
 
-/* 5.7 Drop Cap Rules */
+/* 6.7 Drop Cap Rules */
 .article-content > p:first-of-type::first-letter,
 .entry-content > p:first-of-type::first-letter,
-.article-body > p:first-of-type::first-letter {
-  font-family: var(--serif-editorial) !important;
-  font-size: 5rem !important;
-  float: left !important;
-  line-height: 0.75 !important;
-  padding-top: 4px !important;
-  padding-right: 12px !important;
-  padding-bottom: 0 !important;
-  margin-left: -2px !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-
-/* Prevent drop cap on bold headings/intro lines */
-.article-content > p:has(strong):first-of-type::first-letter,
-.entry-content p:has(strong):first-of-type::first-letter,
-.article-body p:has(strong):first-of-type::first-letter {
-  font-size: inherit !important;
-  float: none !important;
-  line-height: inherit !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
+.article-body > p:first-of-type::first-letter,
 .article-content h2 + p::first-letter,
 .article-content h3 + p::first-letter,
 .article-content p:has(strong) + p::first-letter,
@@ -424,7 +420,17 @@ figcaption, .caption, .photo-credit {
   font-weight: 700 !important;
 }
 
-/* --- 6. Global Footer --- */
+.article-content > p:has(strong):first-of-type::first-letter,
+.entry-content p:has(strong):first-of-type::first-letter,
+.article-body p:has(strong):first-of-type::first-letter {
+  font-size: inherit !important;
+  float: none !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- 7. Global Footer --- */
 .site-footer {
   background-color: #ffffff !important;
   border-top: 1px solid var(--border-color) !important;
@@ -455,31 +461,16 @@ figcaption, .caption, .photo-credit {
   letter-spacing: 0.12em !important;
 }
 
-.main-container .site-footer,
-.article-page .site-footer,
-article .site-footer,
-footer.site-footer ~ footer.site-footer,
-.site-footer:nth-of-type(n+2) {
-  display: none !important;
-}
-
-/* --- 7. Precision Mobile Overrides --- */
-
+/* --- 8. Mobile Overrides --- */
 @media (max-width: 768px) {
-  .article-list article .article-title,
-  .article-list article h2,
-  .article-list .article-title a {
-    font-family: var(--serif-editorial) !important;
-    font-size: 40px !important;
-    font-weight: 400 !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.015em !important;
-    color: #111111 !important;
-    margin-top: 14px !important;
-    margin-bottom: 8px !important;
-    overflow: visible !important;
-    border-left: none !important;
-    padding-left: 0 !important;
+  .site-masthead-tagline {
+    padding: 1rem 12px !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .site-masthead-tagline .tagline-text {
+    font-size: 0.88rem !important;
+    line-height: 1.4 !important;
   }
 
   .single-post h1.article-title,
@@ -487,60 +478,10 @@ footer.site-footer ~ footer.site-footer,
   article h1.article-title,
   article h1.entry-title,
   .article-header h1 {
-    font-family: var(--serif-editorial) !important;
     font-size: 48px !important;
-    font-weight: 400 !important;
     line-height: 1.15 !important;
-    letter-spacing: -0.02em !important;
-    color: #111111 !important;
     margin-top: 10px !important;
     margin-bottom: 14px !important;
-    overflow: visible !important;
-    border-left: none !important;
-    padding-left: 0 !important;
-  }
-
-  .article-list article .article-title::after,
-  .article-list article h2::after,
-  .article-title::after {
-    content: "" !important;
-    display: block !important;
-    width: 56px !important;
-    height: 1px !important;
-    background-color: #111111 !important;
-    margin-top: 12px !important;
-    margin-bottom: 16px !important;
-  }
-
-  .article-list .article-subtitle,
-  .article-list .article-summary,
-  .article-list article p {
-    font-family: var(--sans-ui) !important;
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-    color: #1a1a1a !important;
-    margin-top: 0 !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .article-list article {
-    margin-bottom: 1.25rem !important;
-    padding-bottom: 0 !important;
-    border-bottom: 1px solid #f0f0f0 !important;
-  }
-
-  .article-list article + article {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  .single-post .article-subtitle,
-  .single-post .entry-subtitle,
-  .single-post .deck,
-  .article-header .subtitle,
-  .article-details .article-subtitle {
-    font-size: 16px !important;
-    line-height: 1.45 !important;
     border-left: none !important;
     padding-left: 0 !important;
   }
@@ -556,7 +497,6 @@ footer.site-footer ~ footer.site-footer,
     padding-left: 0 !important;
   }
 
-  /* Mobile Subheadings INSIDE Article Body ONLY */
   .article-body h2, .article-body h3, .article-body h4,
   .entry-content h2, .entry-content h3, .entry-content h4,
   .article-content h2, .article-content h3, .article-content h4,
@@ -564,23 +504,9 @@ footer.site-footer ~ footer.site-footer,
   .entry-content p:has(> strong:only-child),
   .article-content p:has(> strong:only-child) {
     font-size: 30px !important;
-    font-weight: 400 !important;
-    line-height: 1.25 !important;
     margin-top: 2rem !important;
     margin-bottom: 1rem !important;
     border-left: 3px solid var(--accent-bar) !important;
     padding-left: 12px !important;
-    margin-left: 0 !important;
-    overflow: visible !important;
-  }
-
-  .article-content > p:first-of-type::first-letter,
-  .entry-content > p:first-of-type::first-letter,
-  .article-body > p:first-of-type::first-letter,
-  .article-content h2 + p::first-letter,
-  .article-content h3 + p::first-letter,
-  .article-content p:has(strong) + p::first-letter,
-  .entry-content p:has(strong) + p::first-letter {
-    font-size: 4.8rem !important;
   }
 }
