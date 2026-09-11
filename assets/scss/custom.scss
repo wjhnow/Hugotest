@@ -273,17 +273,17 @@ svg.lucide-clock {
   display: none !important;
 }
 
-/* 5.5 Post Body Serif Typography & Links — larger for readability */
+/* 5.5 Post Body Serif Typography & Links — AD-style readable size */
 .article-body p,
 .entry-content p,
 .post-content p,
 .article-content p {
   font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.35rem !important;
+  font-size: 1.4rem !important; /* ~22.4px */
   line-height: 1.75 !important;
   font-weight: 400 !important;
   color: #222222 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.6rem !important;
 }
 
 /* Editorial Underlined Body Links */
@@ -330,7 +330,7 @@ figcaption, .caption, .photo-credit {
 .entry-content > p:first-of-type::first-letter,
 .article-body > p:first-of-type::first-letter {
   font-family: var(--serif-editorial) !important;
-  font-size: 4.8rem !important;
+  font-size: 5rem !important;
   float: left !important;
   line-height: 0.75 !important;
   padding-top: 4px !important;
@@ -360,7 +360,7 @@ figcaption, .caption, .photo-credit {
 .article-content p:has(strong) + p::first-letter,
 .entry-content p:has(strong) + p::first-letter {
   font-family: var(--serif-editorial) !important;
-  font-size: 4.8rem !important;
+  font-size: 5rem !important;
   float: left !important;
   line-height: 0.75 !important;
   padding-top: 4px !important;
@@ -506,9 +506,9 @@ footer.site-footer ~ footer.site-footer,
   .entry-content p,
   .post-content p,
   .article-content p {
-    font-size: 1.3rem !important; /* ~20.8px */
+    font-size: 1.375rem !important; /* ~22px */
     line-height: 1.75 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.6rem !important;
   }
 
   .article-body h2,
@@ -530,6 +530,6 @@ footer.site-footer ~ footer.site-footer,
   .article-content h3 + p::first-letter,
   .article-content p:has(strong) + p::first-letter,
   .entry-content p:has(strong) + p::first-letter {
-    font-size: 4.5rem !important;
+    font-size: 4.8rem !important;
   }
 }
