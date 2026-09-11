@@ -321,4 +321,44 @@ footer.site-footer ~ footer.site-footer,
     margin-top: 0 !important;
     margin-bottom: 24px !important;
   }
+}/* =========================================
+   AD Precision Mobile Alignment
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* 1. Flush Side Padding with Image Edges */
+  .main, #main-content, .main-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* 2. Headline Divider Width Extension */
+  .article-list article .article-title::after,
+  .article-list article h2::after,
+  .article-title::after {
+    width: 56px !important;
+    height: 1px !important;
+    background-color: #111111 !important;
+    margin-top: 12px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* 3. Tight, Dense Deck Typography */
+  .article-list .article-subtitle,
+  .article-list .article-summary,
+  .article-list .article-excerpt,
+  .article-list article p,
+  .entry-summary p {
+    font-size: 15.5px !important;
+    line-height: 1.36 !important;
+    letter-spacing: -0.01em !important;
+    color: #111111 !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  /* 4. Reduce Gap Between Feed Cards */
+  .article-list article {
+    margin-bottom: 1.75rem !important;
+  }
 }
+
