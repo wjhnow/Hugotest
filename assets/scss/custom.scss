@@ -273,3 +273,60 @@ footer.site-footer ~ footer.site-footer,
 .site-footer:nth-of-type(n+2) {
   display: none !important;
 }
+
+/* =========================================
+   AD Hyper-Scale Typography & Layout Match
+   ========================================= */
+
+/* 1. Expand Text Alignment to Match Image Margins */
+@media (max-width: 768px) {
+  .main, #main-content, .main-container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    padding-top: 0.25rem !important;
+  }
+
+  .article-list article,
+  .article-details {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 2. Headline Font - Massive Editorial Display Serif */
+  .article-list article .article-title,
+  .article-list article .article-details h2,
+  .article-list article h2 a,
+  .article-title,
+  .article-title a {
+    font-size: 2.75rem !important;
+    font-weight: 400 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.03em !important;
+    color: #000000 !important;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  /* 3. Hairline Rule Placement & Width */
+  .article-list article .article-title::after,
+  .article-list article h2::after {
+    width: 65px !important;
+    height: 1px !important;
+    background-color: #000000 !important;
+    margin-top: 0.9rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  /* 4. Deck / Summary Text - Dark, Heavy Sans */
+  .article-list .article-subtitle,
+  .article-list .article-summary,
+  .article-list .article-excerpt,
+  .article-list article p {
+    font-size: 1.15rem !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+    color: #000000 !important;
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+  }
+}
