@@ -172,10 +172,13 @@ body {
   display: none !important;
 }
 
+/* Article Hero Title (Explicitly Cleaned - No Accent Bar) */
 .article-title,
 .article-title a,
 h1.article-title,
 h1.entry-title,
+.article-header h1,
+.single-post h1,
 .article-list article .article-title,
 .article-list article .article-details h2,
 .article-list article h2 a {
@@ -190,6 +193,9 @@ h1.entry-title,
   text-decoration: none !important;
   display: block !important;
   overflow: visible !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .article-list article .article-title::after,
@@ -262,7 +268,7 @@ a[href*="/categories/"] {
   border-radius: 3px !important;
 }
 
-/* 5.2 Subtitle / Deck */
+/* 5.2 Top Hero Subtitle / Deck (Explicitly Cleaned - No Accent Bar) */
 .single-post .article-subtitle,
 .single-post .entry-subtitle,
 .single-post .deck,
@@ -276,6 +282,9 @@ a[href*="/categories/"] {
   letter-spacing: normal !important;
   margin-bottom: 18px !important;
   font-weight: 400 !important;
+  border-left: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* 5.3 Metadata Strip & Icon Hiding */
@@ -317,6 +326,8 @@ a[href*="/categories/"] {
   color: #222222 !important;
   margin-bottom: 1.6rem !important;
   overflow: visible !important;
+  border-left: none !important;
+  padding-left: 0 !important;
 }
 
 .article-body p a, .entry-content p a, .article-content p a {
@@ -327,17 +338,13 @@ a[href*="/categories/"] {
   font-weight: 500 !important;
 }
 
-/* 5.5 Section Subheadings & Bold Paragraph Subheadings (Left Accent Bar Fix) */
+/* 5.5 Section Subheadings INSIDE Article Body ONLY (Left Accent Bar Fix) */
 .article-body h2, .article-body h3, .article-body h4,
 .entry-content h2, .entry-content h3, .entry-content h4,
 .article-content h2, .article-content h3, .article-content h4,
-h2, h3, h4,
-.section-heading,
-/* Targets bold text lines formatted as paragraphs inside the body */
 .article-body p:has(> strong:only-child),
 .entry-content p:has(> strong:only-child),
-.article-content p:has(> strong:only-child),
-.article-body > p:first-of-type:has(strong) {
+.article-content p:has(> strong:only-child) {
   font-family: var(--serif-editorial) !important;
   font-size: 34px !important;
   font-weight: 400 !important;
@@ -346,7 +353,7 @@ h2, h3, h4,
   margin-top: 2.2rem !important;
   margin-bottom: 1.2rem !important;
   
-  /* Accent Vertical Line Styling */
+  /* Accent Vertical Line Styling for Body Subtitles */
   border-left: 3px solid var(--accent-bar) !important;
   padding-left: 14px !important;
   margin-left: 0 !important;
@@ -355,7 +362,7 @@ h2, h3, h4,
   overflow: visible !important;
 }
 
-/* Unset strong tag font adjustments inside headings to prevent double-bolding */
+/* Unset strong tag font adjustments inside headings */
 .article-body p:has(> strong:only-child) strong,
 .entry-content p:has(> strong:only-child) strong,
 .article-content p:has(> strong:only-child) strong {
@@ -392,7 +399,7 @@ figcaption, .caption, .photo-credit {
   font-weight: 700 !important;
 }
 
-/* Prevent drop cap from triggering on bold headings/intro lines */
+/* Prevent drop cap on bold headings/intro lines */
 .article-content > p:has(strong):first-of-type::first-letter,
 .entry-content p:has(strong):first-of-type::first-letter,
 .article-body p:has(strong):first-of-type::first-letter {
@@ -471,6 +478,8 @@ footer.site-footer ~ footer.site-footer,
     margin-top: 14px !important;
     margin-bottom: 8px !important;
     overflow: visible !important;
+    border-left: none !important;
+    padding-left: 0 !important;
   }
 
   .single-post h1.article-title,
@@ -487,6 +496,8 @@ footer.site-footer ~ footer.site-footer,
     margin-top: 10px !important;
     margin-bottom: 14px !important;
     overflow: visible !important;
+    border-left: none !important;
+    padding-left: 0 !important;
   }
 
   .article-list article .article-title::after,
@@ -530,6 +541,8 @@ footer.site-footer ~ footer.site-footer,
   .article-details .article-subtitle {
     font-size: 16px !important;
     line-height: 1.45 !important;
+    border-left: none !important;
+    padding-left: 0 !important;
   }
 
   .article-body p,
@@ -539,18 +552,17 @@ footer.site-footer ~ footer.site-footer,
     font-size: 1.48rem !important;
     line-height: 1.75 !important;
     margin-bottom: 1.6rem !important;
+    border-left: none !important;
+    padding-left: 0 !important;
   }
 
-  /* Mobile Subheadings & Bold Intro Line Accent Bar Fix */
+  /* Mobile Subheadings INSIDE Article Body ONLY */
   .article-body h2, .article-body h3, .article-body h4,
   .entry-content h2, .entry-content h3, .entry-content h4,
   .article-content h2, .article-content h3, .article-content h4,
-  h2, h3, h4,
-  .section-heading,
   .article-body p:has(> strong:only-child),
   .entry-content p:has(> strong:only-child),
-  .article-content p:has(> strong:only-child),
-  .article-body > p:first-of-type:has(strong) {
+  .article-content p:has(> strong:only-child) {
     font-size: 30px !important;
     font-weight: 400 !important;
     line-height: 1.25 !important;
