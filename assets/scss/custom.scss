@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
    AD Middle East - Consolidated Master Stylesheet
@@ -7,9 +7,9 @@
 :root {
   --body-background: #ffffff;
   --text-main: #111111;
-  --text-muted: #666666;
+  --text-muted: #666;
   --border-color: #e5e5e5;
-  --serif-editorial: "Didot", "Bodoni MT", "Cormorant Garamond", "Playfair Display", "Georgia", serif;
+  --serif-editorial: "Playfair Display", "Cormorant Garamond", "Didot", "Bodoni MT", "Georgia", serif; /* CHANGED: Playfair first */
   --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
@@ -31,7 +31,7 @@ body {
 
 /* Container Spacing */
 .main, #main-content, .main-container {
-  max-width: 1120px !important;
+  max-width: 720px !important; /* CHANGED: Narrower like AD */
   margin: 0 auto !important;
   padding: 2.5rem 1.5rem 5rem !important;
   width: 100% !important;
@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 768px) {
   .main, #main-content, .main-container {
-    padding: 1rem 12px 2.5rem !important;
+    padding: 1rem 14px 2.5rem !important; /* CHANGED: Tighter mobile padding */
   }
 }
 
@@ -52,14 +52,14 @@ body {
   background-color: #ffffff;
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
-  padding: 0.6rem 1.25rem;
+  padding: 0.7rem 1.25rem; /* CHANGED: Slightly smaller */
 }
 
 .header-container {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  max-width: 1120px;
+  max-width: 720px; /* CHANGED */
   margin: 0 auto;
 }
 
@@ -79,7 +79,7 @@ body {
   display: block;
   width: 100%;
   height: 1.5px;
-  background-color: #111111;
+  background-color: #111;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
@@ -88,13 +88,13 @@ body {
 .hamburger-menu.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 .ad-logo {
-  font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif !important;
-  font-size: 2.75rem !important;
-  font-weight: 700 !important;
-  color: #000000 !important;
+  font-family: "Playfair Display", "Didot", "Bodoni MT", Georgia, serif !important; /* CHANGED */
+  font-size: 2.5rem !important; /* CHANGED: Match your screenshot */
+  font-weight: 900 !important; /* CHANGED: Bolder */
+  color: #000 !important;
   text-decoration: none !important;
-  letter-spacing: -0.09em !important;
-  line-height: 0.8 !important;
+  letter-spacing: -0.04em !important; /* CHANGED */
+  line-height: 1 !important;
   display: inline-block;
   margin-top: -2px;
 }
@@ -133,9 +133,10 @@ body {
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  margin-bottom: 2.5rem !important;
+  margin-bottom: 2rem !important; /* CHANGED */
   background: transparent !important;
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 1.5rem !important; /* CHANGED */
+  border-bottom: 1px solid #eee !important; /* ADDED: separator line */
 }
 
 .article-image img {
@@ -143,6 +144,7 @@ body {
   height: auto;
   object-fit: contain;
   border-radius: 0 !important;
+  margin-bottom: 18px !important; /* ADDED */
 }
 /* Hide Meta from Main Feed Stream */
 .article-list .article-category,
@@ -162,13 +164,13 @@ h1.entry-title,
 .article-list article .article-details h2,
 .article-list article h2 a {
   font-family: var(--serif-editorial) !important;
-  font-size: 2.2rem !important;
-  font-weight: 400 !important;
-  line-height: 1.15 !important;
+  font-size: 2.4rem !important; /* CHANGED: 2.2 -> 2.4rem */
+  font-weight: 700 !important; /* CHANGED: 400 -> 700 */
+  line-height: 1.22 !important; /* CHANGED */
   letter-spacing: -0.01em !important;
-  color: #111111 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  color: #000 !important; /* CHANGED: #111 -> #000 */
+  margin-top: 0.5rem !important; /* CHANGED */
+  margin-bottom: 0.75rem !important; /* CHANGED */
   text-decoration: none !important;
   display: block !important;
 }
@@ -177,22 +179,23 @@ h1.entry-title,
 .article-list article h2::after {
   content: "" !important;
   display: block !important;
-  width: 50px !important;
-  height: 1px !important;
-  background-color: #111111 !important;
-  margin-top: 0.85rem !important;
-  margin-bottom: 0.85rem !important;
+  width: 60px !important; /* CHANGED: 50 -> 60px */
+  height: 2px !important; /* CHANGED: 1 -> 2px */
+  background-color: #000000 !important; /* CHANGED: #111 -> #000 */
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
 }
 
 .article-list .article-subtitle,
 .article-list .article-summary,
 .article-list article p {
   font-family: var(--sans-ui) !important;
-  font-size: 1.08rem !important;
-  line-height: 1.45 !important;
-  color: #111111 !important;
+  font-size: 1rem !important; /* CHANGED: 1.08 -> 1rem = 16px */
+  line-height: 1.55 !important; /* CHANGED: 1.45 -> 1.55 */
+  color: #333333 !important; /* CHANGED: #111 -> #333 */
+  font-weight: 400 !important; /* ADDED */
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 0 !important; /* CHANGED */
 }
 
 /* --- 5. Single Article Page Overrides --- */
@@ -209,7 +212,7 @@ h1.entry-title,
 a[href*="/categories/"] {
   background: transparent !important;
   background-color: transparent !important;
-  color: #111111 !important;
+  color: #111 !important;
   padding: 0 !important;
   border: none !important;
   border-radius: 0 !important;
@@ -231,8 +234,8 @@ a[href*="/categories/"] {
 .article-details .article-subtitle {
   text-transform: none !important;
   font-family: var(--sans-ui) !important;
-  font-size: 16px !important;
-  line-height: 1.45 !important;
+  font-size: 17px !important; /* CHANGED: 16 -> 17px */
+  line-height: 1.55 !important; /* CHANGED */
   color: #333333 !important;
   letter-spacing: normal !important;
   margin-bottom: 18px !important;
@@ -280,8 +283,8 @@ svg.lucide-clock {
 .post-content p,
 .article-content p {
   font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.05rem !important;
-  line-height: 1.6 !important;
+  font-size: 1.125rem !important; /* CHANGED: 1.05 -> 1.125rem */
+  line-height: 1.7 !important; /* CHANGED */
   font-weight: 400 !important;
   color: #222222 !important;
   margin-bottom: 1.25rem !important;
@@ -306,7 +309,7 @@ svg.lucide-clock {
 .article-content h2,
 .article-content h3 {
   font-family: var(--serif-editorial) !important;
-  font-size: 22px !important;
+  font-size: 24px !important; /* CHANGED: 22 -> 24px */
   font-weight: 700 !important;
   line-height: 1.25 !important;
   color: #111111 !important;
@@ -318,10 +321,10 @@ svg.lucide-clock {
 figcaption, .caption, .photo-credit {
   font-family: var(--sans-ui) !important;
   font-size: 0.75rem !important;
-  color: #666666 !important;
+  color: #666 !important;
   line-height: 1.4 !important;
   margin-top: 0.6rem !important;
-  border-left: 2px solid #000000 !important;
+  border-left: 2px solid #000 !important;
   padding-left: 0.75rem !important;
   text-align: left !important;
 }
@@ -366,7 +369,7 @@ figcaption, .caption, .photo-credit {
   line-height: 0.75 !important;
   padding-top: 4px !important;
   padding-right: 10px !important;
-  color: #000000 !important;
+  color: #000 !important;
   font-weight: 700 !important;
 }
 
@@ -392,15 +395,15 @@ h3::first-letter {
   border-top: 1px solid var(--border-color) !important;
   padding: 4rem 1.5rem 3rem !important;
   text-align: center !important;
-  color: #111111 !important;
+  color: #111 !important;
   margin-top: 5rem !important;
 }
 .site-footer::before {
-  content: "AD";
-  font-family: "Didot", "Bodoni MT", "Playfair Display", Georgia, serif;
+  content: "WJH"; /* CHANGED: AD -> WJH */
+  font-family: "Playfair Display", Georgia, serif; /* CHANGED */
   font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: -0.09em;
+  font-weight: 900; /* CHANGED */
+  letter-spacing: -0.04em; /* CHANGED */
   display: block;
   margin-bottom: 1.25rem;
   color: #000000;
@@ -408,7 +411,7 @@ h3::first-letter {
 }
 
 .site-footer a {
-  color: #111111 !important;
+  color: #111 !important;
   text-decoration: none !important;
   font-size: 0.72rem !important;
   font-weight: 700 !important;
@@ -434,11 +437,11 @@ footer.site-footer ~ footer.site-footer,
   h1.article-title,
   h1.entry-title {
     font-family: var(--serif-editorial) !important;
-    font-size: 30px !important;
-    font-weight: 400 !important;
-    line-height: 1.15 !important;
+    font-size: 28px !important; /* CHANGED: 30 -> 28px */
+    font-weight: 700 !important; /* CHANGED: 400 -> 700 */
+    line-height: 1.22 !important; /* CHANGED */
     letter-spacing: -0.015em !important;
-    color: #111111 !important;
+    color: #000000 !important; /* CHANGED */
     margin-top: 12px !important;
     margin-bottom: 10px !important;
   }
@@ -448,9 +451,9 @@ footer.site-footer ~ footer.site-footer,
   .article-title::after {
     content: "" !important;
     display: block !important;
-    width: 56px !important;
-    height: 1px !important;
-    background-color: #111111 !important;
+    width: 60px !important; /* CHANGED */
+    height: 2px !important; /* CHANGED */
+    background-color: #000000 !important; /* CHANGED */
     margin-top: 10px !important;
     margin-bottom: 12px !important;
   }
@@ -459,17 +462,18 @@ footer.site-footer ~ footer.site-footer,
   .article-list .article-summary,
   .article-list article p {
     font-family: var(--sans-ui) !important;
-    font-size: 15.5px !important;
-    line-height: 1.35 !important;
-    color: #111111 !important;
+    font-size: 16px !important; /* CHANGED: 15.5 -> 16px */
+    line-height: 1.55 !important; /* CHANGED */
+    color: #333 !important; /* CHANGED */
     margin-top: 0 !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
   }
 
   .article-list article {
-    margin-bottom: 1.25rem !important;
-    padding-bottom: 0 !important;
-    border-bottom: 1px solid #f0f0f0 !important;
+    margin-bottom: 1.75rem !important; /* CHANGED */
+    padding-bottom: 1.25rem !important; /* CHANGED */
+    border-bottom: 1px solid #eee !important; /* ADDED */
   }
 
   .article-list article + article {
