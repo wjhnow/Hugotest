@@ -128,7 +128,7 @@ body {
   text-decoration: none !important;
 }
 
-/* --- 4. Main Feed Cards & Typography (High Specificity) --- */
+/* --- 4. Main Feed Cards & Typography --- */
 .article-list article {
   border: none !important;
   border-radius: 0 !important;
@@ -145,7 +145,7 @@ body {
   border-radius: 0 !important;
 }
 
-/* Hide Categories, Dates, and Clock Icons in Stream */
+/* Hide Categories, Dates, and Clock Icons in Stream Feed */
 .article-list .article-category,
 .article-list .article-meta,
 .article-list .article-date,
@@ -154,7 +154,7 @@ body {
   display: none !important;
 }
 
-/* Article Title Serif Sizing */
+/* Article Feed Title Serif Sizing */
 .article-list article .article-title,
 .article-list article .article-details h2,
 .article-list article h2 a,
@@ -172,7 +172,7 @@ body {
   display: block !important;
 }
 
-/* Hairline Line Directly Under Headline */
+/* Hairline Line Directly Under Feed Headline */
 .article-list article .article-title::after,
 .article-list article h2::after {
   content: "" !important;
@@ -184,7 +184,7 @@ body {
   margin-bottom: 0.85rem !important;
 }
 
-/* Article Subtitle / Deck Paragraph */
+/* Article Subtitle / Deck Paragraph in Feed */
 .article-list .article-subtitle,
 .article-list .article-summary,
 .article-list .article-excerpt,
@@ -201,26 +201,104 @@ body {
   margin-bottom: 1.5rem !important;
 }
 
-/* --- 5. Single Article Page & Editorial Polish --- */
-.article-content > p:first-of-type::first-letter {
-  font-family: var(--serif-editorial) !important;
-  font-size: 4.2rem !important;
-  float: left !important;
-  line-height: 0.8 !important;
-  padding-top: 4px !important;
-  padding-right: 12px !important;
-  padding-bottom: 0 !important;
-  color: #000000 !important;
+/* --- 5. Single Article Page & Editorial Styling --- */
+
+/* Category Label (Remove Green Pill Box) */
+.single-post .category-badge,
+.article-category,
+.entry-category,
+.article-header .category {
+  background-color: transparent !important;
+  color: #111111 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-family: var(--sans-ui) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 12px !important;
+  display: inline-block !important;
+}
+
+/* Article Subtitle / Deck Text */
+.single-post .article-subtitle,
+.single-post .entry-subtitle,
+.single-post .deck,
+.article-header .subtitle {
+  text-transform: none !important;
+  font-family: var(--sans-ui) !important;
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  color: #333333 !important;
+  letter-spacing: normal !important;
+  margin-bottom: 18px !important;
+}
+
+/* Meta Data Strip (Date & Read Time) */
+.single-post .article-meta,
+.single-post .post-meta,
+.article-header .meta {
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding: 10px 0 !important;
+  margin: 16px 0 24px 0 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.05em !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase !important;
   font-weight: 700 !important;
 }
 
-.article-subtitle, .article-time, .article-author, .article-meta {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.72rem !important;
+/* Hide Bulky Metadata Icons Inside Article */
+.single-post .article-meta svg,
+.single-post .article-meta i,
+.post-meta svg,
+.post-meta i {
+  display: none !important;
+}
+
+/* Post Body Serif Typography */
+.single-post .article-body p,
+.single-post .entry-content p,
+.single-post .post-content p,
+.article-content p {
+  font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  color: #111111 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* In-Article Subtitles & Headings */
+.single-post .article-body h2,
+.single-post .article-body h3,
+.single-post .entry-content h2,
+.single-post .entry-content h3,
+.article-content h2,
+.article-content h3 {
+  font-family: var(--serif-editorial) !important;
+  font-size: 24px !important;
   font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
-  color: var(--text-muted) !important;
+  line-height: 1.25 !important;
+  color: #111111 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Drop Cap Formatting */
+.article-content > p:first-of-type::first-letter,
+.entry-content > p:first-of-type::first-letter,
+.article-body > p:first-of-type::first-letter {
+  font-family: var(--serif-editorial) !important;
+  font-size: 3.6rem !important;
+  float: left !important;
+  line-height: 0.8 !important;
+  padding-top: 4px !important;
+  padding-right: 10px !important;
+  padding-bottom: 0 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
 }
 
 figcaption {
@@ -273,56 +351,9 @@ footer.site-footer ~ footer.site-footer,
 .site-footer:nth-of-type(n+2) {
   display: none !important;
 }
+
 /* =========================================
-   AD Precise Editorial Ratio (Mobile)
-   ========================================= */
-
-@media (max-width: 768px) {
-  /* 1. Headline - Dialed to 30px display serif */
-  .article-list article .article-title,
-  .article-list article h2,
-  .article-list article h2 a,
-  .article-title,
-  .article-title a {
-    font-family: "Playfair Display", "Didot", "Bodoni MT", Georgia, serif !important;
-    font-size: 30px !important;
-    font-weight: 400 !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.015em !important;
-    color: #111111 !important;
-    margin-top: 14px !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* 2. Hairline Divider */
-  .article-list article .article-title::after,
-  .article-list article h2::after,
-  .article-title::after {
-    content: "" !important;
-    display: block !important;
-    width: 48px !important;
-    height: 1px !important;
-    background-color: #111111 !important;
-    margin-top: 10px !important;
-    margin-bottom: 12px !important;
-  }
-
-  /* 3. Summary Deck - Crisp 15px sans-serif */
-  .article-list .article-subtitle,
-  .article-list .article-summary,
-  .article-list .article-excerpt,
-  .article-list article p,
-  .entry-summary p {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: 15px !important;
-    line-height: 1.45 !important;
-    font-weight: 400 !important;
-    color: #111111 !important;
-    margin-top: 0 !important;
-    margin-bottom: 24px !important;
-  }
-}/* =========================================
-   AD Precision Mobile Alignment
+   AD Precision Mobile Alignment Block
    ========================================= */
 
 @media (max-width: 768px) {
