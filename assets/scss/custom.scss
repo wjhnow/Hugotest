@@ -362,3 +362,11 @@ footer.site-footer ~ footer.site-footer,
   }
 }
 
+@media (max-width: 768px) {
+  .article-list .article-summary,
+  .article-list article p {
+    line-height: 1.32 !important;
+    margin-bottom: 20px !important;
+  }
+}
+
