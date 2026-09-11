@@ -196,7 +196,7 @@ h1.entry-title,
 
 /* --- 5. Single Article Page Overrides --- */
 
-/* 5.1 Category Tag */
+/* 5.1 Category & Article Tags (Scaled down so tags do not look overly large) */
 .category-badge,
 .article-category,
 .entry-category,
@@ -214,7 +214,7 @@ a[href*="/categories/"] {
   border-radius: 0 !important;
   box-shadow: none !important;
   font-family: var(--sans-ui) !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
@@ -222,7 +222,34 @@ a[href*="/categories/"] {
   display: inline-block !important;
 }
 
-/* 5.2 Article Subtitle / Deck Text — keep original comfortable size */
+/* Article Footer Tags / Pill Buttons */
+.article-tags,
+.post-tags,
+.tags,
+.tag-cloud {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+
+.article-tags a,
+.post-tags a,
+.tags a,
+.tag-cloud a,
+.tag {
+  font-family: var(--sans-ui) !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  padding: 3px 7px !important;
+  line-height: 1.2 !important;
+  display: inline-block !important;
+}
+
+/* 5.2 Article Subtitle / Deck Text */
 .single-post .article-subtitle,
 .single-post .entry-subtitle,
 .single-post .deck,
@@ -273,13 +300,13 @@ svg.lucide-clock {
   display: none !important;
 }
 
-/* 5.5 Post Body Serif Typography & Links — AD-style readable size */
+/* 5.5 Post Body Serif Typography â€” Increased font size to match reference */
 .article-body p,
 .entry-content p,
 .post-content p,
 .article-content p {
   font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.4rem !important; /* ~22.4px */
+  font-size: 1.52rem !important; /* ~24.3px for enhanced readability */
   line-height: 1.75 !important;
   font-weight: 400 !important;
   color: #222222 !important;
@@ -297,7 +324,7 @@ svg.lucide-clock {
   font-weight: 500 !important;
 }
 
-/* 5.6 In-Article Body Subheadings — larger */
+/* 5.6 In-Article Body Subheadings */
 .article-body h2,
 .article-body h3,
 .entry-content h2,
@@ -346,7 +373,7 @@ figcaption, .caption, .photo-credit {
 .entry-content > p:first-of-type strong::first-letter,
 .article-body > p:first-of-type strong::first-letter,
 .article-content > p:has(strong):first-of-type::first-letter,
-.entry-content > p:has(strong):first-of-type::first-letter {
+.entry-content p:has(strong):first-of-type::first-letter {
   font-size: inherit !important;
   float: none !important;
   line-height: inherit !important;
@@ -442,7 +469,7 @@ footer.site-footer ~ footer.site-footer,
     margin-bottom: 8px !important;
   }
 
-  /* Single article page main title — bigger for readability */
+  /* Single article page main title */
   .single-post h1.article-title,
   .single-post h1.entry-title,
   article h1.article-title,
@@ -492,7 +519,7 @@ footer.site-footer ~ footer.site-footer,
     padding-top: 0 !important;
   }
 
-  /* ===== Single article page — larger type on mobile ===== */
+  /* Single article page â€” increased body text on mobile */
   .single-post .article-subtitle,
   .single-post .entry-subtitle,
   .single-post .deck,
@@ -506,7 +533,7 @@ footer.site-footer ~ footer.site-footer,
   .entry-content p,
   .post-content p,
   .article-content p {
-    font-size: 1.375rem !important; /* ~22px */
+    font-size: 1.48rem !important; /* ~23.6px for mobile body text */
     line-height: 1.75 !important;
     margin-bottom: 1.6rem !important;
   }
