@@ -273,67 +273,6 @@ footer.site-footer ~ footer.site-footer,
 .site-footer:nth-of-type(n+2) {
   display: none !important;
 }
-/* =========================================
-   AD Middle East - Final Editorial Polish
-   ========================================= */
-
-/* Signature AD Drop-Cap on First Paragraph */
-.article-content > p:first-of-type::first-letter {
-  font-family: var(--serif-editorial) !important;
-  font-size: 4.2rem !important;
-  float: left !important;
-  line-height: 0.8 !important;
-  padding-top: 4px !important;
-  padding-right: 12px !important;
-  padding-bottom: 0 !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-
-/* Hide Theme Stack Tech Artifacts (Avatars, Dark Mode, Reading Time Icons) */
-#dark-mode-toggle,
-.article-avatar,
-.avatar,
-.article-time svg,
-.article-translations,
-.sidebar-container {
-  display: none !important;
-}
-
-/* Condé Nast Byline & Meta Styling */
-.article-subtitle,
-.article-time,
-.article-author,
-.article-meta {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.15em !important;
-  color: var(--text-muted) !important;
-}
-
-/* Editorial Image Captions */
-figcaption {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.75rem !important;
-  color: #666666 !important;
-  line-height: 1.4 !important;
-  margin-top: 0.75rem !important;
-  border-left: 2px solid #000000 !important;
-  padding-left: 0.75rem !important;
-  text-align: left !important;
-}
-
-/* Minimalist Centered Footer with AD Monogram */
-.site-footer {
-  background-color: #ffffff !important;
-  border-top: 1px solid var(--border-color) !important;
-  padding: 4rem 1.5rem 3rem !important;
-  text-align: center !important;
-  color: #111111 !important;
-  margin-top: 5rem !important;
-}
 
 .site-footer::before {
   content: "AD";
@@ -354,5 +293,55 @@ figcaption {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.12em !important;
+}
+
+/* =========================================
+   AD Ultra-Display Mobile Scale
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* 1. Dynamic Large Serif Headline */
+  .article-list article .article-title,
+  .article-list article h2,
+  .article-list article h2 a,
+  .article-title,
+  .article-title a {
+    font-family: "Playfair Display", "Didot", "Bodoni MT", Georgia, serif !important;
+    font-size: clamp(40px, 9.5vw, 52px) !important;
+    font-weight: 400 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.035em !important;
+    color: #000000 !important;
+    margin-top: 18px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* 2. Hairline Divider Line */
+  .article-list article .article-title::after,
+  .article-list article h2::after,
+  .article-title::after {
+    content: "" !important;
+    display: block !important;
+    width: 60px !important;
+    height: 1px !important;
+    background-color: #000000 !important;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* 3. Scaled-Up Article Deck / Summary */
+  .article-list .article-subtitle,
+  .article-list .article-summary,
+  .article-list .article-excerpt,
+  .article-list article p,
+  .entry-summary p {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 21px !important;
+    line-height: 1.4 !important;
+    font-weight: 400 !important;
+    color: #111111 !important;
+    margin-top: 0 !important;
+    margin-bottom: 32px !important;
+  }
 }
 
