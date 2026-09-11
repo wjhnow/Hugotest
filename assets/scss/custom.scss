@@ -516,3 +516,9 @@ figcaption, .caption, .photo-credit {
     padding-left: 12px !important;
   }
 }
+
+/* Hide duplicate footer instance */
+footer:nth-of-type(2),
+.site-footer:nth-of-type(2) {
+  display: none !important;
+}
