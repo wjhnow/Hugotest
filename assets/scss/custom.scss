@@ -99,35 +99,7 @@ body {
   margin-top: -2px;
 }
 
-/* --- 3. Header Masthead Tagline (Below Main Logo) --- */
-.site-masthead-tagline {
-  max-width: 1120px;
-  margin: 0 auto 2rem auto;
-  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--border-color);
-  text-align: left;
-}
 
-.site-masthead-tagline .tagline-title {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
-  color: #111111 !important;
-  margin-bottom: 0.35rem !important;
-  display: block;
-}
-
-.site-masthead-tagline .tagline-text {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.45 !important;
-  color: #555555 !important;
-  font-weight: 400 !important;
-  margin: 0 !important;
-  max-width: 580px;
-}
 
 /* --- 4. Navigation Drawer --- */
 .nav-drawer {
@@ -461,7 +433,6 @@ figcaption, .caption, .photo-credit {
   letter-spacing: 0.12em !important;
 }
 
-
 /* --- 8. Mobile Overrides --- */
 @media (max-width: 768px) {
   .site-masthead-tagline {
@@ -470,11 +441,11 @@ figcaption, .caption, .photo-credit {
   }
 
   .site-masthead-tagline .tagline-title {
-    font-size: 0.9rem !important;
+    font-size: 0.75rem !important;
   }
 
   .site-masthead-tagline .tagline-text {
-    font-size: 1.1rem !important;
+    font-size: 0.95rem !important;
     line-height: 1.45 !important;
   }
 
@@ -515,3 +486,4 @@ figcaption, .caption, .photo-credit {
     padding-left: 12px !important;
   }
 }
+
