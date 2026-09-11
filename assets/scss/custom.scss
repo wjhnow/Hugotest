@@ -295,53 +295,53 @@ footer.site-footer ~ footer.site-footer,
   letter-spacing: 0.12em !important;
 }
 
+/
 /* =========================================
-   AD Ultra-Display Mobile Scale
+   AD Precise Editorial Ratio (Mobile)
    ========================================= */
 
 @media (max-width: 768px) {
-  /* 1. Dynamic Large Serif Headline */
+  /* 1. Headline - Dialed to 30px display serif */
   .article-list article .article-title,
   .article-list article h2,
   .article-list article h2 a,
   .article-title,
   .article-title a {
     font-family: "Playfair Display", "Didot", "Bodoni MT", Georgia, serif !important;
-    font-size: clamp(40px, 9.5vw, 52px) !important;
+    font-size: 30px !important;
     font-weight: 400 !important;
-    line-height: 1.05 !important;
-    letter-spacing: -0.035em !important;
-    color: #000000 !important;
-    margin-top: 18px !important;
-    margin-bottom: 14px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
+    color: #111111 !important;
+    margin-top: 14px !important;
+    margin-bottom: 10px !important;
   }
 
-  /* 2. Hairline Divider Line */
+  /* 2. Hairline Divider */
   .article-list article .article-title::after,
   .article-list article h2::after,
   .article-title::after {
     content: "" !important;
     display: block !important;
-    width: 60px !important;
+    width: 48px !important;
     height: 1px !important;
-    background-color: #000000 !important;
-    margin-top: 16px !important;
-    margin-bottom: 16px !important;
+    background-color: #111111 !important;
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
   }
 
-  /* 3. Scaled-Up Article Deck / Summary */
+  /* 3. Summary Deck - Crisp 15px sans-serif */
   .article-list .article-subtitle,
   .article-list .article-summary,
   .article-list .article-excerpt,
   .article-list article p,
   .entry-summary p {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: 21px !important;
-    line-height: 1.4 !important;
+    font-size: 15px !important;
+    line-height: 1.45 !important;
     font-weight: 400 !important;
     color: #111111 !important;
     margin-top: 0 !important;
-    margin-bottom: 32px !important;
+    margin-bottom: 24px !important;
   }
 }
-
