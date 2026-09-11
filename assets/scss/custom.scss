@@ -230,8 +230,8 @@ a[href*="/categories/"] {
 .article-details .article-subtitle {
   text-transform: none !important;
   font-family: var(--sans-ui) !important;
-  font-size: 18px !important;
-  line-height: 1.5 !important;
+  font-size: 19px !important;
+  line-height: 1.55 !important;
   color: #333333 !important;
   letter-spacing: normal !important;
   margin-bottom: 18px !important;
@@ -279,11 +279,11 @@ svg.lucide-clock {
 .post-content p,
 .article-content p {
   font-family: "Georgia", "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.2rem !important;
-  line-height: 1.7 !important;
+  font-size: 1.3rem !important;
+  line-height: 1.75 !important;
   font-weight: 400 !important;
   color: #222222 !important;
-  margin-bottom: 1.4rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 /* Editorial Underlined Body Links */
@@ -305,12 +305,12 @@ svg.lucide-clock {
 .article-content h2,
 .article-content h3 {
   font-family: var(--serif-editorial) !important;
-  font-size: 26px !important;
+  font-size: 28px !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
   color: #111111 !important;
-  margin-top: 2.4rem !important;
-  margin-bottom: 1.1rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.15rem !important;
 }
 
 /* 5.8 Captions and Credits */
@@ -330,11 +330,11 @@ figcaption, .caption, .photo-credit {
 .entry-content > p:first-of-type::first-letter,
 .article-body > p:first-of-type::first-letter {
   font-family: var(--serif-editorial) !important;
-  font-size: 4.2rem !important;
+  font-size: 4.6rem !important;
   float: left !important;
   line-height: 0.75 !important;
   padding-top: 4px !important;
-  padding-right: 10px !important;
+  padding-right: 12px !important;
   padding-bottom: 0 !important;
   margin-left: -2px !important;
   color: #000000 !important;
@@ -360,11 +360,11 @@ figcaption, .caption, .photo-credit {
 .article-content p:has(strong) + p::first-letter,
 .entry-content p:has(strong) + p::first-letter {
   font-family: var(--serif-editorial) !important;
-  font-size: 4.2rem !important;
+  font-size: 4.6rem !important;
   float: left !important;
   line-height: 0.75 !important;
   padding-top: 4px !important;
-  padding-right: 10px !important;
+  padding-right: 12px !important;
   color: #000000 !important;
   font-weight: 700 !important;
 }
@@ -428,13 +428,10 @@ footer.site-footer ~ footer.site-footer,
 /* --- 7. Precision Mobile Overrides --- */
 
 @media (max-width: 768px) {
-  /* Homepage stream titles (unchanged intent) */
+  /* Homepage stream titles */
   .article-list article .article-title,
   .article-list article h2,
-  .article-title,
-  .article-title a,
-  h1.article-title,
-  h1.entry-title {
+  .article-list .article-title a {
     font-family: var(--serif-editorial) !important;
     font-size: 32px !important;
     font-weight: 400 !important;
@@ -443,6 +440,22 @@ footer.site-footer ~ footer.site-footer,
     color: #111111 !important;
     margin-top: 14px !important;
     margin-bottom: 8px !important;
+  }
+
+  /* Single article page main title — bigger for readability */
+  .single-post h1.article-title,
+  .single-post h1.entry-title,
+  article h1.article-title,
+  article h1.entry-title,
+  .article-header h1 {
+    font-family: var(--serif-editorial) !important;
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    color: #111111 !important;
+    margin-top: 10px !important;
+    margin-bottom: 14px !important;
   }
 
   .article-list article .article-title::after,
@@ -485,17 +498,17 @@ footer.site-footer ~ footer.site-footer,
   .single-post .deck,
   .article-header .subtitle,
   .article-details .article-subtitle {
-    font-size: 17px !important;
-    line-height: 1.5 !important;
+    font-size: 18px !important;
+    line-height: 1.55 !important;
   }
 
   .article-body p,
   .entry-content p,
   .post-content p,
   .article-content p {
-    font-size: 1.175rem !important; /* ~18.8px */
-    line-height: 1.7 !important;
-    margin-bottom: 1.35rem !important;
+    font-size: 1.25rem !important; /* ~20px */
+    line-height: 1.75 !important;
+    margin-bottom: 1.45rem !important;
   }
 
   .article-body h2,
@@ -504,10 +517,10 @@ footer.site-footer ~ footer.site-footer,
   .entry-content h3,
   .article-content h2,
   .article-content h3 {
-    font-size: 24px !important;
+    font-size: 26px !important;
     line-height: 1.3 !important;
-    margin-top: 2rem !important;
-    margin-bottom: 0.9rem !important;
+    margin-top: 2.1rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .article-content > p:first-of-type::first-letter,
@@ -517,6 +530,6 @@ footer.site-footer ~ footer.site-footer,
   .article-content h3 + p::first-letter,
   .article-content p:has(strong) + p::first-letter,
   .entry-content p:has(strong) + p::first-letter {
-    font-size: 3.9rem !important;
+    font-size: 4.3rem !important;
   }
 }
