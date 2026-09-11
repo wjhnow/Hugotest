@@ -370,3 +370,12 @@ footer.site-footer ~ footer.site-footer,
   }
 }
 
+@media (max-width: 768px) {
+  /* Reduce bottom margin and add faint card divider line */
+  .article-list article {
+    margin-bottom: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+  }
+}
+
