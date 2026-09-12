@@ -15,6 +15,8 @@ categories:
 ---
 ## Day 7 in Syafrubesi: 'If We Find Anything Now, It's Just Parts'
 
+
+
 **SYAFRUBESI, Nepal** — The smell of wet river mud hits you long before you reach the banks of the Trishuli.
 
 It’s day seven, and the search teams here have mostly put down their shovels. Nobody is looking for survivors under the silt anymore.
@@ -34,4 +36,6 @@ And the weather isn't helping. Rain started falling again over the ridges this m
 ---
 
 **Reporting**: On-ground notes from Syafrubesi, Rasuwa District. Sources: Nepal Army, local volunteers, District Administration Office.  
+
 **Last Updated**: September 3, 2026, 10:00 AM AST
+
