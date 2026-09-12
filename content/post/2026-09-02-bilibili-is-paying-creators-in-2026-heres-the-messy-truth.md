@@ -64,5 +64,5 @@ I’m gonna post 2 videos and forget about it for a month. If something happens 
 
 ---
 
-**Where I got this stuff**
+Where I got this stuff**
 Read the GadgetsNow guides, NDTV piece, and scrolled X/Threads for 30 min to see what creators are actually saying. [1][2][5]
