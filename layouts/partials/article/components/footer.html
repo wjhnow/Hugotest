@@ -2,15 +2,6 @@
     <!-- Article Tags -->
     {{ partial "article/components/tags" . }}
 
-    <!-- Live Social Updates Block -->
-    <div class="live-updates">
-        <strong>Live updates:</strong>
-        <a href="https://t.me/wjh_now" target="_blank" rel="noopener noreferrer">Telegram @wjh_now</a>
-        <span class="sep">|</span>
-        <a href="https://x.com/wjhnow" target="_blank" rel="noopener noreferrer">X @wjhnow</a>
-        <span class="sep">|</span>
-        <a href="https://facebook.com/wjhnow" target="_blank" rel="noopener noreferrer">Facebook @wjhnow</a>
-    </div>
 
     <!-- Author Bio Section -->
     {{ $author := .Params.author | default .Params.authors }}
