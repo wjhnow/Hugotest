@@ -15,7 +15,7 @@ tags:
 categories:
   - Technology
 ---
-# I Tried To Figure Out If Bilibili Pays. It’s Weird.
+## I Tried To Figure Out If Bilibili Pays. It’s Weird.
 
 I downloaded Bilibili at 2am last Tuesday because I saw a meme about it on Reddit.
 "China YouTube" they said. "They’re paying creators now."
@@ -26,7 +26,7 @@ Bilibili is old. Like 16 years old. Started with anime. My brother in India used
 
 I don’t even know why I cared. Maybe just FOMO.
 
-## The money part
+### The money part
 
 Okay so requirements. This is where I got confused.
 
@@ -37,7 +37,7 @@ The new global thing is supposed to be $0.70 per 1k views but... is it? Bilibili
 
 The real money is coins. People throw you virtual batteries. It’s like Twitch but in Chinese. Can be $0, can be a lot. No way to predict.
 
-## It’s still beta as hell
+### It’s still beta as hell
 
 Here’s the part nobody’s saying out loud.
 
@@ -49,9 +49,10 @@ Saw this on X yesterday from a guy testing it:
 > "dashboard is live but translation is cooked 💀 payout setup took me an hour and im still not sure it worked. its youtube studio if youtube studio was made in 2009"
 
 That’s more honest than any PR line. [1][3]
+
 It’s not broken. It’s just... first week. You’re the guinea pig.
 
-## So should you?
+### So should you?
 
 I genuinely have no idea.
 
