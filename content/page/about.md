@@ -1,6 +1,6 @@
 ---
 title: About WJH.now
-description: "The internet is full of news. We do the weird stuff. Science, space, and tech facts you didn’t know you needed."
+description: 
 menu:
   main:
     weight: 5
