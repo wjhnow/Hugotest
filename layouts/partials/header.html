@@ -11,12 +11,17 @@
   <!-- Navigation Drawer -->
   <nav class="nav-drawer" id="navDrawer">
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/categories/architecture/">Architecture</a></li>
-      <li><a href="/categories/interiors/">Interiors</a></li>
-      <li><a href="/categories/style/">Style</a></li>
-      <li><a href="/categories/celebrity-homes/">Celebrity Homes</a></li>
+      <li><a href="{{ "/about-wjh.now/" | relURL }}">About WJHnow</a></li>
     </ul>
+
+    <div class="drawer-social-section">
+      <span class="drawer-social-title">Follow us</span>
+      <div class="drawer-social-links">
+        <a href="https://t.me/wjh_now" target="_blank" rel="noopener noreferrer">Telegram @wjh_now</a>
+        <a href="https://x.com/wjhnow" target="_blank" rel="noopener noreferrer">X @wjhnow</a>
+        <a href="https://facebook.com/wjhnow" target="_blank" rel="noopener noreferrer">Facebook @wjhnow</a>
+      </div>
+    </div>
   </nav>
 </header>
 
@@ -33,8 +38,8 @@
 
     if (toggleBtn && navDrawer) {
       toggleBtn.addEventListener("click", function() {
-        toggleBtn.classList.toggle("active");
         navDrawer.classList.toggle("active");
+        toggleBtn.classList.toggle("open");
       });
     }
   });
