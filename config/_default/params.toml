@@ -1,16 +1,9 @@
-# Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
-# Output page's full content in RSS.
+mainSections   = ["post"]
 rssFullContent = true
 favicon        = "img/favicon.png"
 
-# Accepted values: "default", "lastmod"
-# default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
-# lastmod = sort by last modified date, in descending order
-SortBy              = "default"
-
 [footer]
-    since      = 2020
+    since      = 2026
     customText = ""
 
 [dateFormat]
@@ -18,18 +11,15 @@ SortBy              = "default"
     lastUpdated = ":date_full"
 
 [sidebar]
-    emoji    = "🍥"
-    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    subtitle = "The internet is full of news. We do the weird stuff. Science, space, and tech facts you didn’t know you needed"
     avatar   = "img/avatar.png"
 
 [article]
     headingAnchor = false
     math          = false
-    readingTime   = false
-
+    readingTime   = true
     [article.license]
         enabled = false
-        default = "Licensed under CC BY-NC-SA 4.0"
 
 [widgets]
     homepage = [
@@ -40,18 +30,9 @@ SortBy              = "default"
     ]
     page = [{ type = "toc" }]
 
-[opengraph.twitter]
-    site = ""
-    card = "summary_large_image"
-
 [colorScheme]
     toggle  = true
     default = "auto"
 
-## Comments
 [comments]
-    enabled  = false
-    provider = "disqus"
-
-    # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
-    # Copy the configurations you need from there and paste it here.
+    enabled = false
