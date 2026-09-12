@@ -9,6 +9,7 @@ author: Mr Wnow
 tags:
   - Science
 ---
+
 I woke up feeling dull one morning. I really wanted to go to work... but then I took off for the day. Let's say, somewhere out there, another version of me pushed through and showed up anyway.
 
 This is not pure science fiction. It comes from one of the most serious and debated ideas in modern physics: the Many-Worlds Interpretation of quantum mechanics.
@@ -31,7 +32,8 @@ In simple quantum physics, branching happens when two things get linked together
 
 The original theory was about tiny quantum events.
 
-Using it to explain human choices is taking it one step further**
+**Using it to explain human choices is taking it one step further**
+
 Here "taking it one step further" means, we still have zero knowledge that human choices create new quantum branches, most scientists say "probably not".
 
 So here is the important clarification: most everyday choices do not automatically create new universes in the dramatic way the popular version suggests. The human brain runs mostly on regular classical chemistry and physics, not quantum weirdness. All the signals firing between neurons happen in a warm, messy biological environment, and that kind of environment tends to wash out quantum effects before they matter.
@@ -46,7 +48,8 @@ The universe is still branching constantly at the subatomic level though, trilli
 
 David Deutsch is probably the loudest defender of this idea today. He basically says Many-Worlds isn't even the weird option — it's just what the math tells you if you take it at face value instead of adding extra rules to make it feel normal. Critics obviously disagree. Their main issue is that this theory multiplies reality on a massive scale, and there's no experiment anyone can actually run to confirm the other branches are real. 
 
-A lot of critics also point out that stretching this to cover everyday human choices goes way beyond anything Everett actually claimed**
+**A lot of critics also point out that stretching this to cover everyday human choices goes way beyond anything Everett actually claimed**
+
 A lot of critics also point out that stretching this to cover everyday human choices goes way beyond anything Everett actually claimed in his original paper — he was talking about particles, not people skipping work.
 
 Still, the core claim comes down to the math itself: if the wave function never collapses, then every possible outcome is still sitting there, still existing, just in a different branch.
