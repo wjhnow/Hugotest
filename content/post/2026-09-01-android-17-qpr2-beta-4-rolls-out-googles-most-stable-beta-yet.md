@@ -44,5 +44,5 @@ Most people are still on Android 14 anyway. Update if you want, just don’t exp
 
 ---
 
-**Where this came from**
+Where this came from
 Read the 9to5Google coverage, watched the Notification Intelligence breakdown on YouTube, and scrolled r/android_beta + X for 20 min to see what beta testers are actually saying. [1][2][3][4]
