@@ -33,7 +33,7 @@ Follows it up, running about an hour and covering how LLMs work, common use case
 **Introduction to Responsible AI**  
 Gets into Google's own principles around bias, fairness, and transparency — the stuff that matters more than people give it credit for once you start actually deploying these tools.
 
-Complete all three and Google gives you a free **"Generative AI Fundamentals"** skill badge.
+Complete all three and Google gives you a free "Generative AI Fundamentals" skill badge.
 
 ### The Catch
 
