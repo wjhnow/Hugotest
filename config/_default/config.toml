@@ -2,6 +2,7 @@
 baseurl = "https://wjhnow.github.io/hugotest/"
 locale  = "en-us"
 title   = "WJHnow"
+enableRobotsTXT = true
 
 # Theme i18n support
 # See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
