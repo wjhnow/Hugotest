@@ -1,5 +1,5 @@
 ---
-title: About WJH.now
+title: 
 description: 
 menu:
   main:
