@@ -1,19 +1,14 @@
-# Change baseurl before deploy
-baseurl = "https://wjhnow.github.io/hugotest/"
-locale  = "en-us"
-title   = "WJHnow"
+baseURL = "https://wjhnow.com/Hugotest"
+title = "What Just Happened NOW"
+languageCode = "en-us"
+
 enableRobotsTXT = true
 
-# Theme i18n support
-# See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n
-defaultContentLanguage = "en"
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage = false
-
-# Change it to your Disqus shortname before using
-disqusShortname = "hugo-theme-stack"
-
-[pagination]
-    pagerSize = 5
+[params]
+  description = "The internet is full of news. We do the weird stuff. Science, space, and tech facts you didn’t know you needed."
+  mainSections = ["post"]
+  
+  [sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
