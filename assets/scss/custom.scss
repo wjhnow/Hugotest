@@ -678,35 +678,51 @@ footer hr,
     color: #111111 !important;
 }
 
-/* --- Live Updates Bar Font & Mobile Scaling --- */
+/* ==========================================
+   GLOBAL FOOTER & SOCIAL BAR TYPOGRAPHY
+   ========================================== */
+
+/* 1. Entire Footer Container */
+.site-footer {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 32px 16px !important;
+}
+
+/* 2. Social / Live Updates Bar (Whole Block) */
 .site-footer .live-updates,
 .live-updates {
+    width: 100% !important;
+    max-width: 640px !important;
     font-family: var(--sans-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif) !important;
-    font-size: 12px !important;
-    line-height: 1.8 !important;
-    letter-spacing: 0.1em !important;
+    font-size: 13px !important;            /* Scaled up from 9px/11px */
+    line-height: 2.0 !important;           /* Prevents line collisions on mobile wrap */
+    letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
-    color: #444444 !important;
-    padding: 14px 10px !important;
-    margin-bottom: 20px !important;
-    border-top: 1px solid #eaeaea !important;
-    border-bottom: 1px solid #eaeaea !important;
+    color: #333333 !important;
+    padding: 16px 12px !important;
+    margin: 0 0 24px 0 !important;
+    border-top: 1px solid #e0e0e0 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
     text-align: center !important;
 }
 
 .live-updates strong {
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     color: #000000 !important;
-    margin-right: 6px !important;
+    margin-right: 8px !important;
     display: inline-block !important;
 }
 
 .live-updates a {
     color: #111111 !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;          /* Bolded for visual weight */
     text-decoration: none !important;
     display: inline-block !important;
-    padding: 2px 4px !important;
+    padding: 4px 6px !important;          /* Larger tap targets */
     transition: color 0.2s ease !important;
 }
 
@@ -715,15 +731,51 @@ footer hr,
 }
 
 .live-updates .sep {
-    color: #cccccc !important;
-    margin: 0 6px !important;
-    font-weight: 300 !important;
+    color: #bbbbbb !important;
+    margin: 0 8px !important;
+    font-weight: 400 !important;
 }
 
-/* Bump up slightly for larger screens */
+/* 3. Title & Copyright Line */
+.site-footer .copyright {
+    font-family: var(--sans-ui, -apple-system, sans-serif) !important;
+    font-size: 15px !important;            /* Clear, readable title */
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    color: #111111 !important;
+    margin-bottom: 6px !important;
+}
+
+/* 4. Domain Sub-heading */
+.footer-domain {
+    margin-bottom: 20px !important;
+}
+
+.footer-domain a {
+    font-family: var(--sans-ui, -apple-system, sans-serif) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: #666666 !important;
+    text-decoration: none !important;
+}
+
+.footer-domain a:hover {
+    color: #000000 !important;
+}
+
+/* 5. Theme Credits */
+.site-footer .powerby {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    color: #888888 !important;
+}
+
+/* Desktop Expansion */
 @media (min-width: 768px) {
     .site-footer .live-updates,
     .live-updates {
-        font-size: 13px !important;
+        font-size: 14px !important;        /* Comfortably sized on desktop */
     }
 }
