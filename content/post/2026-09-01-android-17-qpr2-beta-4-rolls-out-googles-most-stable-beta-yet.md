@@ -16,7 +16,7 @@ tags:
 categories:
   - Technoloy
 ---
-# Android 17 QPR2 Beta 4: Pixel 11 Support Arrives And Notification Intelligence Is Cooked 💀
+## Android 17 QPR2 Beta 4: Pixel 11 Support Arrives And Notification Intelligence Is Cooked 💀
 
 Android 17 QPR2 Beta 4 dropped over the weekend. Google also finally let Pixel 11 owners into the beta program yesterday, which is late but whatever.
 
@@ -28,7 +28,7 @@ There’s also a new Status Bar menu hiding in Settings > System. You can kill t
 
 Lock screen overlays are back too. Calendar and weather widgets that sit on the glass. Looked clean for five minutes until a notification rolled in and the text crashed right into the Spotify player. Classic.
 
-## The community vibe right now
+### The community vibe right now
 
 Scrolling Reddit and X is weird. No one’s posting bricked device threads. People are just complaining less.
 
@@ -36,7 +36,7 @@ The standby drain from Beta 3 is gone. Phones make it to dinner now instead of d
 
 That’s not normal for a QPR2 beta.
 
-## So should you install it?
+### So should you install it?
 
 For Pixel 11 and Fold owners this is the first beta available. Google locked the APIs so it won’t nuke apps.
 
