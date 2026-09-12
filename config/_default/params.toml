@@ -25,7 +25,7 @@ SortBy              = "default"
 [article]
     headingAnchor = false
     math          = false
-    readingTime   = true
+    readingTime   = false
 
     [article.license]
         enabled = false
