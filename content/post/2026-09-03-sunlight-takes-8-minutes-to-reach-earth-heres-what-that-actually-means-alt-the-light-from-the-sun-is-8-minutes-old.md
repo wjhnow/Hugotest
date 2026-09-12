@@ -18,9 +18,9 @@ tags:
 categories:
   - Science
 ---
-# Sunlight Takes 8 Minutes To Reach Earth. Here's What That Actually Means
+## Sunlight Takes 8 Minutes To Reach Earth. Here's What That Actually Means
 
-Alt: The Light From The Sun Is 8 Minutes Old. And That's Wild
+*Alt: The Light From The Sun Is 8 Minutes Old. And That's Wild*
 
 Weird thought.
 
@@ -28,18 +28,17 @@ The warmth on your face? That light left the Sun 8 minutes and 20 seconds ago. N
 
 I know, sounds fake. But it’s just math and a lot of empty space.
 
-## So why 8 minutes?
+### So why 8 minutes?
 
-Because the Sun is stupid far. 
+Because the Sun is stupid far. 93 million miles. 150 million km. Whatever. 
 
-93 million miles. 150 million km. Whatever. 
 Light is fast — 186,282 miles per second — but even that isn’t instant when you’re crossing that much nothing.
 
 500 seconds. 
 8 minutes 20 seconds on average. 
 It actually changes a few seconds during the year because our orbit isn’t a perfect circle. But close enough.
 
-## If the Sun just... turned off
+### If the Sun just... turned off
 
 We’d have no idea for a while.
 
@@ -51,7 +50,7 @@ And it gets crazier the further out you go. Moonlight is only 1.3 seconds old. P
 
 The Sun thing is just the one we deal with every day.
 
-## The light is way older than 8 minutes
+### The light is way older than 8 minutes
 
 Here’s the part that broke my brain.
 
@@ -67,10 +66,9 @@ Then it finally reaches the surface and goes "ok, time to sprint" and does the 8
 
 So technically, the light hitting you might be older than humans.
 
-## Why this actually matters
+### Why this actually matters
 
 Without those 8 minutes, nothing works.
-
 No weather. No oceans moving. No plants, no oxygen, no food. That whole delay is literally what keeps us alive.
 
 So next time you’re outside, just... think about that. A piece of light got lost inside a star for 100,000 years, then booked it across space for 8 minutes, just to hit your nose.
