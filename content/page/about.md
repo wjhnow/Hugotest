@@ -10,7 +10,6 @@ comments: false
 ---
 
 ### About WJH.now
-The internet is full of news. We do the weird stuff. Science, space, and tech facts you didn’t know you needed.
 
 Look, the internet is loud.
 Every day there's a new gadget, a new space photo, a new "scientists say".
