@@ -516,3 +516,19 @@ figcaption, .caption, .photo-credit {
     padding-left: 12px !important;
   }
 }
+
+/* Force the site container to wrap elements horizontally */
+.main-container {
+    flex-wrap: wrap !important;
+}
+
+/* Override the desktop desktop sidebar styles for the footer */
+@media (min-width: 768px) {
+    .site-footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 0 100% !important;
+        order: 99; /* Forces the footer to the absolute bottom of the layout flow */
+        margin-top: 4rem; /* Adds clean spacing between content and the footer */
+    }
+}
