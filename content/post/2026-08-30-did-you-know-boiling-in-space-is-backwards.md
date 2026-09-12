@@ -14,7 +14,7 @@ categories:
   - Science
   - Physics & Engineering
 ---
-## In Space, Boiling Water Does the Opposite. And That’s a Problem for Rockets.
+# In Space, Boiling Water Does the Opposite. And That’s a Problem for Rockets.
 
 On Earth when you boil water, bubbles go up. In space there IS no up.
 
@@ -24,7 +24,7 @@ So researchers from the University of Florida did a "dumb but cool" test. They t
 
 And???
 
-### What they found
+## What they found
 
 It went the opposite way of what they thought. At first.
 
@@ -34,7 +34,7 @@ Turns out when bubbles CAN’T float away, they just sit on the hot metal. And t
 
 So it’s like... better, until it’s suddenly catastrophic.
 
-### Why it matters
+## Why it matters
 
 Mars missions. Deep space. Rocket fuel has to stay cold for YEARS. If engineers can figure out how to design tank walls to stop bubbles from doing this, we might actually make long missions work.
 
