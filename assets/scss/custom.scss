@@ -654,3 +654,26 @@ footer hr,
     padding: 0.65rem 0 !important;
   }
 }
+
+.site-footer .copyright {
+    margin-bottom: 2px !important;
+}
+
+.footer-domain {
+    margin-bottom: 16px !important;
+}
+
+.footer-domain a {
+    font-family: var(--sans-ui, -apple-system, sans-serif) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: #777777 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.footer-domain a:hover {
+    color: #111111 !important;
+}
