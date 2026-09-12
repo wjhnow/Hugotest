@@ -555,3 +555,55 @@ footer hr,
   width: 0 !important;
   height: 0 !important;
 }
+/* --- Live Updates & Editorial Social Bar --- */
+.live-updates {
+  font-family: var(--sans-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.04em !important;
+  color: #555555 !important;
+  margin: 2rem 0 1.5rem 0 !important;
+  padding: 0.75rem 0 !important;
+  border-top: 1px solid #e5e5e5 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+.live-updates strong,
+.live-updates b {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #111111 !important;
+  margin-right: 0.4rem !important;
+}
+
+.live-updates a {
+  color: #222222 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.live-updates a:hover {
+  color: #000000 !important;
+  border-bottom: 1px solid #111111 !important;
+}
+
+.live-updates .sep {
+  color: #cccccc !important;
+  padding: 0 0.25rem !important;
+  user-select: none !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .live-updates {
+    font-size: 0.8rem !important;
+    padding: 0.65rem 0 !important;
+  }
+}
