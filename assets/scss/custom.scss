@@ -677,3 +677,53 @@ footer hr,
 .footer-domain a:hover {
     color: #111111 !important;
 }
+
+/* --- Live Updates Bar Font & Mobile Scaling --- */
+.site-footer .live-updates,
+.live-updates {
+    font-family: var(--sans-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif) !important;
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: #444444 !important;
+    padding: 14px 10px !important;
+    margin-bottom: 20px !important;
+    border-top: 1px solid #eaeaea !important;
+    border-bottom: 1px solid #eaeaea !important;
+    text-align: center !important;
+}
+
+.live-updates strong {
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin-right: 6px !important;
+    display: inline-block !important;
+}
+
+.live-updates a {
+    color: #111111 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 2px 4px !important;
+    transition: color 0.2s ease !important;
+}
+
+.live-updates a:hover {
+    color: #666666 !important;
+}
+
+.live-updates .sep {
+    color: #cccccc !important;
+    margin: 0 6px !important;
+    font-weight: 300 !important;
+}
+
+/* Bump up slightly for larger screens */
+@media (min-width: 768px) {
+    .site-footer .live-updates,
+    .live-updates {
+        font-size: 13px !important;
+    }
+}
