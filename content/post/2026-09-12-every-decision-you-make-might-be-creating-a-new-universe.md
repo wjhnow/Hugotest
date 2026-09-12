@@ -4,6 +4,7 @@ date: 2026-09-12
 description: Did you know. Or do you believe if I say every time you choose one
   thing instead of another, a version of you might keep going down the path you
   didn't take.
+image: /img/2026-09-09_split_universe-1.jpeg
 author: Mr Wnow
 tags:
   - Science
