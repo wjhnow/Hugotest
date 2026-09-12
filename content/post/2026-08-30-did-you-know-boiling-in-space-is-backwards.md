@@ -28,7 +28,7 @@ And???
 
 It went the opposite way of what they thought. At first.
 
-Turns out when bubbles CAN’T float away, they just sit on the hot metal. And that weirdly makes them **pull heat out FASTER**. Way better cooling. The lead researcher Youngsup Song said: "yeah we expected worse, got better instead"
+**Turns out** when bubbles CAN’T float away, they just sit on the hot metal. And that weirdly makes them **pull heat out FASTER**. Way better cooling. The lead researcher Youngsup Song said: "yeah we expected worse, got better instead"
 
 **BUT. Big but.** It also breaks **65% sooner**. Because all those bubbles just sit there and eventually glom together and dry the whole surface out. Then nothing cools and everything would fry.
 
