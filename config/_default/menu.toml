@@ -1,24 +1,23 @@
-# Configure main menu and social menu
-#[[main]]
-#identifier = "home"
-#name = "Home"
-#url = "/"
-#[main.params]
-#icon = "home"
-#newtab = true
+# -------------------------------
+# Social Icons (Facebook + X)
+# -------------------------------
+[[social]]
+identifier = "facebook"
+name = "Facebook"
+url = "https://facebook.com/wjhnow"          # ← Change this
+[social.params]
+icon = "brand-facebook"
 
 [[social]]
-    identifier = "github"
-    name       = "GitHub"
-    url        = "https://github.com/CaiJimmy/hugo-theme-stack"
-
-    [social.params]
-        icon = "brand-github"
+identifier = "x"
+name = "X"
+url = "https://x.com/wjhnow"             # ← Change this
+[social.params]
+icon = "brand-x"
 
 [[social]]
-    identifier = "twitter"
-    name       = "Twitter"
-    url        = "https://twitter.com"
-
-    [social.params]
-        icon = "brand-twitter"
+identifier = "Twitter"
+name = "Twitter"
+url = "https://t.me/wjh_now"             # ← Change this
+[social.params]
+icon = "brand-Twitter"
