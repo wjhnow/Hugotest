@@ -120,11 +120,12 @@ body {
   display: block !important;
 }
 
+.site-masthead-tagline p,
 .site-masthead-tagline .tagline-text {
-  font-family: var(--font-serif, "Cormorant Garamond", "Georgia", serif) !important;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif !important;
   font-size: 21px !important;
   font-style: italic !important;
-  line-height: 1.4 !important;
+  line-height: 1.45 !important;
   color: #444444 !important;
   font-weight: 400 !important;
   margin: 0 !important;
