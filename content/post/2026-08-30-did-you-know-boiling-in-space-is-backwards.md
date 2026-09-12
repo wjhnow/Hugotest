@@ -20,7 +20,7 @@ On Earth when you boil water, bubbles go up. In space there IS no up.
 
 Scientists have been trying to figure out what that means for rockets and space computers. They use super cold liquids to stay cool, but nobody really knew what boiling looks like in zero gravity.
 
-So researchers from the University of Florida did a "dumb but cool" test. They took **liquid nitrogen** — basically fake rocket fuel — and flew it on those "vomit comet" planes. The ones that dive to make zero-g for about 20 seconds.
+**So researchers** from the University of Florida did a "dumb but cool" test. They took **liquid nitrogen** — basically fake rocket fuel — and flew it on those "vomit comet" planes. The ones that dive to make zero-g for about 20 seconds.
 
 And???
 
