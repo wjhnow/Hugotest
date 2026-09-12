@@ -9,7 +9,7 @@ menu:
 comments: false
 ---
 
-### About WJH.now
+
 
 Look, the internet is loud.
 Every day there's a new gadget, a new space photo, a new "scientists say".
