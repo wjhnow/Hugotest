@@ -670,3 +670,40 @@ footer hr,
   color: #000000 !important;
   text-decoration: underline !important;
 }
+
+/* --- Hamburger Menu Icon & X-Transform Animation --- */
+.hamburger-menu {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 22px !important;
+  height: 16px !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+.hamburger-menu span {
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: #111111 !important;
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out !important;
+  transform-origin: center !important;
+}
+
+/* Transform 3 bars into X when menu is active */
+.hamburger-menu.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg) !important;
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0 !important;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg) !important;
+}
