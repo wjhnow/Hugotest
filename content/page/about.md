@@ -38,13 +38,13 @@ Email us at info@wjhnow.com — we read everything.
 
 <img src="/img/mr-jh.png" alt="Mr. JH" class="author-inline-avatar">
 
-**-Mr. JH**
+** 1.Mr. JH**
 
 I'm the science nerd. I dig through research papers and turn "quantum entanglement" into "here's why it's weird". If it involves space or a "did you know", I probably wrote it.
 
 <img src="/img/mr-wnow.png" alt="Mr. Wnow" class="author-inline-avatar">
 
-**-Mr. Wnow**
+** 2. Mr. Wnow**
 
 I'm the tech guy. Gadgets, AI, and all the "how does this actually work" stuff. I test the claims so you get the truth without the marketing fluff.
 
