@@ -421,7 +421,7 @@ h1.entry-title,
   text-decoration-thickness: 1px !important;
 }
 
-/* Subheadings */
+/* --- 6. Subheadings (Bolder, Larger, Thicker Bar) --- */
 .article-body h2,
 .article-body h3,
 .article-body h4,
@@ -432,14 +432,15 @@ h1.entry-title,
 .article-content h3,
 .article-content h4 {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.75rem !important;
-  font-weight: 400 !important;
-  line-height: 1.3 !important;
+  font-size: 2.1rem !important; /* Increased from 1.75rem */
+  font-weight: 700 !important; /* Changed from 400 to bold */
+  line-height: 1.25 !important;
   color: #111111 !important;
   margin: 2.6rem 0 1.1rem 0 !important;
-  border-left: 2px solid var(--accent-bar) !important;
+  border-left: 3px solid var(--accent-bar) !important; /* Thicker left accent bar */
   padding-left: 14px !important;
 }
+
 
 /* Drop cap */
 .article-content > p:first-of-type::first-letter,
