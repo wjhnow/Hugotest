@@ -560,76 +560,6 @@ a[href*="/categories/"]:hover {
 }
 
 /* --- 7. Related Content Hard Structural Reset --- */
-.related-content,
-.related-posts,
-.related,
-[class*="related"] {
-  margin-top: 3.5rem !important;
-  padding-top: 2rem !important;
-  border-top: 1px solid var(--border-color) !important;
-  background: transparent !important;
-}
-
-/* Force container into clean block flow */
-.related-content article,
-.related-posts article,
-.related article,
-[class*="related"] article,
-.related-card {
-  display: block !important;
-  position: relative !important;
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin-bottom: 2.5rem !important;
-  height: auto !important;
-  min-height: 0 !important;
-}
-
-/* Clear links acting as full-card absolute covers */
-[class*="related"] article > a,
-[class*="related"] .article-link,
-[class*="related"] a {
-  position: static !important;
-  display: block !important;
-  height: auto !important;
-  width: 100% !important;
-}
-
-/* Image formatting */
-[class*="related"] .article-image,
-[class*="related"] img {
-  position: relative !important;
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 380px !important;
-  object-fit: cover !important;
-  border-radius: 0 !important;
-  margin: 0 0 0.8rem 0 !important;
-  float: none !important;
-}
-
-/* Push text container completely below image */
-[class*="related"] .article-details,
-[class*="related"] .article-title-wrapper {
-  position: relative !important;
-  display: block !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  inset: auto !important;
-  transform: none !important;
-  background: transparent !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-/* --- 7. Hugo Stack Related Content Reset --- */
 .related-contents,
 .related-content,
 aside.related-contents {
@@ -638,6 +568,17 @@ aside.related-contents {
   border-top: 1px solid var(--border-color) !important;
   background: transparent !important;
   display: block !important;
+}
+
+/* Strip top-level link bounds from covering entire cards */
+.related-contents article > a,
+.related-content article > a,
+.related-contents .article-list a,
+.related-content .article-list a {
+  position: static !important;
+  display: block !important;
+  height: auto !important;
+  width: 100% !important;
 }
 
 /* Force container cards out of grid overlay into block flow */
@@ -658,12 +599,12 @@ aside.related-contents {
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
-  margin: 0 !important;
+  margin-bottom: 2.5rem !important;
   height: auto !important;
   min-height: 0 !important;
 }
 
-/* Ensure the thumbnail image displays on top */
+/* Ensure the thumbnail image displays cleanly on top */
 .related-contents article .article-image,
 .related-content article .article-image,
 .related-contents article img,
@@ -677,11 +618,14 @@ aside.related-contents {
   border-radius: 0 !important;
   margin-bottom: 0.8rem !important;
   inset: auto !important;
+  float: none !important;
 }
 
-/* Push text wrapper below the image */
+/* Push text wrapper completely below the image */
 .related-contents article .article-details,
-.related-content article .article-details {
+.related-content article .article-details,
+.related-contents article .article-title-wrapper,
+.related-content article .article-title-wrapper {
   position: relative !important;
   display: block !important;
   top: auto !important;
@@ -694,6 +638,8 @@ aside.related-contents {
   padding: 0 !important;
   margin: 0 !important;
   width: 100% !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
 }
 
 /* Format title text below image */
@@ -905,7 +851,7 @@ img.author-inline-avatar {
   }
 }
 
-/* --- Related Content Clean Layout --- */
+/* --- 11. Custom Plain Related Component Styling --- */
 .related-content-plain {
   margin-top: 3.5rem !important;
   padding-top: 2rem !important;
@@ -979,10 +925,4 @@ img.author-inline-avatar {
   color: #777777 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
-}
-
-/* Hide default Hugo Stack theme related container if called outside article footer */
-.article-footer + .related-contents,
-.related-contents {
-  display: none !important;
 }
