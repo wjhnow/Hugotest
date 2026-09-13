@@ -873,3 +873,160 @@ a[href*="/categories/"]:hover {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+/* ============================================================
+   FINAL TYPOGRAPHY SCALE – AD Inspired
+   ============================================================ */
+
+/* --- H1 Title --- */
+.article-title,
+.article-title a,
+h1.article-title,
+h1.entry-title,
+.article-header h1,
+.single-post h1 {
+  font-family: var(--serif-editorial) !important;
+  font-size: 3.1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: #111111 !important;
+  margin: 0.4rem 0 0.7rem 0 !important;
+}
+
+/* --- Deck / Subtitle --- */
+.single-post .article-subtitle,
+.single-post .entry-subtitle,
+.single-post .deck,
+.article-header .subtitle,
+.article-details .article-subtitle {
+  font-family: var(--sans-ui) !important;
+  font-size: 1.4rem !important;
+  line-height: 1.55 !important;
+  color: #333333 !important;
+  font-weight: 400 !important;
+  margin: 0.5rem 0 1.4rem 0 !important;
+  max-width: 740px !important;
+}
+
+/* --- Body Text --- */
+.article-body p,
+.entry-content p,
+.post-content p,
+.article-content p {
+  font-family: Georgia, "Times New Roman", Book Antiqua, serif !important;
+  font-size: 1.42rem !important;
+  line-height: 1.8 !important;
+  color: #222222 !important;
+  margin-bottom: 1.7rem !important;
+  max-width: 700px;
+}
+
+/* --- Subheadings (H2 / H3) --- */
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.75rem !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  color: #111111 !important;
+  margin: 2.6rem 0 1.1rem 0 !important;
+  border-left: 2px solid var(--accent-bar) !important;
+  padding-left: 14px !important;
+}
+
+/* --- Category Tags --- */
+.category-badge,
+.article-category,
+.entry-category,
+.post-category,
+.taxonomy-term,
+.badge,
+a[href*="/categories/"],
+.article-tags a,
+.post-tags a,
+.tags a,
+.tag {
+  background-color: #1a2b3c !important;
+  color: #ffffff !important;
+  padding: 5px 12px !important;
+  border-radius: 3px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+/* --- Author Card --- */
+.author-title,
+.about-author-card .author-name,
+.article-content .author-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+}
+
+.article-content p:has(strong),
+.author-bio,
+.author-description {
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+  color: #444 !important;
+}
+
+/* --- Footer & Live Updates --- */
+.site-footer,
+.site-footer p,
+.site-footer a,
+.site-footer .copyright,
+.live-updates,
+.live-updates a,
+.live-updates strong {
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+.live-updates a,
+.site-footer a {
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.site-footer .copyright {
+  font-size: 0.95rem !important;
+  color: #333 !important;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+  .article-title,
+  h1.article-title,
+  .single-post h1 {
+    font-size: 2.3rem !important;
+  }
+
+  .single-post .article-subtitle,
+  .single-post .deck {
+    font-size: 1.2rem !important;
+  }
+
+  .article-body p,
+  .entry-content p,
+  .article-content p {
+    font-size: 1.25rem !important;
+  }
+
+  .article-body h2,
+  .article-body h3,
+  .entry-content h2,
+  .entry-content h3 {
+    font-size: 1.5rem !important;
+  }
+}
