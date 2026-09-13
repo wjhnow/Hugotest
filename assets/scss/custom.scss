@@ -570,41 +570,43 @@ aside.related-contents {
   display: block !important;
 }
 
-/* Strip top-level link bounds from covering entire cards */
-.related-contents article > a,
-.related-content article > a,
-.related-contents .article-list a,
-.related-content .article-list a {
-  position: static !important;
-  display: block !important;
-  height: auto !important;
-  width: 100% !important;
-}
-
 /* Force container cards out of grid overlay into block flow */
 .related-contents .article-list,
-.related-content .article-list {
+.related-content .article-list,
+.related-contents .related-build,
+.related-content .related-build {
   display: flex !important;
   flex-direction: column !important;
   gap: 2rem !important;
 }
 
+/* Reset article wrapper */
 .related-contents article,
 .related-content article {
-  display: flex !important;
-  flex-direction: column !important;
+  display: block !important;
   position: relative !important;
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
-  margin-bottom: 2.5rem !important;
+  margin-bottom: 2rem !important;
   height: auto !important;
   min-height: 0 !important;
+  overflow: visible !important;
 }
 
-/* Ensure the thumbnail image displays cleanly on top */
+/* Ensure the main link spans as a block rather than an absolute cover */
+.related-contents article > a,
+.related-content article > a {
+  position: relative !important;
+  display: block !important;
+  height: auto !important;
+  width: 100% !important;
+  inset: auto !important;
+}
+
+/* Set image behavior */
 .related-contents article .article-image,
 .related-content article .article-image,
 .related-contents article img,
@@ -621,13 +623,15 @@ aside.related-contents {
   float: none !important;
 }
 
-/* Push text wrapper completely below the image */
+/* Force details text block back into the document flow below image */
 .related-contents article .article-details,
 .related-content article .article-details,
 .related-contents article .article-title-wrapper,
 .related-content article .article-title-wrapper {
   position: relative !important;
   display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   top: auto !important;
   bottom: auto !important;
   left: auto !important;
@@ -635,31 +639,50 @@ aside.related-contents {
   inset: auto !important;
   transform: none !important;
   background: transparent !important;
-  padding: 0 !important;
+  padding: 0.5rem 0 0 0 !important;
   margin: 0 !important;
   width: 100% !important;
   box-shadow: none !important;
   box-sizing: border-box !important;
 }
 
-/* Format title text below image */
+/* Reset title typography */
 .related-contents article .article-title,
 .related-content article .article-title,
 .related-contents article .article-title a,
-.related-content article .article-title a {
+.related-content article .article-title a,
+.related-contents article h2,
+.related-content article h2 {
   position: relative !important;
   display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   font-family: var(--serif-editorial) !important;
   font-size: 1.55rem !important;
   font-weight: 400 !important;
   line-height: 1.25 !important;
   color: #111111 !important;
   text-shadow: none !important;
-  margin: 0.4rem 0 0 0 !important;
+  margin: 0.4rem 0 0.2rem 0 !important;
   padding: 0 !important;
 }
 
-/* Strip theme dark gradient overlays */
+/* Display date and meta below title if available */
+.related-contents article .article-time,
+.related-content article .article-time,
+.related-contents article time,
+.related-content article time {
+  display: block !important;
+  visibility: visible !important;
+  font-family: var(--sans-ui) !important;
+  font-size: 0.75rem !important;
+  color: #777777 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 0.3rem !important;
+}
+
+/* Strip theme gradient overlays and pseudo elements */
 .related-contents *::before,
 .related-contents *::after,
 .related-content *::before,
