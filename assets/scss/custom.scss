@@ -442,10 +442,9 @@ h1.entry-title,
   padding-left: 14px !important;
 }
 
-/* Drop cap */
-.article-content > p:first-of-type::first-letter,
-.entry-content > p:first-of-type::first-letter,
-.article-body > p:first-of-type::first-letter {
+/* Drop cap - Manual control */
+p.has-dropcap::first-letter,
+.article-body > p.intro::first-letter {
   font-family: var(--serif-editorial) !important;
   font-size: 4.1rem !important;
   float: left !important;
@@ -455,6 +454,7 @@ h1.entry-title,
   color: #000 !important;
   font-weight: 700 !important;
 }
+
 
 /* Captions */
 figcaption,
