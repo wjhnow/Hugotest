@@ -46,11 +46,19 @@ We’re trying to be the site that finally explains it without making your brain
 Got a weird science fact or a tip?
 Email us at info@wjhnow.com — we read everything.
 
-### Who Writes This
-**Mr. JH**  
-I’m the science nerd. I dig through research papers and turn “quantum entanglement” into “here’s why it’s weird”. If it involves space or a “did you know”, I probably wrote it.
+### | Who Writes This
 
-**Mr. Wnow**  
-I’m the tech guy. Gadgets, AI, and all the “how does this actually work” stuff. I test the claims so you get the truth without the marketing fluff.
+<img src="/img/jh.jpg" alt="Mr. JH" class="author-inline-avatar">
+
+**Mr. JH**
+
+I'm the science nerd. I dig through research papers and turn "quantum entanglement" into "here's why it's weird". If it involves space or a "did you know", I probably wrote it.
+
+<img src="/img/wnow.jpg" alt="Mr. Wnow" class="author-inline-avatar">
+
+**Mr. Wnow**
+
+I'm the tech guy. Gadgets, AI, and all the "how does this actually work" stuff. I test the claims so you get the truth without the marketing fluff.
 
 — The WJH.now Team
+
