@@ -949,3 +949,7 @@ img.author-inline-avatar {
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
 }
+/* Permanently hide Stack theme default related contents widget */
+.related-contents {
+    display: none !important;
+}
