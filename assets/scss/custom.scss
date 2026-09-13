@@ -725,3 +725,45 @@ footer hr,
         font-size: 12.5px !important;
     }
 }
+/* --- About Page Author Avatars --- */
+.about-authors-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 32px !important;
+    margin: 16px 0 36px 0 !important;
+    padding-bottom: 24px !important;
+    border-bottom: 1px solid #eaeaea !important;
+}
+
+.about-author-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.about-avatar {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #e0e0e0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.about-avatar:hover {
+    transform: scale(1.05) !important;
+    border-color: #111111 !important;
+}
+
+.about-author-card .author-name {
+    font-family: var(--sans-ui, -apple-system, sans-serif) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #222222 !important;
+}
+
