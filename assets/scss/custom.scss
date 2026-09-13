@@ -318,20 +318,21 @@ a[href*="/categories/"] {
   display: inline-block !important;
 }
 
-/* Deck / Subtitle */
+/* Deck / Subtitle – larger & more readable */
 .single-post .article-subtitle,
 .single-post .entry-subtitle,
 .single-post .deck,
-.article-header .subtitle {
+.article-header .subtitle,
+.article-details .article-subtitle {
   font-family: var(--sans-ui) !important;
-  font-size: 1.15rem !important;
-  line-height: 1.5 !important;
-  color: #333 !important;
+  font-size: 1.35rem !important;        /* was 1.15rem – increased */
+  line-height: 1.55 !important;
+  color: #333333 !important;
   font-weight: 400 !important;
-  margin: 0 0 1.1rem 0 !important;
-  max-width: 720px;
+  margin: 0.4rem 0 1.3rem 0 !important;
+  max-width: 740px !important;
+  letter-spacing: -0.01em !important;
 }
-
 /* Meta strip */
 .single-post .article-meta,
 .single-post .post-meta,
