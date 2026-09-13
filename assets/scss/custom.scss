@@ -952,3 +952,48 @@ article img {
   box-shadow: none !important;
   outline: none !important;
 }
+
+/* --- 13. Fix Related Content Title Overlay --- */
+
+/* Force relative positioning so titles render below images */
+.related-content article,
+.related-posts article,
+.related article,
+[class*="related"] article,
+[class*="related"] .article-details,
+[class*="related"] .article-title-wrapper {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure the title container sits in normal layout flow */
+.related-content .article-details,
+.related-posts .article-details,
+[class*="related"] .article-details {
+  position: relative !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  padding: 0.6rem 0 0 0 !important;
+  margin: 0 !important;
+  z-index: 1 !important;
+}
+
+/* Reset title link text color and positioning */
+.related-content .article-title,
+.related-posts .article-title,
+[class*="related"] .article-title,
+[class*="related"] h2,
+[class*="related"] h3,
+[class*="related"] h4 {
+  position: relative !important;
+  color: #111111 !important;
+  text-shadow: none !important;
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.55rem !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
