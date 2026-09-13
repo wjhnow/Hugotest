@@ -1,0 +1,25 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<aside class="related-content-plain">
+    <h2 class="related-title">RELATED CONTENT</h2>
+    <div class="related-article-list">
+        {{ range . }}
+        <div class="related-card-flat">
+            {{ if .Params.image }}
+            <a href="{{ .RelPermalink }}" class="related-image-link">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" />
+            </a>
+            {{ end }}
+            <div class="related-details">
+                <h3 class="related-article-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h3>
+                {{ if .Date }}
+                <time class="related-article-time">{{ .Date.Format "Jan 02, 2006" }}</time>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</aside>
+{{ end }}
