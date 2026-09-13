@@ -560,137 +560,72 @@ a[href*="/categories/"]:hover {
 }
 
 /* --- 7. Related Content Hard Structural Reset --- */
+
+/* 1. SILENCE THE THEME'S NATIVE OVERLAY WIDGET (BLUE CIRCLE) */
 .related-contents,
-.related-content,
-aside.related-contents {
-  margin-top: 3.5rem !important;
-  padding-top: 2rem !important;
-  border-top: 1px solid var(--border-color) !important;
-  background: transparent !important;
-  display: block !important;
+aside.related-contents,
+.related-content-section,
+.article-related {
+  display: none !important;
 }
 
-/* Force container cards out of grid overlay into block flow */
-.related-contents .article-list,
-.related-content .article-list,
-.related-contents .related-build,
-.related-content .related-build {
+/* 2. ENSURE YOUR CLEAN CUSTOM LAYOUT (INSIDE FOOTER.HTML) RENDERS */
+.related-content-plain {
+  display: block !important;
+  margin-top: 2.5rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.related-content-plain .related-title {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  color: #777777 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.related-content-plain .related-article-list {
   display: flex !important;
   flex-direction: column !important;
   gap: 2rem !important;
 }
 
-/* Reset article wrapper */
-.related-contents article,
-.related-content article {
+.related-content-plain .related-card-flat {
   display: block !important;
-  position: relative !important;
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin-bottom: 2rem !important;
-  height: auto !important;
-  min-height: 0 !important;
-  overflow: visible !important;
 }
 
-/* Ensure the main link spans as a block rather than an absolute cover */
-.related-contents article > a,
-.related-content article > a {
-  position: relative !important;
-  display: block !important;
-  height: auto !important;
+.related-content-plain .related-image-link img {
   width: 100% !important;
-  inset: auto !important;
-}
-
-/* Set image behavior */
-.related-contents article .article-image,
-.related-content article .article-image,
-.related-contents article img,
-.related-content article img {
-  position: relative !important;
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
   max-height: 380px !important;
   object-fit: cover !important;
-  border-radius: 0 !important;
+  display: block !important;
   margin-bottom: 0.8rem !important;
-  inset: auto !important;
-  float: none !important;
 }
 
-/* Force details text block back into the document flow below image */
-.related-contents article .article-details,
-.related-content article .article-details,
-.related-contents article .article-title-wrapper,
-.related-content article .article-title-wrapper {
-  position: relative !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  inset: auto !important;
-  transform: none !important;
-  background: transparent !important;
-  padding: 0.5rem 0 0 0 !important;
-  margin: 0 !important;
-  width: 100% !important;
-  box-shadow: none !important;
-  box-sizing: border-box !important;
-}
-
-/* Reset title typography */
-.related-contents article .article-title,
-.related-content article .article-title,
-.related-contents article .article-title a,
-.related-content article .article-title a,
-.related-contents article h2,
-.related-content article h2 {
-  position: relative !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+.related-content-plain .related-article-title a {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;
+  font-size: 1.8rem !important;
   font-weight: 400 !important;
   line-height: 1.25 !important;
   color: #111111 !important;
-  text-shadow: none !important;
-  margin: 0.4rem 0 0.2rem 0 !important;
-  padding: 0 !important;
+  text-decoration: none !important;
+  display: block !important;
 }
 
-/* Display date and meta below title if available */
-.related-contents article .article-time,
-.related-content article .article-time,
-.related-contents article time,
-.related-content article time {
-  display: block !important;
-  visibility: visible !important;
+.related-content-plain .related-article-time {
   font-family: var(--sans-ui) !important;
   font-size: 0.75rem !important;
   color: #777777 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
-  margin-top: 0.3rem !important;
+  margin-top: 0.4rem !important;
+  display: block !important;
 }
 
-/* Strip theme gradient overlays and pseudo elements */
-.related-contents *::before,
-.related-contents *::after,
-.related-content *::before,
-.related-content *::after {
-  display: none !important;
-  content: none !important;
-  background: none !important;
-}
+
 
 /* --- 8. Footer --- */
 .site-footer,
