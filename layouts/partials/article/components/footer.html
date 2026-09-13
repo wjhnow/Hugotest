@@ -38,31 +38,4 @@
       {{ end }}
     </div>
     {{ end }}
-
-    <!-- Custom Related Content (Placed directly inside footer to supersede theme default) -->
-    {{ $related := .Site.RegularPages.Related . | first 5 }}
-    {{ with $related }}
-    <div class="related-content-plain">
-        <h2 class="related-title">RELATED CONTENT</h2>
-        <div class="related-article-list">
-            {{ range . }}
-            <article class="related-card-flat">
-                {{ if .Params.image }}
-                <a href="{{ .RelPermalink }}" class="related-image-link">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" />
-                </a>
-                {{ end }}
-                <div class="related-details">
-                    <h3 class="related-article-title">
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </h3>
-                    <span class="related-article-time">
-                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-                    </span>
-                </div>
-            </article>
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
 </footer>
