@@ -1277,3 +1277,79 @@ a[href*="/categories/"]:hover {
     padding: 4px 9px !important;
   }
 }
+/* ============================================================
+   RELATED CONTENT – Better Match to Overall Theme
+   ============================================================ */
+
+.related-content,
+.related-posts,
+.related,
+.article-related {
+  margin-top: 4rem !important;
+  padding-top: 2.5rem !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+/* Heading style – matches the rest of the site */
+.related-content h3,
+.related-posts h3,
+.related h3,
+.article-related h3,
+.related-title,
+.related-content .section-title {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  color: #444444 !important;
+  margin-bottom: 1.6rem !important;
+  display: block !important;
+}
+
+/* Related card styling */
+.related-content article,
+.related-posts article,
+.related article,
+.related-content .post,
+.related-posts .post {
+  background: #ffffff !important;
+  border: 1px solid #e8e6e3 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  transition: all 0.2s ease !important;
+  max-width: 360px !important;
+}
+
+.related-content article:hover,
+.related-posts article:hover,
+.related article:hover {
+  border-color: #ccc !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Image inside related card */
+.related-content img,
+.related-posts img,
+.related article img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Title inside related card */
+.related-content h4,
+.related-posts h4,
+.related article h4,
+.related-content .article-title,
+.related-posts .article-title {
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.15rem !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  color: #111 !important;
+  padding: 1rem 1.1rem 1.2rem !important;
+  margin: 0 !important;
+}
