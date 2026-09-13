@@ -784,3 +784,19 @@ img.author-inline-avatar,
     border: 1.5px solid #e5e5e5 !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
 }
+/* --- Global Vertical Line Logic --- */
+
+/* 1. ANY paragraph containing bold text -> REMOVE vertical line */
+.article-content p:has(strong, b),
+.post-content p:has(strong, b),
+.entry-content p:has(strong, b) {
+    border-left: none !important;
+    padding-left: 0 !important;
+}
+
+/* 2. Blockquotes / Callout blocks WITHOUT bold text -> KEEP vertical line */
+.article-content blockquote:not(:has(strong, b)),
+.post-content blockquote:not(:has(strong, b)) {
+    border-left: 2px solid #000000 !important;
+    padding-left: 0.75rem !important;
+}
