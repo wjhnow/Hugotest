@@ -1149,3 +1149,131 @@ a[href*="/categories/"]:hover {
     font-size: 1rem !important;
   }
 }
+/* ============================================================
+   FINAL FIXES – Related Content, Footer & Tag Density
+   ============================================================ */
+
+/* 1. Better “RELATED CONTENT” heading */
+.related-content,
+.related-posts,
+.related,
+.article-related {
+  margin-top: 3.5rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+.related-content h3,
+.related-posts h3,
+.related h3,
+.article-related h3,
+.related-title {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.14em !important;
+  color: #555555 !important;
+  margin-bottom: 1.4rem !important;
+  display: block !important;
+}
+
+/* Optional: make related cards a bit nicer */
+.related-content article,
+.related-posts article,
+.related article {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  transition: transform 0.2s ease !important;
+}
+
+.related-content article:hover,
+.related-posts article:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* 2. Stronger & cleaner Footer */
+.site-footer {
+  background-color: #faf9f7 !important;
+  border-top: 1px solid #e5e5e5 !important;
+  padding: 3.2rem 1.5rem 2.8rem !important;
+  margin-top: 4.5rem !important;
+  text-align: center !important;
+}
+
+.live-updates {
+  background: #ffffff !important;
+  border: 1px solid #e8e6e3 !important;
+  border-radius: 6px !important;
+  padding: 1.1rem 1.3rem !important;
+  margin: 0 auto 2rem auto !important;
+  max-width: 680px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 6px 14px !important;
+}
+
+.live-updates strong {
+  font-size: 0.84rem !important;
+  letter-spacing: 0.1em !important;
+  color: #111 !important;
+}
+
+.live-updates a {
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  color: #222 !important;
+  text-decoration: none !important;
+}
+
+.live-updates a:hover {
+  color: #000 !important;
+}
+
+.site-footer .copyright {
+  font-size: 0.95rem !important;
+  color: #333 !important;
+  margin-bottom: 0.6rem !important;
+  font-weight: 500 !important;
+}
+
+.footer-domain,
+.site-footer small,
+.site-footer .footer-info {
+  font-size: 0.82rem !important;
+  color: #777 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* 3. Better handling of long tag rows */
+.article-tags,
+.post-tags,
+.tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 9px !important;
+  margin: 2rem 0 1.8rem 0 !important;
+  max-width: 100% !important;
+}
+
+/* Slightly smaller tags when there are many */
+.article-tags a,
+.post-tags a,
+.tags a,
+.tag {
+  padding: 5px 11px !important;
+  font-size: 0.73rem !important;
+  border-radius: 4px !important;
+}
+
+/* Optional: limit extreme wrapping on very small screens */
+@media (max-width: 480px) {
+  .article-tags a,
+  .post-tags a,
+  .tags a {
+    font-size: 0.7rem !important;
+    padding: 4px 9px !important;
+  }
+}
