@@ -1030,3 +1030,122 @@ a[href*="/categories/"],
     font-size: 1.5rem !important;
   }
 }
+/* ============================================================
+   FINAL POLISH – Tags, Author Card & Footer
+   ============================================================ */
+
+/* --- Better Tag Spacing & Style --- */
+.article-tags,
+.post-tags,
+.tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 10px !important;
+  margin: 2.2rem 0 1.8rem 0 !important;
+}
+
+.category-badge,
+.article-category,
+.entry-category,
+.post-category,
+.taxonomy-term,
+.badge,
+a[href*="/categories/"],
+.article-tags a,
+.post-tags a,
+.tags a,
+.tag {
+  background-color: #1a2b3c !important;
+  color: #ffffff !important;
+  padding: 6px 13px !important;
+  border-radius: 4px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  border: none !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.article-tags a:hover,
+.post-tags a:hover,
+.tags a:hover,
+a[href*="/categories/"]:hover {
+  background-color: #000000 !important;
+}
+
+/* --- Author Card – Slightly Larger Text --- */
+.author-card,
+.article-author,
+.author-box {
+  padding: 1.3rem 1.4rem !important;
+}
+
+.author-title,
+.about-author-card .author-name,
+.article-content .author-title,
+.author-name {
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.author-bio,
+.author-description,
+.article-content p:has(strong) + p,
+.author-card p {
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+  color: #444444 !important;
+}
+
+/* --- Cleaner Footer Spacing --- */
+.site-footer {
+  padding: 3rem 1.5rem 2.5rem !important;
+  margin-top: 4rem !important;
+}
+
+.live-updates {
+  padding: 1.1rem 1rem !important;
+  margin-bottom: 1.8rem !important;
+  gap: 8px 12px !important;
+}
+
+.live-updates strong,
+.live-updates a {
+  font-size: 0.92rem !important;
+  letter-spacing: 0.07em !important;
+}
+
+.site-footer .copyright {
+  font-size: 0.95rem !important;
+  color: #333 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.footer-domain,
+.site-footer .footer-info {
+  font-size: 0.88rem !important;
+  color: #666 !important;
+  margin-top: 0.4rem !important;
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 768px) {
+  .article-tags,
+  .post-tags,
+  .tags {
+    gap: 7px 8px !important;
+  }
+
+  .author-title,
+  .author-name {
+    font-size: 1.1rem !important;
+  }
+
+  .author-bio,
+  .author-description {
+    font-size: 1rem !important;
+  }
+}
