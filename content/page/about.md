@@ -21,9 +21,9 @@ Then we just tell you the stuff that makes you go "wait, what?" — usually in t
 ### What do we actually write about?
 Honestly? Three things:
 
-**Science** – Space, biology, physics. The "wait, boiling in space is backwards?" kind of facts.  
-**Tech** – AI, phones, how stuff actually works. No marketing fluff, just the real explanation.  
-**Everything else** – The random discoveries and trends that are quietly changing the world.
+Science – Space, biology, physics. The "wait, boiling in space is backwards?" kind of facts.  
+Tech – AI, phones, how stuff actually works. No marketing fluff, just the real explanation.  
+Everything else – The random discoveries and trends that are quietly changing the world.
 
 We’re based in India. Started in 2026. Just a small team obsessed with “huh, that’s cool”.
 
