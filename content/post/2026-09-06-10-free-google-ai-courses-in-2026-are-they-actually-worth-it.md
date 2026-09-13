@@ -45,11 +45,14 @@ You can preview all the video lectures on Coursera at no cost. But the graded as
 ## Applied AI and Prototyping
 This is where things start getting hands-on.
 
-**Introduction to Image Generation**: Fundamentals of diffusion models. How AI turns a text prompt into a picture.
+**Introduction to Image Generation:** Fundamentals of diffusion models.<br>
+How AI turns a text prompt into a picture.
 
-**Introduction to Generative AI Studio**: Walkthrough of Google's Vertex AI platform. Prompt engineering and basic model customization.
+**Introduction to Generative AI Studio:** Walkthrough of Google's Vertex AI platform.<br>
+Prompt engineering and basic model customization.
 
-**Create Image Captioning Models**: Computer vision. How deep learning pipelines generate descriptive text from images.
+**Create Image Captioning Models:** Computer vision.<br>
+How deep learning pipelines generate descriptive text from images.
 
 ## The Architecture Deep Dive
 The last three courses. This is where the beginner-friendly framing drops off.
