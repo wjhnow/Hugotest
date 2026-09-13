@@ -906,3 +906,49 @@ section[class*="related"] {
   margin-top: 0.5rem !important;
   padding: 0 !important;
 }
+
+/* --- 12. Complete Article Card Reset (Hugo Stack Override) --- */
+
+/* Strip card styles from all article containers */
+.article-list article,
+.related-content article,
+.related-posts article,
+.related article,
+[class*="related"] article,
+.related-card,
+article.has-image {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+}
+
+/* Remove card inner containers & backgrounds */
+.article-details,
+.article-image,
+.featured-image,
+.related-content div,
+.related-posts div {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Hard reset for all image wrappers and img tags */
+.article-image img,
+.featured-image img,
+.related-content img,
+.related-posts img,
+.related img,
+[class*="related"] img,
+article img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
