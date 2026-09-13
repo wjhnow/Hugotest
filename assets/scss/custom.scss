@@ -645,3 +645,109 @@ footer.site-footer,
     max-height: 340px !important;
   }
 }
+
+/* ============================================================
+   Hero Image – more compact
+   ============================================================ */
+.article-image img,
+.featured-image img,
+.post-thumbnail img,
+.article-list .article-image img,
+.single-post .article-image img,
+.single-post .featured-image img {
+  width: 100% !important;
+  max-height: 460px !important;          /* ← reduced from 520px */
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .article-image img,
+  .featured-image img,
+  .post-thumbnail img,
+  .single-post .article-image img {
+    max-height: 300px !important;
+  }
+}
+
+/* ============================================================
+   Deck / Subtitle – larger & better presence
+   ============================================================ */
+.single-post .article-subtitle,
+.single-post .entry-subtitle,
+.single-post .deck,
+.article-header .subtitle,
+.article-details .article-subtitle,
+.article-list .article-subtitle,
+.article-list .article-summary {
+  font-family: var(--sans-ui) !important;
+  font-size: 1.35rem !important;         /* increased */
+  line-height: 1.55 !important;
+  color: #333333 !important;
+  font-weight: 400 !important;
+  margin: 0.5rem 0 1.4rem 0 !important;
+  max-width: 740px !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* ============================================================
+   Tighter spacing: Image → Title → Deck
+   ============================================================ */
+.article-list article,
+.single-post article {
+  margin-bottom: 0 !important;
+}
+
+.article-list .article-image,
+.article-list .featured-image,
+.single-post .article-image,
+.single-post .featured-image {
+  margin-bottom: 1.6rem !important;
+}
+
+.article-title,
+.article-title a,
+h1.article-title,
+h1.entry-title,
+.article-header h1,
+.single-post h1 {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* ============================================================
+   Alternating Background Colors for Articles (Homepage)
+   ============================================================ */
+
+/* Base style for every article card */
+.article-list article {
+  padding: 2.8rem 1.8rem !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Odd articles – soft off-white */
+.article-list article:nth-child(odd) {
+  background-color: #faf9f7 !important;
+}
+
+/* Even articles – light warm grey */
+.article-list article:nth-child(even) {
+  background-color: #f3f1ed !important;
+}
+
+/* Optional: subtle top border between articles */
+.article-list article + article {
+  border-top: 1px solid #e8e6e3 !important;
+}
+
+/* Make sure the content inside stays properly aligned */
+.article-list article .article-details,
+.article-list article .article-content {
+  max-width: 1080px;
+  margin: 0 auto;
+}
