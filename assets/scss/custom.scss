@@ -1,5 +1,5 @@
 /* ==========================================================================
-   WJH.now / Hugotest – Clean AD-inspired Master Stylesheet
+   WJH.now / Hugotest – Clean AD-inspired Master Stylesheet (Refactored)
    ========================================================================== */
 
 :root {
@@ -421,7 +421,7 @@ h1.entry-title,
   text-decoration-thickness: 1px !important;
 }
 
-/* --- 6. Subheadings (Bolder, Larger, Thicker Bar) --- */
+/* Subheadings (Clean Sans-Serif Bold Fix) */
 .article-body h2,
 .article-body h3,
 .article-body h4,
@@ -431,16 +431,16 @@ h1.entry-title,
 .article-content h2,
 .article-content h3,
 .article-content h4 {
-  font-family: var(--serif-editorial) !important;
-  font-size: 2.1rem !important; /* Increased from 1.75rem */
-  font-weight: 700 !important; /* Changed from 400 to bold */
-  line-height: 1.25 !important;
-  color: #111111 !important;
+  font-family: var(--sans-ui) !important;
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+  color: #000000 !important;
   margin: 2.6rem 0 1.1rem 0 !important;
-  border-left: 3px solid var(--accent-bar) !important; /* Thicker left accent bar */
+  border-left: 4px solid var(--accent-bar) !important;
   padding-left: 14px !important;
 }
-
 
 /* Drop cap */
 .article-content > p:first-of-type::first-letter,
@@ -517,6 +517,7 @@ a[href*="/categories/"]:hover {
 .article-author,
 .author-box {
   padding: 1.3rem 1.4rem !important;
+  margin-bottom: 3.5rem !important;
 }
 
 .author-title,
@@ -536,7 +537,7 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
-/* --- 7. Related Content (Gap + Smaller Font) --- */
+/* --- 7. Related Content --- */
 .related-content,
 .related-posts,
 .related,
@@ -546,12 +547,12 @@ a[href*="/categories/"]:hover {
 [class*="related_posts"],
 section.related,
 div.related {
-  margin-top: 5rem !important; /* Increases gap below author card */
+  margin-top: 4rem !important;
   padding-top: 2.5rem !important;
   border-top: 1px solid #e5e5e5 !important;
 }
 
-/* Related section heading ("RELATED CONTENT") */
+/* Related section heading */
 .related-content h3,
 .related-posts h3,
 .related h3,
@@ -563,50 +564,12 @@ div.related {
 [class*="related"] > h4,
 [class*="related"] > .title {
   font-family: var(--sans-ui) !important;
-  font-size: 0.68rem !important; /* Reduced from 0.78rem */
+  font-size: 0.68rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.16em !important;
   color: #555555 !important;
   margin-bottom: 1.4rem !important;
-  display: block !important;
-}
-
-/* Related card post titles */
-.related-content h4,
-.related-posts h4,
-.related article h4,
-.related-content .article-title,
-.related-posts .article-title,
-[class*="related"] h4,
-[class*="related"] .article-title {
-  font-family: var(--serif-editorial) !important;
-  font-size: 0.98rem !important; /* Reduced from 1.15rem */
-  font-weight: 400 !important;
-  line-height: 1.35 !important;
-  color: #111 !important;
-  padding: 0.85rem 1rem 1rem !important;
-  margin: 0 !important;
-}
-
-/* Related heading – target common patterns */
-.related-content h3,
-.related-posts h3,
-.related h3,
-.article-related h3,
-.related-title,
-.related-content .section-title,
-.related-posts .section-title,
-[class*="related"] > h3,
-[class*="related"] > h4,
-[class*="related"] > .title {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.16em !important;
-  color: #555555 !important;
-  margin-bottom: 1.6rem !important;
   display: block !important;
 }
 
@@ -653,11 +616,11 @@ div.related {
 [class*="related"] h4,
 [class*="related"] .article-title {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.15rem !important;
+  font-size: 0.98rem !important;
   font-weight: 400 !important;
   line-height: 1.35 !important;
   color: #111 !important;
-  padding: 1rem 1.1rem 1.2rem !important;
+  padding: 0.85rem 1rem 1rem !important;
   margin: 0 !important;
 }
 
@@ -807,7 +770,7 @@ img.author-inline-avatar {
   .entry-content h3,
   .article-content h2,
   .article-content h3 {
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
   }
 
   .article-content > p:first-of-type::first-letter,
