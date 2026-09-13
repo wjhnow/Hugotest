@@ -1,5 +1,5 @@
 /* ==========================================================================
-   WJH.now / Hugotest – Clean AD-inspired Master Stylesheet (Refactored)
+   WJH.now / Hugotest – Complete Master Stylesheet
    ========================================================================== */
 
 :root {
@@ -421,7 +421,7 @@ h1.entry-title,
   text-decoration-thickness: 1px !important;
 }
 
-/* Subheadings (Clean Sans-Serif Bold Fix) */
+/* Subheadings */
 .article-body h2,
 .article-body h3,
 .article-body h4,
@@ -442,7 +442,7 @@ h1.entry-title,
   padding-left: 14px !important;
 }
 
-/* --- Universal Drop Cap Reset (Neutralize themes/spans/pseudo-elements) --- */
+/* Universal Drop Cap Reset */
 p::first-letter,
 .article-content p::first-letter,
 .article-body p::first-letter,
@@ -464,7 +464,7 @@ span.dropcap,
   display: inline !important;
 }
 
-/* Explicit Manual Drop Cap (Triggers only when class is specified) */
+/* Explicit Manual Drop Cap */
 p.has-dropcap::first-letter,
 .article-body > p.intro::first-letter,
 p.has-dropcap .first-letter {
@@ -559,102 +559,101 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
-/* --- 7. Related Content (Editorial Minimalist Refactor) --- */
+/* --- 7. Related Content Hard Structural Reset --- */
 .related-content,
 .related-posts,
 .related,
-.article-related,
-[class*="related-content"],
-[class*="related-posts"],
-[class*="related_posts"],
-section.related,
-div.related {
+[class*="related"] {
   margin-top: 3.5rem !important;
   padding-top: 2rem !important;
   border-top: 1px solid var(--border-color) !important;
   background: transparent !important;
 }
 
-/* Related section header */
-.related-content h3,
-.related-posts h3,
-.related h3,
-.article-related h3,
-.related-title,
-.related-content .section-title,
-.related-posts .section-title,
-[class*="related"] > h3,
-[class*="related"] > h4,
-[class*="related"] > .title {
-  font-family: var(--sans-ui) !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.18em !important;
-  color: #111111 !important;
-  margin-bottom: 1.5rem !important;
-  display: block !important;
-  border: none !important;
-}
-
-/* Related card layout reset */
+/* Force container into clean block flow */
 .related-content article,
 .related-posts article,
 .related article,
-.related-content .post,
-.related-posts .post,
 [class*="related"] article,
-[class*="related"] .post,
 .related-card {
+  display: block !important;
+  position: relative !important;
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 0 !important;
-  margin-bottom: 2rem !important;
-  max-width: 100% !important;
+  margin-bottom: 2.5rem !important;
+  height: auto !important;
+  min-height: 0 !important;
 }
 
-/* Related images */
-.related-content img,
-.related-posts img,
-.related article img,
-[class*="related"] img,
-.related-card img {
+/* Clear links acting as full-card absolute covers */
+[class*="related"] article > a,
+[class*="related"] .article-link,
+[class*="related"] a {
+  position: static !important;
+  display: block !important;
+  height: auto !important;
+  width: 100% !important;
+}
+
+/* Image formatting */
+[class*="related"] .article-image,
+[class*="related"] img {
+  position: relative !important;
+  display: block !important;
   width: 100% !important;
   height: auto !important;
   max-height: 380px !important;
   object-fit: cover !important;
   border-radius: 0 !important;
-  display: block !important;
-  margin-bottom: 0.8rem !important;
+  margin: 0 0 0.8rem 0 !important;
+  float: none !important;
 }
 
-/* Related titles (Serif Editorial) */
-.related-content h4,
-.related-posts h4,
-.related article h4,
-.related-content .article-title,
-.related-posts .article-title,
-[class*="related"] h4,
+/* Push text container completely below image */
+[class*="related"] .article-details,
+[class*="related"] .article-title-wrapper {
+  position: relative !important;
+  display: block !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  inset: auto !important;
+  transform: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Title typography styling */
 [class*="related"] .article-title,
-.related-card a,
-.related-card h3 {
+[class*="related"] h2,
+[class*="related"] h3,
+[class*="related"] h4,
+[class*="related"] .article-title a {
+  position: relative !important;
+  display: block !important;
   font-family: var(--serif-editorial) !important;
-  font-size: 1.6rem !important;
+  font-size: 1.55rem !important;
   font-weight: 400 !important;
   line-height: 1.25 !important;
   color: #111111 !important;
-  padding: 0 !important;
+  text-shadow: none !important;
   margin: 0.4rem 0 0 0 !important;
-  text-decoration: none !important;
+  padding: 0 !important;
 }
 
-.related-content a:hover,
-.related-posts a:hover,
-.related article a:hover,
-[class*="related"] a:hover {
-  opacity: 0.75 !important;
+/* Strip dark gradients and pseudo-overlays */
+[class*="related"] *::before,
+[class*="related"] *::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
 }
 
 /* --- 8. Footer --- */
@@ -765,7 +764,7 @@ img.author-inline-avatar {
   border: 1.5px solid #e5e5e5 !important;
 }
 
-/* --- 10. Mobile --- */
+/* --- 10. Mobile Responsive Adjustments --- */
 @media (max-width: 768px) {
   .site-masthead-tagline {
     padding: 1.1rem 0 1.3rem !important;
@@ -806,7 +805,6 @@ img.author-inline-avatar {
     font-size: 1.25rem !important;
   }
 
-  /* Manual Drop Cap Mobile Scaling */
   p.has-dropcap::first-letter,
   .article-body > p.intro::first-letter,
   p.has-dropcap .first-letter {
@@ -838,234 +836,4 @@ img.author-inline-avatar {
     font-size: 0.7rem !important;
     padding: 4px 9px !important;
   }
-}
-/* --- 11. Forceful Related Content Card Override --- */
-.related-content *,
-.related-posts *,
-.related *,
-[class*="related"] * {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Remove card wrapper backgrounds */
-.related-content div,
-.related-posts div,
-.related div,
-.related-content article,
-.related-posts article,
-.related article,
-[class*="related"] article,
-[class*="related"] .card,
-[class*="related"] .related-card,
-aside[class*="related"],
-section[class*="related"] {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Image Reset */
-.related-content img,
-.related-posts img,
-.related img,
-[class*="related"] img {
-  border-radius: 0 !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 380px !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin-bottom: 0.8rem !important;
-}
-
-/* Title Styling Reset */
-.related-content a,
-.related-posts a,
-.related a,
-[class*="related"] a {
-  text-decoration: none !important;
-  background: transparent !important;
-}
-
-.related-content h4,
-.related-posts h4,
-.related h4,
-[class*="related"] h4,
-[class*="related"] h3,
-[class*="related"] .title {
-  font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;
-  font-weight: 400 !important;
-  line-height: 1.25 !important;
-  color: #111111 !important;
-  margin-top: 0.5rem !important;
-  padding: 0 !important;
-}
-
-/* --- 12. Complete Article Card Reset (Hugo Stack Override) --- */
-
-/* Strip card styles from all article containers */
-.article-list article,
-.related-content article,
-.related-posts article,
-.related article,
-[class*="related"] article,
-.related-card,
-article.has-image {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 0 2rem 0 !important;
-}
-
-/* Remove card inner containers & backgrounds */
-.article-details,
-.article-image,
-.featured-image,
-.related-content div,
-.related-posts div {
-  background: transparent !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* Hard reset for all image wrappers and img tags */
-.article-image img,
-.featured-image img,
-.related-content img,
-.related-posts img,
-.related img,
-[class*="related"] img,
-article img {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* --- 13. Fix Related Content Title Overlay --- */
-
-/* Force relative positioning so titles render below images */
-.related-content article,
-.related-posts article,
-.related article,
-[class*="related"] article,
-[class*="related"] .article-details,
-[class*="related"] .article-title-wrapper {
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-/* Ensure the title container sits in normal layout flow */
-.related-content .article-details,
-.related-posts .article-details,
-[class*="related"] .article-details {
-  position: relative !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  padding: 0.6rem 0 0 0 !important;
-  margin: 0 !important;
-  z-index: 1 !important;
-}
-
-/* Reset title link text color and positioning */
-.related-content .article-title,
-.related-posts .article-title,
-[class*="related"] .article-title,
-[class*="related"] h2,
-[class*="related"] h3,
-[class*="related"] h4 {
-  position: relative !important;
-  color: #111111 !important;
-  text-shadow: none !important;
-  font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;
-  line-height: 1.25 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* --- 14. Hard Layout Reset for Related Cards --- */
-
-/* Reset post card link container */
-.related-content a,
-.related-posts a,
-.related a,
-[class*="related"] article a,
-[class*="related"] .article-image,
-[class*="related"] .article-details {
-  position: static !important;
-  display: block !important;
-  transform: none !important;
-}
-
-/* Force article element into flex column layout */
-.related-content article,
-.related-posts article,
-.related article,
-[class*="related"] article,
-[class*="related"] .related-card {
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-/* Push details block below image */
-.related-content .article-details,
-.related-posts .article-details,
-.related .article-details,
-[class*="related"] .article-details {
-  position: relative !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  inset: auto !important;
-  padding: 0.8rem 0 0 0 !important;
-  background: transparent !important;
-  width: 100% !important;
-}
-
-/* Typography fix for un-stacked headline */
-.related-content .article-title,
-.related-posts .article-title,
-.related .article-title,
-[class*="related"] .article-title,
-[class*="related"] h2,
-[class*="related"] h3,
-[class*="related"] h4 {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  color: #111111 !important;
-  text-shadow: none !important;
-  font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;
-  line-height: 1.25 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block !important;
-}
-
-/* Clear gradient overlays generated by theme image covers */
-[class*="related"] .article-image::after,
-[class*="related"] .article-image::before,
-[class*="related"] article::after,
-[class*="related"] article::before {
-  display: none !important;
-  content: none !important;
-  background: none !important;
 }
