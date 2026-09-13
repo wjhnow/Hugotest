@@ -873,15 +873,3 @@ img.author-inline-avatar {
     padding: 4px 9px !important;
   }
 }
-
-/* Hide the theme's native auto-injected related section */
-.article-related,
-.related-contents-section,
-aside.related-contents {
-    display: none !important;
-}
-
-/* Ensure your custom footer related section stays visible */
-.article-footer .related-content-plain {
-    display: block !important;
-}
