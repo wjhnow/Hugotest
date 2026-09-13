@@ -1,0 +1,17 @@
+{{ define "main" }}
+<article class="main-article {{ if .Params.image }}has-image{{ end }}">
+    {{ partial "article/components/header" . }}
+
+    {{ if .Params.image }}
+    <div class="article-image">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" />
+    </div>
+    {{ end }}
+
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+
+    {{ partial "article/components/footer" . }}
+</article>
+{{ end }}
