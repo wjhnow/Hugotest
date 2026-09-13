@@ -914,3 +914,8 @@ img.author-inline-avatar {
   letter-spacing: 0.05em !important;
 }
 
+/* Hide default Hugo Stack theme related container if called outside article footer */
+.article-footer + .related-contents,
+.related-contents {
+  display: none !important;
+}
