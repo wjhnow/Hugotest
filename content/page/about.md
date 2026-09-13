@@ -38,7 +38,7 @@ Email us at info@wjhnow.com — we read everything.
 
 <img src="/img/mr-jh.png" alt="Mr. JH" class="author-inline-avatar">
 
-**1.Mr. JH**
+**1. Mr. JH**
 
 I'm the science nerd. I dig through research papers and turn "quantum entanglement" into "here's why it's weird". If it involves space or a "did you know", I probably wrote it.
 
