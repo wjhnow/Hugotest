@@ -559,7 +559,7 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
-/* --- 7. Related Content --- */
+/* --- 7. Related Content (Editorial Minimalist Refactor) --- */
 .related-content,
 .related-posts,
 .related,
@@ -569,12 +569,13 @@ a[href*="/categories/"]:hover {
 [class*="related_posts"],
 section.related,
 div.related {
-  margin-top: 4rem !important;
-  padding-top: 2.5rem !important;
-  border-top: 1px solid #e5e5e5 !important;
+  margin-top: 3.5rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid var(--border-color) !important;
+  background: transparent !important;
 }
 
-/* Related section heading */
+/* Related section header */
 .related-content h3,
 .related-posts h3,
 .related h3,
@@ -586,64 +587,74 @@ div.related {
 [class*="related"] > h4,
 [class*="related"] > .title {
   font-family: var(--sans-ui) !important;
-  font-size: 0.68rem !important;
+  font-size: 11px !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.16em !important;
-  color: #555555 !important;
-  margin-bottom: 1.4rem !important;
+  letter-spacing: 0.18em !important;
+  color: #111111 !important;
+  margin-bottom: 1.5rem !important;
   display: block !important;
+  border: none !important;
 }
 
-/* Related cards */
+/* Related card layout reset */
 .related-content article,
 .related-posts article,
 .related article,
 .related-content .post,
 .related-posts .post,
 [class*="related"] article,
-[class*="related"] .post {
-  background: #ffffff !important;
-  border: 1px solid #e8e6e3 !important;
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  max-width: 380px !important;
-  transition: all 0.2s ease !important;
+[class*="related"] .post,
+.related-card {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 2rem !important;
+  max-width: 100% !important;
 }
 
-.related-content article:hover,
-.related-posts article:hover,
-.related article:hover,
-[class*="related"] article:hover {
-  border-color: #ccc !important;
-  transform: translateY(-3px) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07) !important;
-}
-
+/* Related images */
 .related-content img,
 .related-posts img,
 .related article img,
-[class*="related"] img {
+[class*="related"] img,
+.related-card img {
   width: 100% !important;
-  height: 180px !important;
+  height: auto !important;
+  max-height: 380px !important;
   object-fit: cover !important;
+  border-radius: 0 !important;
   display: block !important;
+  margin-bottom: 0.8rem !important;
 }
 
+/* Related titles (Serif Editorial) */
 .related-content h4,
 .related-posts h4,
 .related article h4,
 .related-content .article-title,
 .related-posts .article-title,
 [class*="related"] h4,
-[class*="related"] .article-title {
+[class*="related"] .article-title,
+.related-card a,
+.related-card h3 {
   font-family: var(--serif-editorial) !important;
-  font-size: 0.98rem !important;
+  font-size: 1.6rem !important;
   font-weight: 400 !important;
-  line-height: 1.35 !important;
-  color: #111 !important;
-  padding: 0.85rem 1rem 1rem !important;
-  margin: 0 !important;
+  line-height: 1.25 !important;
+  color: #111111 !important;
+  padding: 0 !important;
+  margin: 0.4rem 0 0 0 !important;
+  text-decoration: none !important;
+}
+
+.related-content a:hover,
+.related-posts a:hover,
+.related article a:hover,
+[class*="related"] a:hover {
+  opacity: 0.75 !important;
 }
 
 /* --- 8. Footer --- */
