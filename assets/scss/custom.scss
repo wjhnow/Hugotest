@@ -442,10 +442,32 @@ h1.entry-title,
   padding-left: 14px !important;
 }
 
+/* --- Universal Drop Cap Reset (Neutralize themes/spans/pseudo-elements) --- */
+p::first-letter,
+.article-content p::first-letter,
+.article-body p::first-letter,
+.entry-content p::first-letter,
+.first-letter,
+.dropcap,
+span.first-letter,
+span.dropcap,
+.article-content .first-letter,
+.article-content .dropcap {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  float: none !important;
+  line-height: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+  display: inline !important;
+}
 
-/* Drop cap - Manual control */
+/* Explicit Manual Drop Cap (Triggers only when class is specified) */
 p.has-dropcap::first-letter,
-.article-body > p.intro::first-letter {
+.article-body > p.intro::first-letter,
+p.has-dropcap .first-letter {
   font-family: var(--serif-editorial) !important;
   font-size: 4.1rem !important;
   float: left !important;
@@ -773,8 +795,10 @@ img.author-inline-avatar {
     font-size: 1.25rem !important;
   }
 
-  .article-content > p:first-of-type::first-letter,
-  .entry-content > p:first-of-type::first-letter {
+  /* Manual Drop Cap Mobile Scaling */
+  p.has-dropcap::first-letter,
+  .article-body > p.intro::first-letter,
+  p.has-dropcap .first-letter {
     font-size: 3.4rem !important;
     padding-right: 10px !important;
   }
