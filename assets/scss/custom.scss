@@ -617,3 +617,31 @@ footer.site-footer,
 .page-content {
   display: block !important;
 }
+
+/* ===== Reduce Hero Image Size ===== */
+
+/* Main hero image on single posts & homepage */
+.article-image img,
+.featured-image img,
+.post-thumbnail img,
+.article-list .article-image img,
+.single-post .article-image img,
+.single-post .featured-image img {
+  width: 100% !important;
+  max-height: 420px !important;          /* ← control height here */
+  height: auto !important;
+  object-fit: cover !important;          /* crops nicely instead of stretching */
+  object-position: center center !important;
+  border-radius: 0 !important;
+  display: block !important;
+}
+
+/* Optional: slightly shorter on mobile */
+@media (max-width: 768px) {
+  .article-image img,
+  .featured-image img,
+  .post-thumbnail img,
+  .single-post .article-image img {
+    max-height: 340px !important;
+  }
+}
