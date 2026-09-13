@@ -839,3 +839,70 @@ img.author-inline-avatar {
     padding: 4px 9px !important;
   }
 }
+/* --- 11. Forceful Related Content Card Override --- */
+.related-content *,
+.related-posts *,
+.related *,
+[class*="related"] * {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove card wrapper backgrounds */
+.related-content div,
+.related-posts div,
+.related div,
+.related-content article,
+.related-posts article,
+.related article,
+[class*="related"] article,
+[class*="related"] .card,
+[class*="related"] .related-card,
+aside[class*="related"],
+section[class*="related"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Image Reset */
+.related-content img,
+.related-posts img,
+.related img,
+[class*="related"] img {
+  border-radius: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 380px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin-bottom: 0.8rem !important;
+}
+
+/* Title Styling Reset */
+.related-content a,
+.related-posts a,
+.related a,
+[class*="related"] a {
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+.related-content h4,
+.related-posts h4,
+.related h4,
+[class*="related"] h4,
+[class*="related"] h3,
+[class*="related"] .title {
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.55rem !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  color: #111111 !important;
+  margin-top: 0.5rem !important;
+  padding: 0 !important;
+}
