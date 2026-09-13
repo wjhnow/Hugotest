@@ -9,18 +9,6 @@ menu:
 comments: false
 ---
 
-
-<div class="about-authors-container">
-    <div class="about-author-card">
-        <img src="/img/mr-jh.png" alt="Mr JH" class="about-avatar">
-        <span class="author-name">Mr JH</span>
-    </div>
-    <div class="about-author-card">
-        <img src="/img/mr-wnow.png" alt="Mr Wnow" class="about-avatar">
-        <span class="author-name">Mr Wnow</span>
-    </div>
-</div>
-
 Look, the internet is loud.
 Every day there's a new gadget, a new space photo, a new "scientists say".
 Most of it is buried in 2000-word articles you’ll never finish.
@@ -48,13 +36,13 @@ Email us at info@wjhnow.com — we read everything.
 
 ### | Who Writes This
 
-<img src="/img/jh.jpg" alt="Mr. JH" class="author-inline-avatar">
+<img src="/img/mr-jh.png" alt="Mr. JH" class="author-inline-avatar">
 
 **Mr. JH**
 
 I'm the science nerd. I dig through research papers and turn "quantum entanglement" into "here's why it's weird". If it involves space or a "did you know", I probably wrote it.
 
-<img src="/img/wnow.jpg" alt="Mr. Wnow" class="author-inline-avatar">
+<img src="/img/mr-wnow.png" alt="Mr. Wnow" class="author-inline-avatar">
 
 **Mr. Wnow**
 
