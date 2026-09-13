@@ -10,6 +10,16 @@ comments: false
 ---
 
 
+<div class="about-authors-container">
+    <div class="about-author-card">
+        <img src="/img/mr-jh.png" alt="Mr JH" class="about-avatar">
+        <span class="author-name">Mr JH</span>
+    </div>
+    <div class="about-author-card">
+        <img src="/img/mr-wnow.png" alt="Mr Wnow" class="about-avatar">
+        <span class="author-name">Mr Wnow</span>
+    </div>
+</div>
 
 Look, the internet is loud.
 Every day there's a new gadget, a new space photo, a new "scientists say".
