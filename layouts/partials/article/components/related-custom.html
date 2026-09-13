@@ -1,1 +1,22 @@
-<h1 style="color: red; font-size: 2rem;">CUSTOM PARTIAL HERE</h1>
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<aside class="related-content-plain" style="margin-top: 2rem;">
+    <h2 class="related-title" style="font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--card-text-color-main, #444); margin-bottom: 1rem;">RELATED CONTENT</h2>
+    <div class="related-article-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        {{ range . }}
+        <div class="related-card-flat" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            {{ if .Params.image }}
+            <a href="{{ .RelPermalink }}" style="display: block; width: 100%; overflow: hidden; border-radius: 8px;">
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+            </a>
+            {{ end }}
+            <div>
+                <h3 style="margin: 0.25rem 0 0 0; font-size: 1.1rem; line-height: 1.4;">
+                    <a href="{{ .RelPermalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a>
+                </h3>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</aside>
+{{ end }}
