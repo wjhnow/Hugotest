@@ -751,3 +751,63 @@ h1.entry-title,
   max-width: 1080px;
   margin: 0 auto;
 }
+
+/* ===== Larger Article Body Text (1.42rem) ===== */
+.article-body p,
+.entry-content p,
+.post-content p,
+.article-content p {
+  font-family: Georgia, "Times New Roman", Book Antiqua, serif !important;
+  font-size: 1.42rem !important;
+  line-height: 1.8 !important;
+  color: #222222 !important;
+  margin-bottom: 1.7rem !important;
+  max-width: 700px;
+}
+
+/* Slightly larger on very wide screens */
+@media (min-width: 1200px) {
+  .article-body p,
+  .entry-content p,
+  .post-content p,
+  .article-content p {
+    font-size: 1.48rem !important;
+  }
+}
+
+/* ===== Larger Subheadings (to match new body size) ===== */
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  font-family: var(--serif-editorial) !important;
+  font-size: 2rem !important;               /* increased */
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  color: #111111 !important;
+  margin: 2.6rem 0 1.1rem 0 !important;
+  border-left: 2px solid var(--accent-bar) !important;
+  padding-left: 14px !important;
+}
+
+@media (max-width: 768px) {
+  .article-body p,
+  .entry-content p,
+  .article-content p {
+    font-size: 1.28rem !important;
+  }
+
+  .article-body h2,
+  .article-body h3,
+  .entry-content h2,
+  .entry-content h3,
+  .article-content h2,
+  .article-content h3 {
+    font-size: 1.65rem !important;
+  }
+}
