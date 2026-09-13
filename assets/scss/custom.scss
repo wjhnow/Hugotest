@@ -1,9 +1,9 @@
 /* ==========================================================================
-   WJH.now / Hugotest – AD-inspired Master Stylesheet (Revised)
+   WJH.now / Hugotest – Clean AD-inspired Master Stylesheet
    ========================================================================== */
 
 :root {
-  --body-background: #faf9f7;          /* soft warm off-white instead of pure white */
+  --body-background: #faf9f7;
   --text-main: #111111;
   --text-muted: #555555;
   --border-color: #e8e6e3;
@@ -42,6 +42,15 @@ body {
   padding: 1.75rem 1.5rem 4.5rem !important;
   width: 100% !important;
   overflow: visible !important;
+  display: block !important;
+  flex-direction: unset !important;
+}
+
+.container,
+.wrapper,
+.page,
+.page-content {
+  display: block !important;
 }
 
 @media (max-width: 768px) {
@@ -217,9 +226,22 @@ body {
 .article-list article {
   border: none !important;
   box-shadow: none !important;
-  margin-bottom: 3.5rem !important;
   background: transparent !important;
-  padding-bottom: 0 !important;
+  padding: 2.8rem 1.8rem !important;
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+.article-list article:nth-child(odd) {
+  background-color: #faf9f7 !important;
+}
+
+.article-list article:nth-child(even) {
+  background-color: #f3f1ed !important;
+}
+
+.article-list article + article {
+  border-top: 1px solid #e8e6e3 !important;
 }
 
 .article-list .article-image,
@@ -232,17 +254,31 @@ body {
   max-height: none !important;
   aspect-ratio: auto !important;
   overflow: visible !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 1.6rem !important;
 }
 
 .article-image img,
 .featured-image img,
-.post-thumbnail img {
+.post-thumbnail img,
+.article-list .article-image img,
+.single-post .article-image img,
+.single-post .featured-image img {
   width: 100% !important;
+  max-height: 460px !important;
   height: auto !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
+  object-position: center center !important;
   border-radius: 0 !important;
   display: block !important;
+}
+
+@media (max-width: 768px) {
+  .article-image img,
+  .featured-image img,
+  .post-thumbnail img,
+  .single-post .article-image img {
+    max-height: 300px !important;
+  }
 }
 
 .article-list .article-category,
@@ -253,7 +289,7 @@ body {
   display: none !important;
 }
 
-/* Titles – refined for AD feel */
+/* Titles */
 .article-title,
 .article-title a,
 h1.article-title,
@@ -263,17 +299,16 @@ h1.entry-title,
 .article-list article .article-title,
 .article-list article h2 a {
   font-family: var(--serif-editorial) !important;
-  font-size: 3.35rem !important;
+  font-size: 3.1rem !important;
   font-weight: 400 !important;
-  line-height: 1.12 !important;
+  line-height: 1.15 !important;
   letter-spacing: -0.02em !important;
-  color: #111 !important;
-  margin: 0.4rem 0 0.7rem 0 !important;
+  color: #111111 !important;
+  margin: 0.3rem 0 0.6rem 0 !important;
   text-decoration: none !important;
   display: block !important;
 }
 
-/* Thin underline accent under list titles */
 .article-list article .article-title::after,
 .article-list article h2::after {
   content: "" !important;
@@ -297,14 +332,9 @@ h1.entry-title,
 
 /* --- 6. Single Post --- */
 
-/* Category */
-.category-badge,
-.article-category,
-.entry-category,
+/* Category (top of post) */
 .article-header .category,
-.taxonomy-term,
-.post-category,
-a[href*="/categories/"] {
+.article-header .category-badge {
   background: transparent !important;
   color: #111 !important;
   padding: 0 !important;
@@ -318,21 +348,22 @@ a[href*="/categories/"] {
   display: inline-block !important;
 }
 
-/* Deck / Subtitle – larger & more readable */
+/* Deck / Subtitle */
 .single-post .article-subtitle,
 .single-post .entry-subtitle,
 .single-post .deck,
 .article-header .subtitle,
 .article-details .article-subtitle {
   font-family: var(--sans-ui) !important;
-  font-size: 1.35rem !important;        /* was 1.15rem – increased */
+  font-size: 1.4rem !important;
   line-height: 1.55 !important;
   color: #333333 !important;
   font-weight: 400 !important;
-  margin: 0.4rem 0 1.3rem 0 !important;
+  margin: 0.5rem 0 1.4rem 0 !important;
   max-width: 740px !important;
   letter-spacing: -0.01em !important;
 }
+
 /* Meta strip */
 .single-post .article-meta,
 .single-post .post-meta,
@@ -365,10 +396,20 @@ a[href*="/categories/"] {
 .post-content p,
 .article-content p {
   font-family: Georgia, "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.28rem !important;
-  line-height: 1.78 !important;
-  color: #222 !important;
-  margin-bottom: 1.55rem !important;
+  font-size: 1.42rem !important;
+  line-height: 1.8 !important;
+  color: #222222 !important;
+  margin-bottom: 1.7rem !important;
+  max-width: 700px;
+}
+
+@media (min-width: 1200px) {
+  .article-body p,
+  .entry-content p,
+  .post-content p,
+  .article-content p {
+    font-size: 1.48rem !important;
+  }
 }
 
 .article-body p a,
@@ -380,7 +421,7 @@ a[href*="/categories/"] {
   text-decoration-thickness: 1px !important;
 }
 
-/* Subheadings – softer AD-style treatment */
+/* Subheadings */
 .article-body h2,
 .article-body h3,
 .article-body h4,
@@ -391,16 +432,16 @@ a[href*="/categories/"] {
 .article-content h3,
 .article-content h4 {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.85rem !important;
+  font-size: 1.75rem !important;
   font-weight: 400 !important;
-  line-height: 1.25 !important;
-  color: #111 !important;
-  margin: 2.4rem 0 1rem 0 !important;
+  line-height: 1.3 !important;
+  color: #111111 !important;
+  margin: 2.6rem 0 1.1rem 0 !important;
   border-left: 2px solid var(--accent-bar) !important;
   padding-left: 14px !important;
 }
 
-/* Drop cap – better proportioned */
+/* Drop cap */
 .article-content > p:first-of-type::first-letter,
 .entry-content > p:first-of-type::first-letter,
 .article-body > p:first-of-type::first-letter {
@@ -431,127 +472,210 @@ figcaption,
 .article-tags,
 .post-tags,
 .tags {
-  margin: 2.5rem 0 1.5rem !important;
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 8px !important;
+  gap: 8px 10px !important;
+  margin: 2.2rem 0 1.8rem 0 !important;
 }
 
 .article-tags a,
 .post-tags a,
-.tags a {
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.06em !important;
-  padding: 5px 11px !important;
-  border-radius: 2px !important;
-  border: 1px solid #ddd !important;
-  color: #333 !important;
-  text-decoration: none !important;
-}
-
-/* --- 7. Footer --- */
-.site-footer {
-  background: #fff !important;
-  border-top: 1px solid var(--border-color) !important;
-  padding: 3.5rem 1.5rem 2.5rem !important;
-  text-align: center !important;
-  margin-top: 4rem !important;
-}
-
-.site-footer a {
-  color: #111 !important;
-  text-decoration: none !important;
-  font-size: 0.72rem !important;
+.tags a,
+.tag,
+.category-badge,
+.article-category,
+.entry-category,
+.post-category,
+.taxonomy-term,
+.badge,
+a[href*="/categories/"] {
+  background-color: #1a2b3c !important;
+  color: #ffffff !important;
+  padding: 6px 13px !important;
+  border-radius: 4px !important;
+  font-size: 0.76rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.07em !important;
+  border: none !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease !important;
+  display: inline-block !important;
 }
 
-/* --- 8. Mobile refinements --- */
-@media (max-width: 768px) {
-  .site-masthead-tagline {
-    padding: 1.1rem 0 1.3rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  .site-masthead-tagline .tagline-text {
-    font-size: 17px !important;
-  }
-
-  .ad-logo {
-    font-size: 2.2rem !important;
-  }
-
-  .single-post h1.article-title,
-  .single-post h1.entry-title,
-  article h1.article-title,
-  .article-header h1 {
-    font-size: 2.35rem !important;
-    line-height: 1.15 !important;
-    margin-bottom: 0.8rem !important;
-  }
-
-  .article-body p,
-  .entry-content p,
-  .article-content p {
-    font-size: 1.18rem !important;
-    line-height: 1.72 !important;
-  }
-
-  .article-body h2,
-  .article-body h3,
-  .entry-content h2,
-  .entry-content h3,
-  .article-content h2,
-  .article-content h3 {
-    font-size: 1.55rem !important;
-    margin-top: 2rem !important;
-  }
-
-  .article-content > p:first-of-type::first-letter,
-  .entry-content > p:first-of-type::first-letter {
-    font-size: 3.4rem !important;
-    padding-right: 10px !important;
-  }
+.article-tags a:hover,
+.post-tags a:hover,
+.tags a:hover,
+a[href*="/categories/"]:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
 
-/* --- 9. Live Updates & Social (kept & cleaned) --- */
+/* Author Card */
+.author-card,
+.article-author,
+.author-box {
+  padding: 1.3rem 1.4rem !important;
+}
+
+.author-title,
+.about-author-card .author-name,
+.article-content .author-title,
+.author-name {
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.author-bio,
+.author-description,
+.author-card p {
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+  color: #444444 !important;
+}
+
+/* --- 7. Related Content (Fixed with broader selectors) --- */
+.related-content,
+.related-posts,
+.related,
+.article-related,
+[class*="related-content"],
+[class*="related-posts"],
+[class*="related_posts"],
+section.related,
+div.related {
+  margin-top: 4rem !important;
+  padding-top: 2.5rem !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+/* Related heading – target common patterns */
+.related-content h3,
+.related-posts h3,
+.related h3,
+.article-related h3,
+.related-title,
+.related-content .section-title,
+.related-posts .section-title,
+[class*="related"] > h3,
+[class*="related"] > h4,
+[class*="related"] > .title {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  color: #555555 !important;
+  margin-bottom: 1.6rem !important;
+  display: block !important;
+}
+
+/* Related cards */
+.related-content article,
+.related-posts article,
+.related article,
+.related-content .post,
+.related-posts .post,
+[class*="related"] article,
+[class*="related"] .post {
+  background: #ffffff !important;
+  border: 1px solid #e8e6e3 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  max-width: 380px !important;
+  transition: all 0.2s ease !important;
+}
+
+.related-content article:hover,
+.related-posts article:hover,
+.related article:hover,
+[class*="related"] article:hover {
+  border-color: #ccc !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07) !important;
+}
+
+.related-content img,
+.related-posts img,
+.related article img,
+[class*="related"] img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.related-content h4,
+.related-posts h4,
+.related article h4,
+.related-content .article-title,
+.related-posts .article-title,
+[class*="related"] h4,
+[class*="related"] .article-title {
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.15rem !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  color: #111 !important;
+  padding: 1rem 1.1rem 1.2rem !important;
+  margin: 0 !important;
+}
+
+/* --- 8. Footer --- */
+.site-footer,
+footer.site-footer,
+.footer {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  clear: both !important;
+  position: relative !important;
+  order: unset !important;
+  flex: none !important;
+  background-color: #faf9f7 !important;
+  border-top: 1px solid #e5e5e5 !important;
+  padding: 3.2rem 1.5rem 2.8rem !important;
+  margin-top: 4.5rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center !important;
+}
+
 .live-updates {
+  background: #ffffff !important;
+  border: 1px solid #e8e6e3 !important;
+  border-radius: 6px !important;
+  padding: 1.1rem 1.3rem !important;
+  margin: 0 auto 2rem auto !important;
+  max-width: 680px !important;
   display: flex !important;
   flex-wrap: wrap !important;
-  align-items: center !important;
   justify-content: center !important;
-  gap: 6px 8px !important;
+  align-items: center !important;
+  gap: 6px 14px !important;
   font-family: var(--sans-ui) !important;
-  padding: 14px 12px !important;
-  margin: 1.5rem 0 2rem !important;
-  border-top: 1px solid var(--border-color) !important;
-  border-bottom: 1px solid var(--border-color) !important;
-  text-align: center !important;
 }
 
 .live-updates strong {
-  font-size: 12px !important;
+  font-size: 0.84rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.1em !important;
   text-transform: uppercase !important;
   color: #111 !important;
-  margin-right: 4px !important;
 }
 
 .live-updates a {
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-  color: #111 !important;
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  color: #222 !important;
   text-decoration: none !important;
 }
 
 .live-updates a:hover {
-  color: #666 !important;
+  color: #000 !important;
 }
 
 .live-updates .sep {
@@ -559,7 +683,27 @@ figcaption,
   margin: 0 2px !important;
 }
 
-/* About page avatars – kept as-is with minor cleanup */
+.site-footer .copyright {
+  font-size: 0.95rem !important;
+  color: #333 !important;
+  margin-bottom: 0.6rem !important;
+  font-weight: 500 !important;
+}
+
+.footer-domain,
+.site-footer small,
+.site-footer .footer-info {
+  font-size: 0.82rem !important;
+  color: #777 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.site-footer a {
+  color: #111 !important;
+  text-decoration: none !important;
+}
+
+/* --- 9. About page --- */
 .about-authors-container {
   display: flex !important;
   justify-content: center !important;
@@ -586,426 +730,21 @@ img.author-inline-avatar {
   border: 1.5px solid #e5e5e5 !important;
 }
 
-/* ===== Force footer to the bottom (fix for right-side placement) ===== */
-.main-container,
-.main,
-#main-content {
-  display: block !important;          /* kill flex layout */
-  flex-direction: unset !important;
-}
-
-.site-footer,
-footer.site-footer,
-.footer {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  float: none !important;
-  clear: both !important;
-  position: relative !important;
-  order: unset !important;
-  flex: none !important;
-  margin-top: 4.5rem !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Extra safety for Stack theme's possible wrappers */
-.container,
-.wrapper,
-.page,
-.page-content {
-  display: block !important;
-}
-
-/* ===== Reduce Hero Image Size ===== */
-
-/* Main hero image on single posts & homepage */
-.article-image img,
-.featured-image img,
-.post-thumbnail img,
-.article-list .article-image img,
-.single-post .article-image img,
-.single-post .featured-image img {
-  width: 100% !important;
-  max-height: 420px !important;          /* ← control height here */
-  height: auto !important;
-  object-fit: cover !important;          /* crops nicely instead of stretching */
-  object-position: center center !important;
-  border-radius: 0 !important;
-  display: block !important;
-}
-
-/* Optional: slightly shorter on mobile */
+/* --- 10. Mobile --- */
 @media (max-width: 768px) {
-  .article-image img,
-  .featured-image img,
-  .post-thumbnail img,
-  .single-post .article-image img {
-    max-height: 340px !important;
-  }
-}
-
-/* ============================================================
-   Hero Image – more compact
-   ============================================================ */
-.article-image img,
-.featured-image img,
-.post-thumbnail img,
-.article-list .article-image img,
-.single-post .article-image img,
-.single-post .featured-image img {
-  width: 100% !important;
-  max-height: 460px !important;          /* ← reduced from 520px */
-  height: auto !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  border-radius: 0 !important;
-  display: block !important;
-}
-
-@media (max-width: 768px) {
-  .article-image img,
-  .featured-image img,
-  .post-thumbnail img,
-  .single-post .article-image img {
-    max-height: 300px !important;
-  }
-}
-
-/* ============================================================
-   Deck / Subtitle – larger & better presence
-   ============================================================ */
-.single-post .article-subtitle,
-.single-post .entry-subtitle,
-.single-post .deck,
-.article-header .subtitle,
-.article-details .article-subtitle,
-.article-list .article-subtitle,
-.article-list .article-summary {
-  font-family: var(--sans-ui) !important;
-  font-size: 1.35rem !important;         /* increased */
-  line-height: 1.55 !important;
-  color: #333333 !important;
-  font-weight: 400 !important;
-  margin: 0.5rem 0 1.4rem 0 !important;
-  max-width: 740px !important;
-  letter-spacing: -0.01em !important;
-}
-
-/* ============================================================
-   Tighter spacing: Image → Title → Deck
-   ============================================================ */
-.article-list article,
-.single-post article {
-  margin-bottom: 0 !important;
-}
-
-.article-list .article-image,
-.article-list .featured-image,
-.single-post .article-image,
-.single-post .featured-image {
-  margin-bottom: 1.6rem !important;
-}
-
-.article-title,
-.article-title a,
-h1.article-title,
-h1.entry-title,
-.article-header h1,
-.single-post h1 {
-  margin-top: 0.3rem !important;
-  margin-bottom: 0.6rem !important;
-}
-
-/* ============================================================
-   Alternating Background Colors for Articles (Homepage)
-   ============================================================ */
-
-/* Base style for every article card */
-.article-list article {
-  padding: 2.8rem 1.8rem !important;
-  margin-bottom: 0 !important;
-  border-radius: 0 !important;
-  transition: background-color 0.2s ease;
-}
-
-/* Odd articles – soft off-white */
-.article-list article:nth-child(odd) {
-  background-color: #faf9f7 !important;
-}
-
-/* Even articles – light warm grey */
-.article-list article:nth-child(even) {
-  background-color: #f3f1ed !important;
-}
-
-/* Optional: subtle top border between articles */
-.article-list article + article {
-  border-top: 1px solid #e8e6e3 !important;
-}
-
-/* Make sure the content inside stays properly aligned */
-.article-list article .article-details,
-.article-list article .article-content {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-/* ===== Larger Article Body Text (1.42rem) ===== */
-.article-body p,
-.entry-content p,
-.post-content p,
-.article-content p {
-  font-family: Georgia, "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.42rem !important;
-  line-height: 1.8 !important;
-  color: #222222 !important;
-  margin-bottom: 1.7rem !important;
-  max-width: 700px;
-}
-
-/* Slightly larger on very wide screens */
-@media (min-width: 1200px) {
-  .article-body p,
-  .entry-content p,
-  .post-content p,
-  .article-content p {
-    font-size: 1.48rem !important;
-  }
-}
-
-/* ===== Larger Subheadings (to match new body size) ===== */
-.article-body h2,
-.article-body h3,
-.article-body h4,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.article-content h2,
-.article-content h3,
-.article-content h4 {
-  font-family: var(--serif-editorial) !important;
-  font-size: 2rem !important;               /* increased */
-  font-weight: 400 !important;
-  line-height: 1.25 !important;
-  color: #111111 !important;
-  margin: 2.6rem 0 1.1rem 0 !important;
-  border-left: 2px solid var(--accent-bar) !important;
-  padding-left: 14px !important;
-}
-
-@media (max-width: 768px) {
-  .article-body p,
-  .entry-content p,
-  .article-content p {
-    font-size: 1.28rem !important;
+  .site-masthead-tagline {
+    padding: 1.1rem 0 1.3rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
-  .article-body h2,
-  .article-body h3,
-  .entry-content h2,
-  .entry-content h3,
-  .article-content h2,
-  .article-content h3 {
-    font-size: 1.65rem !important;
+  .site-masthead-tagline .tagline-text {
+    font-size: 17px !important;
   }
-}
 
-/* ===== Footer Text – Larger & Clearer ===== */
-.site-footer,
-.site-footer p,
-.site-footer a,
-.site-footer .copyright,
-.site-footer .footer-domain,
-.site-footer .live-updates,
-.live-updates {
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
-}
+  .ad-logo {
+    font-size: 2.2rem !important;
+  }
 
-.site-footer a,
-.live-updates a {
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.08em !important;
-}
-
-.live-updates strong {
-  font-size: 0.9rem !important;
-}
-
-.site-footer .copyright {
-  font-size: 0.95rem !important;
-  color: #333 !important;
-  margin-bottom: 0.6rem !important;
-}
-
-/* ===== Tags / Category Badges – Better Contrast ===== */
-.category-badge,
-.article-category,
-.entry-category,
-.post-category,
-.taxonomy-term,
-.badge,
-a[href*="/categories/"],
-.article-tags a,
-.post-tags a,
-.tags a,
-.tag {
-  background-color: #1a2b3c !important;   /* dark navy background */
-  color: #ffffff !important;              /* white text */
-  padding: 5px 12px !important;
-  border-radius: 3px !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.08em !important;
-  border: none !important;
-  text-decoration: none !important;
-}
-
-/* Hover state for tags */
-.article-tags a:hover,
-.post-tags a:hover,
-.tags a:hover,
-a[href*="/categories/"]:hover {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-/* ============================================================
-   FINAL TYPOGRAPHY SCALE – AD Inspired
-   ============================================================ */
-
-/* --- H1 Title --- */
-.article-title,
-.article-title a,
-h1.article-title,
-h1.entry-title,
-.article-header h1,
-.single-post h1 {
-  font-family: var(--serif-editorial) !important;
-  font-size: 3.1rem !important;
-  font-weight: 400 !important;
-  line-height: 1.15 !important;
-  letter-spacing: -0.02em !important;
-  color: #111111 !important;
-  margin: 0.4rem 0 0.7rem 0 !important;
-}
-
-/* --- Deck / Subtitle --- */
-.single-post .article-subtitle,
-.single-post .entry-subtitle,
-.single-post .deck,
-.article-header .subtitle,
-.article-details .article-subtitle {
-  font-family: var(--sans-ui) !important;
-  font-size: 1.4rem !important;
-  line-height: 1.55 !important;
-  color: #333333 !important;
-  font-weight: 400 !important;
-  margin: 0.5rem 0 1.4rem 0 !important;
-  max-width: 740px !important;
-}
-
-/* --- Body Text --- */
-.article-body p,
-.entry-content p,
-.post-content p,
-.article-content p {
-  font-family: Georgia, "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.42rem !important;
-  line-height: 1.8 !important;
-  color: #222222 !important;
-  margin-bottom: 1.7rem !important;
-  max-width: 700px;
-}
-
-/* --- Subheadings (H2 / H3) --- */
-.article-body h2,
-.article-body h3,
-.article-body h4,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.article-content h2,
-.article-content h3,
-.article-content h4 {
-  font-family: var(--serif-editorial) !important;
-  font-size: 1.75rem !important;
-  font-weight: 400 !important;
-  line-height: 1.3 !important;
-  color: #111111 !important;
-  margin: 2.6rem 0 1.1rem 0 !important;
-  border-left: 2px solid var(--accent-bar) !important;
-  padding-left: 14px !important;
-}
-
-/* --- Category Tags --- */
-.category-badge,
-.article-category,
-.entry-category,
-.post-category,
-.taxonomy-term,
-.badge,
-a[href*="/categories/"],
-.article-tags a,
-.post-tags a,
-.tags a,
-.tag {
-  background-color: #1a2b3c !important;
-  color: #ffffff !important;
-  padding: 5px 12px !important;
-  border-radius: 3px !important;
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.08em !important;
-  border: none !important;
-  text-decoration: none !important;
-}
-
-/* --- Author Card --- */
-.author-title,
-.about-author-card .author-name,
-.article-content .author-title {
-  font-size: 1.15rem !important;
-  font-weight: 700 !important;
-}
-
-.article-content p:has(strong),
-.author-bio,
-.author-description {
-  font-size: 1.05rem !important;
-  line-height: 1.55 !important;
-  color: #444 !important;
-}
-
-/* --- Footer & Live Updates --- */
-.site-footer,
-.site-footer p,
-.site-footer a,
-.site-footer .copyright,
-.live-updates,
-.live-updates a,
-.live-updates strong {
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
-}
-
-.live-updates a,
-.site-footer a {
-  font-weight: 600 !important;
-  letter-spacing: 0.06em !important;
-}
-
-.site-footer .copyright {
-  font-size: 0.95rem !important;
-  color: #333 !important;
-}
-
-/* --- Mobile Adjustments --- */
-@media (max-width: 768px) {
   .article-title,
   h1.article-title,
   .single-post h1 {
@@ -1026,113 +765,18 @@ a[href*="/categories/"],
   .article-body h2,
   .article-body h3,
   .entry-content h2,
-  .entry-content h3 {
+  .entry-content h3,
+  .article-content h2,
+  .article-content h3 {
     font-size: 1.5rem !important;
   }
-}
-/* ============================================================
-   FINAL POLISH – Tags, Author Card & Footer
-   ============================================================ */
 
-/* --- Better Tag Spacing & Style --- */
-.article-tags,
-.post-tags,
-.tags {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 8px 10px !important;
-  margin: 2.2rem 0 1.8rem 0 !important;
-}
+  .article-content > p:first-of-type::first-letter,
+  .entry-content > p:first-of-type::first-letter {
+    font-size: 3.4rem !important;
+    padding-right: 10px !important;
+  }
 
-.category-badge,
-.article-category,
-.entry-category,
-.post-category,
-.taxonomy-term,
-.badge,
-a[href*="/categories/"],
-.article-tags a,
-.post-tags a,
-.tags a,
-.tag {
-  background-color: #1a2b3c !important;
-  color: #ffffff !important;
-  padding: 6px 13px !important;
-  border-radius: 4px !important;
-  font-size: 0.76rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.07em !important;
-  border: none !important;
-  text-decoration: none !important;
-  transition: background-color 0.2s ease !important;
-}
-
-.article-tags a:hover,
-.post-tags a:hover,
-.tags a:hover,
-a[href*="/categories/"]:hover {
-  background-color: #000000 !important;
-}
-
-/* --- Author Card – Slightly Larger Text --- */
-.author-card,
-.article-author,
-.author-box {
-  padding: 1.3rem 1.4rem !important;
-}
-
-.author-title,
-.about-author-card .author-name,
-.article-content .author-title,
-.author-name {
-  font-size: 1.18rem !important;
-  font-weight: 700 !important;
-  margin-bottom: 0.3rem !important;
-}
-
-.author-bio,
-.author-description,
-.article-content p:has(strong) + p,
-.author-card p {
-  font-size: 1.05rem !important;
-  line-height: 1.55 !important;
-  color: #444444 !important;
-}
-
-/* --- Cleaner Footer Spacing --- */
-.site-footer {
-  padding: 3rem 1.5rem 2.5rem !important;
-  margin-top: 4rem !important;
-}
-
-.live-updates {
-  padding: 1.1rem 1rem !important;
-  margin-bottom: 1.8rem !important;
-  gap: 8px 12px !important;
-}
-
-.live-updates strong,
-.live-updates a {
-  font-size: 0.92rem !important;
-  letter-spacing: 0.07em !important;
-}
-
-.site-footer .copyright {
-  font-size: 0.95rem !important;
-  color: #333 !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.footer-domain,
-.site-footer .footer-info {
-  font-size: 0.88rem !important;
-  color: #666 !important;
-  margin-top: 0.4rem !important;
-}
-
-/* Mobile fine-tuning */
-@media (max-width: 768px) {
   .article-tags,
   .post-tags,
   .tags {
@@ -1149,126 +793,7 @@ a[href*="/categories/"]:hover {
     font-size: 1rem !important;
   }
 }
-/* ============================================================
-   FINAL FIXES – Related Content, Footer & Tag Density
-   ============================================================ */
 
-/* 1. Better “RELATED CONTENT” heading */
-.related-content,
-.related-posts,
-.related,
-.article-related {
-  margin-top: 3.5rem !important;
-  padding-top: 2rem !important;
-  border-top: 1px solid #e5e5e5 !important;
-}
-
-.related-content h3,
-.related-posts h3,
-.related h3,
-.article-related h3,
-.related-title {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.82rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.14em !important;
-  color: #555555 !important;
-  margin-bottom: 1.4rem !important;
-  display: block !important;
-}
-
-/* Optional: make related cards a bit nicer */
-.related-content article,
-.related-posts article,
-.related article {
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  transition: transform 0.2s ease !important;
-}
-
-.related-content article:hover,
-.related-posts article:hover {
-  transform: translateY(-2px) !important;
-}
-
-/* 2. Stronger & cleaner Footer */
-.site-footer {
-  background-color: #faf9f7 !important;
-  border-top: 1px solid #e5e5e5 !important;
-  padding: 3.2rem 1.5rem 2.8rem !important;
-  margin-top: 4.5rem !important;
-  text-align: center !important;
-}
-
-.live-updates {
-  background: #ffffff !important;
-  border: 1px solid #e8e6e3 !important;
-  border-radius: 6px !important;
-  padding: 1.1rem 1.3rem !important;
-  margin: 0 auto 2rem auto !important;
-  max-width: 680px !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 6px 14px !important;
-}
-
-.live-updates strong {
-  font-size: 0.84rem !important;
-  letter-spacing: 0.1em !important;
-  color: #111 !important;
-}
-
-.live-updates a {
-  font-size: 0.84rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.06em !important;
-  color: #222 !important;
-  text-decoration: none !important;
-}
-
-.live-updates a:hover {
-  color: #000 !important;
-}
-
-.site-footer .copyright {
-  font-size: 0.95rem !important;
-  color: #333 !important;
-  margin-bottom: 0.6rem !important;
-  font-weight: 500 !important;
-}
-
-.footer-domain,
-.site-footer small,
-.site-footer .footer-info {
-  font-size: 0.82rem !important;
-  color: #777 !important;
-  letter-spacing: 0.03em !important;
-}
-
-/* 3. Better handling of long tag rows */
-.article-tags,
-.post-tags,
-.tags {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 8px 9px !important;
-  margin: 2rem 0 1.8rem 0 !important;
-  max-width: 100% !important;
-}
-
-/* Slightly smaller tags when there are many */
-.article-tags a,
-.post-tags a,
-.tags a,
-.tag {
-  padding: 5px 11px !important;
-  font-size: 0.73rem !important;
-  border-radius: 4px !important;
-}
-
-/* Optional: limit extreme wrapping on very small screens */
 @media (max-width: 480px) {
   .article-tags a,
   .post-tags a,
@@ -1276,80 +801,4 @@ a[href*="/categories/"]:hover {
     font-size: 0.7rem !important;
     padding: 4px 9px !important;
   }
-}
-/* ============================================================
-   RELATED CONTENT – Better Match to Overall Theme
-   ============================================================ */
-
-.related-content,
-.related-posts,
-.related,
-.article-related {
-  margin-top: 4rem !important;
-  padding-top: 2.5rem !important;
-  border-top: 1px solid #e5e5e5 !important;
-}
-
-/* Heading style – matches the rest of the site */
-.related-content h3,
-.related-posts h3,
-.related h3,
-.article-related h3,
-.related-title,
-.related-content .section-title {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.16em !important;
-  color: #444444 !important;
-  margin-bottom: 1.6rem !important;
-  display: block !important;
-}
-
-/* Related card styling */
-.related-content article,
-.related-posts article,
-.related article,
-.related-content .post,
-.related-posts .post {
-  background: #ffffff !important;
-  border: 1px solid #e8e6e3 !important;
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  transition: all 0.2s ease !important;
-  max-width: 360px !important;
-}
-
-.related-content article:hover,
-.related-posts article:hover,
-.related article:hover {
-  border-color: #ccc !important;
-  transform: translateY(-3px) !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06) !important;
-}
-
-/* Image inside related card */
-.related-content img,
-.related-posts img,
-.related article img {
-  width: 100% !important;
-  height: 180px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
-
-/* Title inside related card */
-.related-content h4,
-.related-posts h4,
-.related article h4,
-.related-content .article-title,
-.related-posts .article-title {
-  font-family: var(--serif-editorial) !important;
-  font-size: 1.15rem !important;
-  font-weight: 400 !important;
-  line-height: 1.35 !important;
-  color: #111 !important;
-  padding: 1rem 1.1rem 1.2rem !important;
-  margin: 0 !important;
 }
