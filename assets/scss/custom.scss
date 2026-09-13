@@ -584,3 +584,35 @@ img.author-inline-avatar {
   margin: 1.2rem 0 0.4rem !important;
   border: 1.5px solid #e5e5e5 !important;
 }
+
+/* ===== Force footer to the bottom (fix for right-side placement) ===== */
+.main-container,
+.main,
+#main-content {
+  display: block !important;          /* kill flex layout */
+  flex-direction: unset !important;
+}
+
+.site-footer,
+footer.site-footer,
+.footer {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  clear: both !important;
+  position: relative !important;
+  order: unset !important;
+  flex: none !important;
+  margin-top: 4.5rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Extra safety for Stack theme's possible wrappers */
+.container,
+.wrapper,
+.page,
+.page-content {
+  display: block !important;
+}
