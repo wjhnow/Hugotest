@@ -535,7 +535,7 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
-/* --- 7. Related Content (Fixed with broader selectors) --- */
+/* --- 7. Related Content (Gap + Smaller Font) --- */
 .related-content,
 .related-posts,
 .related,
@@ -545,9 +545,47 @@ a[href*="/categories/"]:hover {
 [class*="related_posts"],
 section.related,
 div.related {
-  margin-top: 4rem !important;
+  margin-top: 5rem !important; /* Increases gap below author card */
   padding-top: 2.5rem !important;
   border-top: 1px solid #e5e5e5 !important;
+}
+
+/* Related section heading ("RELATED CONTENT") */
+.related-content h3,
+.related-posts h3,
+.related h3,
+.article-related h3,
+.related-title,
+.related-content .section-title,
+.related-posts .section-title,
+[class*="related"] > h3,
+[class*="related"] > h4,
+[class*="related"] > .title {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.68rem !important; /* Reduced from 0.78rem */
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  color: #555555 !important;
+  margin-bottom: 1.4rem !important;
+  display: block !important;
+}
+
+/* Related card post titles */
+.related-content h4,
+.related-posts h4,
+.related article h4,
+.related-content .article-title,
+.related-posts .article-title,
+[class*="related"] h4,
+[class*="related"] .article-title {
+  font-family: var(--serif-editorial) !important;
+  font-size: 0.98rem !important; /* Reduced from 1.15rem */
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  color: #111 !important;
+  padding: 0.85rem 1rem 1rem !important;
+  margin: 0 !important;
 }
 
 /* Related heading – target common patterns */
