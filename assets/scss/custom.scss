@@ -801,15 +801,18 @@ img.author-inline-avatar,
     padding-left: 0.75rem !important;
 }
 
-/* Custom Author Titles - Strip Vertical Lines */
-.author-title {
+/* Increase Author Names Font Size & Keep Line-Free */
+.author-title,
+.article-content p:has(strong),
+.post-content p:has(strong) {
     font-family: var(--serif-editorial, "Cormorant Garamond", Georgia, serif) !important;
-    font-size: 1.35rem !important;
+    font-size: 1.85rem !important; /* Increased from small body size */
     font-weight: 700 !important;
     color: #111111 !important;
     border-left: none !important;
     border: none !important;
     padding-left: 0 !important;
-    margin-top: 12px !important;
-    margin-bottom: 8px !important;
+    margin-top: 14px !important;
+    margin-bottom: 6px !important;
+    line-height: 1.2 !important;
 }
