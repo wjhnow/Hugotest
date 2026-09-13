@@ -629,13 +629,78 @@ a[href*="/categories/"]:hover {
   width: 100% !important;
   box-sizing: border-box !important;
 }
+/* --- 7. Hugo Stack Related Content Reset --- */
+.related-contents,
+.related-content,
+aside.related-contents {
+  margin-top: 3.5rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid var(--border-color) !important;
+  background: transparent !important;
+  display: block !important;
+}
 
-/* Title typography styling */
-[class*="related"] .article-title,
-[class*="related"] h2,
-[class*="related"] h3,
-[class*="related"] h4,
-[class*="related"] .article-title a {
+/* Force container cards out of grid overlay into block flow */
+.related-contents .article-list,
+.related-content .article-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+}
+
+.related-contents article,
+.related-content article {
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Ensure the thumbnail image displays on top */
+.related-contents article .article-image,
+.related-content article .article-image,
+.related-contents article img,
+.related-content article img {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 380px !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  margin-bottom: 0.8rem !important;
+  inset: auto !important;
+}
+
+/* Push text wrapper below the image */
+.related-contents article .article-details,
+.related-content article .article-details {
+  position: relative !important;
+  display: block !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  inset: auto !important;
+  transform: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* Format title text below image */
+.related-contents article .article-title,
+.related-content article .article-title,
+.related-contents article .article-title a,
+.related-content article .article-title a {
   position: relative !important;
   display: block !important;
   font-family: var(--serif-editorial) !important;
@@ -648,9 +713,11 @@ a[href*="/categories/"]:hover {
   padding: 0 !important;
 }
 
-/* Strip dark gradients and pseudo-overlays */
-[class*="related"] *::before,
-[class*="related"] *::after {
+/* Strip theme dark gradient overlays */
+.related-contents *::before,
+.related-contents *::after,
+.related-content *::before,
+.related-content *::after {
   display: none !important;
   content: none !important;
   background: none !important;
