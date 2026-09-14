@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="main-article">
+    <header class="article-header">
+        {{ partial "article/components/header" . }}
+    </header>
+
+    <section class="article-content">
+        {{ .Content }}
+    </section>
+
+    <footer class="article-footer">
+        {{ partial "article/components/footer" . }}
+    </footer>
+</article>
+{{ end }}
