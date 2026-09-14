@@ -18,9 +18,11 @@ tags:
 categories:
   - Science
 ---
-## Sunlight Takes 8 Minutes To Reach Earth. Here's What That Actually Means
 
-*Alt: The Light From The Sun Is 8 Minutes Old. And That's Wild*
+
+### Sunlight Takes 8 Minutes To Reach Earth. Here's What That Actually Means
+
+<p class="has-dropcap"> The Light From The Sun Is 8 Minutes Old. And That's Wild </p>
 
 Weird thought.
 
