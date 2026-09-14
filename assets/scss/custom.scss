@@ -572,19 +572,19 @@ aside.related-contents,
 /* Your clean custom related section */
 .related-content-plain {
   display: block !important;
-  margin-top: 4.5rem !important;          /* ← increased gap above */
-  padding-top: 2.2rem !important;
+  margin-top: 5.75rem !important;          /* ← more breathing room */
+  padding-top: 2.4rem !important;
   border-top: 1px solid var(--border-color) !important;
 }
 
 .related-content-plain .related-title {
   font-family: var(--sans-ui) !important;
-  font-size: 0.78rem !important;          /* ← slightly smaller */
+  font-size: 0.76rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.14em !important;
   color: #777777 !important;
   text-transform: uppercase !important;
-  margin-bottom: 1.4rem !important;
+  margin-bottom: 1.35rem !important;
 }
 
 .related-content-plain .related-article-list {
@@ -599,15 +599,15 @@ aside.related-contents,
 
 .related-content-plain .related-image-link img {
   width: 100% !important;
-  max-height: 340px !important;           /* slightly tighter image */
+  max-height: 290px !important;           /* ← shorter image */
   object-fit: cover !important;
   display: block !important;
-  margin-bottom: 0.7rem !important;
+  margin-bottom: 0.65rem !important;
 }
 
 .related-content-plain .related-article-title a {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;          /* ← reduced from 1.8rem */
+  font-size: 1.4rem !important;           /* ← slightly smaller title */
   font-weight: 400 !important;
   line-height: 1.3 !important;
   color: #111111 !important;
@@ -617,7 +617,7 @@ aside.related-contents,
 
 .related-content-plain .related-article-time {
   font-family: var(--sans-ui) !important;
-  font-size: 0.72rem !important;          /* ← slightly smaller */
+  font-size: 0.72rem !important;
   color: #777777 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
@@ -795,6 +795,19 @@ img.author-inline-avatar {
   .author-bio,
   .author-description {
     font-size: 1rem !important;
+  }
+
+  /* Related Content mobile tightening */
+  .related-content-plain {
+    margin-top: 4.5rem !important;
+  }
+
+  .related-content-plain .related-image-link img {
+    max-height: 240px !important;
+  }
+
+  .related-content-plain .related-article-title a {
+    font-size: 1.3rem !important;
   }
 }
 
