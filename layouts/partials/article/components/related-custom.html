@@ -1,4 +1,16 @@
 <!-- MY CUSTOM START -->
+<style>
+  /* Suppress Stack's native card containers rendered outside the footer */
+  .article-footer ~ *,
+  .article-footer + *,
+  .related-contents,
+  .related-content,
+  .article-related,
+  aside.related {
+      display: none !important;
+  }
+</style>
+
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
 <aside class="my-custom-related-block" style="margin-top: 2rem;">
