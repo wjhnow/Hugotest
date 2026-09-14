@@ -12,6 +12,7 @@ comments: false
 Look, the internet is loud.
 Every day there's a new gadget, a new space photo, a new "scientists say".
 Most of it is buried in 2000-word articles you’ll never finish.
+{.has-dropcap}
 
 That’s why we made WJH.now.
 
