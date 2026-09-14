@@ -56,9 +56,9 @@
             }}
         {{ end }}
     {{ else }}
-        {{/* This is a static/ image (not a page resource) – force correct root path */}}
-        {{ if not (hasPrefix $permalink "/") }}
-            {{ $permalink = printf "/%s" $permalink }}
+        {{/* Static image – make path correct for subdirectory sites */}}
+        {{ if hasPrefix $permalink "/" }}
+            {{ $permalink = strings.TrimPrefix "/" $permalink }}
         {{ end }}
         {{ $permalink = $permalink | absURL }}
         {{ $result = dict
