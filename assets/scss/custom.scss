@@ -867,3 +867,26 @@ img.author-inline-avatar {
   border: none !important;
   height: 0 !important;
 }
+
+/* Remove top line above main site footer */
+footer,
+.site-footer,
+#site-footer,
+.footer-wrapper,
+.site-footer-container {
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
+footer::before,
+.site-footer::before,
+#site-footer::before,
+.footer-wrapper::before,
+.site-footer-container::before,
+footer hr,
+.site-footer hr {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  height: 0 !important;
+}
