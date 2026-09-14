@@ -13,6 +13,7 @@ tags:
   - parallel universes
   - many worlds interpretation
  categories:
+  - Science
  
 ---
 
