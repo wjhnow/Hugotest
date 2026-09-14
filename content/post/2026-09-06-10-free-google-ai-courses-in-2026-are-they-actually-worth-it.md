@@ -15,7 +15,6 @@ categories:
   - AI & Technology
 ---
 
-
 ### 10 Free Google AI Courses Everyone's Sharing Online (And Whether They're Actually Worth Your Time)
 
 <p class="has-dropcap"> You've probably seen the post. "Google is quietly giving away 10 AI courses for free" with a screenshot and zero context. </p>
