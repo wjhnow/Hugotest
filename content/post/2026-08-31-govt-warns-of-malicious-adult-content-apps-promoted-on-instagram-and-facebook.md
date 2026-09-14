@@ -17,6 +17,8 @@ tags:
 categories:
   - "Technology "
 ---
+
+
 ### Govt Issues Alert Over Malicious "Adult Content" Apps Promoted on Instagram and Facebook
 
 <p class="has-dropcap"> The Indian government has warned Android users about a new wave of malicious applications disguised as "adult content" apps that are being promoted through advertisements on Instagram and Facebook.</p>
