@@ -9,7 +9,10 @@ author: Mr Wnow
 tags:
   - Science
 ---
-I woke up feeling dull one morning. I really wanted to go to work... but then I took off for the day. Let's say, somewhere out there, another version of me pushed through and showed up anyway.
+
+### Did you know! 
+
+<p class="has-dropcap"> I woke up feeling dull one morning. I really wanted to go to work... but then I took off for the day. Let's say, somewhere out there, another version of me pushed through and showed up anyway.</p>
 
 This is not pure science fiction. It comes from one of the most serious and debated ideas in modern physics: the Many-Worlds Interpretation of quantum mechanics.
 
