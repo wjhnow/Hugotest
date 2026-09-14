@@ -338,18 +338,18 @@ h1.entry-title,
 .article-header .categories,
 .article-categories {
   background: transparent !important;
+  border: none !important;
   box-shadow: none !important;
-  border-top: 1px solid var(--border-color) !important;
-  border-bottom: 1px solid var(--border-color) !important;
-  padding: 11px 0 !important;
+  padding: 0 !important;
   margin: 1rem 0 1.5rem 0 !important;
-  width: 100% !important;
+  width: auto !important;
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 8px 10px !important;
   align-items: center !important;
+  gap: 12px !important;
 }
 
+/* Base Category Badges */
 .article-header .category a,
 .article-header .article-category a,
 .article-header .categories a,
@@ -366,8 +366,24 @@ h1.entry-title,
   letter-spacing: 0.08em !important;
   border: 1px solid #e0ded8 !important;
   text-decoration: none !important;
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
   transition: all 0.2s ease !important;
+}
+
+/* Vertical Separator Line Between Tags */
+.article-header .category a:not(:last-child)::after,
+.article-header .article-category a:not(:last-child)::after,
+.article-header .categories a:not(:last-child)::after,
+.article-categories a:not(:last-child)::after {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1px !important;
+  height: 14px !important;
+  background-color: #d0cecb !important;
+  margin-left: 12px !important;
+  margin-right: -4px !important;
+  pointer-events: none !important;
 }
 
 .article-header .category a:hover,
