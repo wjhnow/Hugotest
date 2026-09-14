@@ -4,14 +4,7 @@ date: 2026-07-01
 description: Ok this space boiling thing is actually insane
 image: /img/2026-07-01 boling  water in space1.jpeg
 author: Mr. JH
-tags:
-  - "Space"
-  - "Physics"
-  - "Did you know"
-  - "WJHnow
-  -categories:
-  - "Science"
-  - "Physics & Eng"
+
 ---
 
 
