@@ -12,8 +12,7 @@ tags:
   - multiverse
   - parallel universes
   - many worlds interpretation
- category:
-  - Science & Physics
+ categories:
  
 ---
 
