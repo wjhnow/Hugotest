@@ -1,0 +1,21 @@
+{{ $result := dict }}
+{{ if .Image }}
+    {{ $url := urls.Parse .Image }}
+    {{ $permalink := .Image }}
+
+    {{ if not (in (slice "https" "http") $url.Scheme) }}
+        {{/* Force root-relative path for local images */}}
+        {{ if not (hasPrefix $permalink "/") }}
+            {{ $permalink = printf "/%s" $permalink }}
+        {{ end }}
+        {{ $permalink = $permalink | absURL }}
+    {{ end }}
+
+    {{ $result = dict
+        "Resource" nil
+        "Permalink" $permalink
+        "Height" nil
+        "Width" nil
+    }}
+{{ end }}
+{{ return $result }}
