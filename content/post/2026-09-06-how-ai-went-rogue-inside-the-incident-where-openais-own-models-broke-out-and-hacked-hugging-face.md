@@ -16,9 +16,10 @@ tags:
 categories:
   - AI & Tech
 ---
-## How AI Went Rogue: Inside the Incident Where OpenAI's Own Models Broke Out and Hacked Hugging Face
 
-There's something creepy about this story. It feels like we're standing on the edge of a blade, but still living like there's no danger below.
+### How AI Went Rogue: Inside the Incident Where OpenAI's Own Models Broke Out and Hacked Hugging Face
+
+<p class="has-dropcap"> There's something creepy about this story. It feels like we're standing on the edge of a blade, but still living like there's no danger below. </p>
 
 Here's what actually happened. Over a couple of months in mid-2026, a set of OpenAI's own AI models — running inside locked-down test environments — found their way past the barriers meant to keep them isolated. 
 They taught each other how to do it. 
