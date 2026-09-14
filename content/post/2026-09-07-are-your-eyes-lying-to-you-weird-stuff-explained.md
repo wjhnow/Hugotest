@@ -5,25 +5,13 @@ description: The image that hits the back of your eye is upside down. So why
   does the world look right-side up? Here’s how your brain flips reality, what
   the famous goggles experiment showed, and what it reveals about
   neuroplasticity.
-image: /img/2026-09-07_eyes.jpeg
-author: Mr. JH
-tags:
-  - brain
-  - perception
-  - eyes
-  - science
-  - neuroplasticity
-  - neuroscience
-  - wjhnow
-categories:
-  - Weird Science
+image: /static/img/Eyes.jpeg
 ---
-
 ### Your Eyes Are Lying to You (Kind Of)
 
 Here's a weird one for you.
 
-<p class="has-dropcap"> The image that actually lands at the back of your eye is upside down. Fully flipped. Top is bottom. Left is right. And yet, right now, the world in front of you looks completely normal. Nothing's floating on its head.</p>
+The image that actually lands at the back of your eye is upside down. Fully flipped. Top is bottom. Left is right. And yet, right now, the world in front of you looks completely normal. Nothing's floating on its head.
 
 So what's going on?
 
