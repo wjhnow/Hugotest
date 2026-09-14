@@ -33,6 +33,22 @@ body {
 .article-translations {
   display: none !important;
 }
+/* Remove divider line under site description */
+.site-description,
+.site-tagline,
+.site-branding,
+.header-description {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.site-description::after,
+.site-tagline::after,
+.site-branding::after,
+.header-description::after {
+  display: none !important;
+  content: none !important;
+}
 
 .main,
 #main-content,
