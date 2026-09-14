@@ -33,6 +33,34 @@ body {
 .article-translations {
   display: none !important;
 }
+/* Remove divider line under site header/description */
+header,
+.site-header,
+.main-header,
+.header-wrapper,
+.site-description,
+.site-tagline,
+.site-branding,
+.header-description {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+header::after,
+.site-header::after,
+.main-header::after,
+.header-wrapper::after,
+.site-description::after,
+.site-tagline::after,
+.site-branding::after,
+.header-description::after,
+header hr,
+.site-header hr {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  height: 0 !important;
+}
 /* Remove divider line under site description */
 .site-description,
 .site-tagline,
