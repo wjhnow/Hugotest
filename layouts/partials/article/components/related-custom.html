@@ -1,20 +1,11 @@
-<style>
-  /* Target and hide the theme's native related card container */
-  .article-footer ~ .related-contents,
-  .related-contents,
-  aside.related-contents {
-    display: none !important;
-  }
-</style>
-
-
+<!-- MY CUSTOM START -->
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-<aside class="related-content-plain" style="margin-top: 2rem;">
-    <h2 class="related-title" style="font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--card-text-color-main, #444); margin-bottom: 1rem;">RELATED CONTENT</h2>
-    <div class="related-article-list" style="display: flex; flex-direction: column; gap: 1.5rem;">
+<aside class="my-custom-related-block" style="margin-top: 2rem;">
+    <h2 style="font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--card-text-color-main, #444); margin-bottom: 1rem;">RELATED CONTENT</h2>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
         {{ range . }}
-        <div class="related-card-flat" style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
             {{ if .Params.image }}
             <a href="{{ .RelPermalink }}" style="display: block; width: 100%; overflow: hidden; border-radius: 8px;">
                 <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: cover;" />
@@ -30,3 +21,13 @@
     </div>
 </aside>
 {{ end }}
+<!-- MY CUSTOM END -->
+
+<style>
+  /* Suppress any default Stack container that is NOT our custom block */
+  .related-contents,
+  .article-related,
+  aside.related {
+    display: none !important;
+  }
+</style>
