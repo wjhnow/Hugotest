@@ -8,6 +8,13 @@ image: /img/2026-09-09_split_universe-1.jpeg
 author: Mr Wnow
 tags:
   - Science
+  - Quantum mechanics
+  - multiverse
+  - parallel universes
+  - many worlds interpretation
+ category:
+  - Science & Physics
+ 
 ---
 
 ### Did you know! 
