@@ -1,16 +1,17 @@
-<!-- MY CUSTOM START -->
 <style>
-  /* Suppress Stack's native card containers rendered outside the footer */
-  .article-footer ~ *,
-  .article-footer + *,
+  /* Force hide Stack's native container wherever it renders */
   .related-contents,
-  .related-content,
-  .article-related,
-  aside.related {
+  aside.related-contents,
+  div.related-contents,
+  .article-footer + .related-contents {
       display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      overflow: hidden !important;
   }
 </style>
 
+<!-- Your Custom Vertical Editorial Layout -->
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
 <aside class="my-custom-related-block" style="margin-top: 2rem;">
@@ -33,13 +34,3 @@
     </div>
 </aside>
 {{ end }}
-<!-- MY CUSTOM END -->
-
-<style>
-  /* Suppress any default Stack container that is NOT our custom block */
-  .related-contents,
-  .article-related,
-  aside.related {
-    display: none !important;
-  }
-</style>
