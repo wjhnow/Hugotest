@@ -16,9 +16,9 @@ tags:
 categories:
   - Technoloy
 ---
-## Android 17 QPR2 Beta 4: Pixel 11 Support Arrives And Notification Intelligence Is Cooked 💀
+### Android 17 QPR2 Beta 4: Pixel 11 Support Arrives And Notification Intelligence Is Cooked 💀
 
-Android 17 QPR2 Beta 4 dropped over the weekend. Google also finally let Pixel 11 owners into the beta program yesterday, which is late but whatever.
+<p class="has-dropcap">Android 17 QPR2 Beta 4 dropped over the weekend. Google also finally let Pixel 11 owners into the beta program yesterday, which is late but whatever.</p>
 
 Usually these late-cycle QPR builds are battery disasters. This one somehow made it to "Platform Stability" without turning the phone into a hand warmer. Miracle.
 
