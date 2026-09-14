@@ -1,8 +1,0 @@
-{{ $image := .Params.image }}
-{{ if $image }}
-    <div class="article-image">
-        <a href="{{ .RelPermalink }}">
-            <img src="{{ $image | relURL }}" loading="lazy" alt="{{ .Title }}" />
-        </a>
-    </div>
-{{ end }}
