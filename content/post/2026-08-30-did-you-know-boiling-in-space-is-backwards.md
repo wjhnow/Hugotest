@@ -4,6 +4,16 @@ date: 2026-07-01
 description: Ok this space boiling thing is actually insane
 image: /img/2026-07-01 boling  water in space1.jpeg
 author: Mr. JH
+tags:
+  - Cybersecurity
+  - "Android "
+  - "Tech news "
+  - "India "
+  - "Online safety "
+  - Malware
+  - Data theft
+categories:
+  - "Technology "
 
 ---
 
