@@ -334,18 +334,48 @@ h1.entry-title,
 
 /* Category (top of post) */
 .article-header .category,
-.article-header .category-badge {
+.article-header .article-category,
+.article-header .categories,
+.article-categories {
   background: transparent !important;
-  color: #111 !important;
-  padding: 0 !important;
   border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0 1.2rem 0 !important;
+  width: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px 10px !important;
+}
+
+.article-header .category a,
+.article-header .article-category a,
+.article-header .categories a,
+.article-categories a,
+.article-header .category-badge {
+  background-color: #efeee9 !important;
+  color: #222222 !important;
+  padding: 5px 12px !important;
+  border-radius: 3px !important;
   font-family: var(--sans-ui) !important;
-  font-size: 11px !important;
+  font-size: 0.74rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.14em !important;
-  margin-bottom: 12px !important;
+  letter-spacing: 0.08em !important;
+  border: 1px solid #e0ded8 !important;
+  text-decoration: none !important;
   display: inline-block !important;
+  transition: all 0.2s ease !important;
+}
+
+.article-header .category a:hover,
+.article-header .article-category a:hover,
+.article-header .categories a:hover,
+.article-categories a:hover,
+.article-header .category-badge:hover {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
 }
 
 /* Deck / Subtitle */
