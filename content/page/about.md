@@ -9,10 +9,10 @@ menu:
 comments: false
 ---
 
-Look, the internet is loud.
-Every day there's a new gadget, a new space photo, a new "scientists say".
-Most of it is buried in 2000-word articles you’ll never finish.
-{.has-dropcap}
+### Look, the internet is loud.
+<p class="has-dropcap"> Every day there's a new gadget, a new space photo, a new "scientists say".
+Most of it is buried in 2000-word articles you’ll never finish. </p>
+
 
 That’s why we made WJH.now.
 
