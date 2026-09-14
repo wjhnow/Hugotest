@@ -1,6 +1,6 @@
 media:
   input: static/img
-  output: img
+  output: /img
 
 content:
   - name: posts
