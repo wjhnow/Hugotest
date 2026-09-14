@@ -559,9 +559,9 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
-/* --- 7. Related Content Hard Structural Reset --- */
+/* --- 7. Related Content (Updated) --- */
 
-/* 1. SILENCE THE THEME'S NATIVE OVERLAY WIDGET (BLUE CIRCLE) */
+/* Silence the theme's native related widget */
 .related-contents,
 aside.related-contents,
 .related-content-section,
@@ -569,22 +569,22 @@ aside.related-contents,
   display: none !important;
 }
 
-/* 2. ENSURE YOUR CLEAN CUSTOM LAYOUT (INSIDE FOOTER.HTML) RENDERS */
+/* Your clean custom related section */
 .related-content-plain {
   display: block !important;
-  margin-top: 2.5rem !important;
-  padding-top: 2rem !important;
+  margin-top: 4.5rem !important;          /* ← increased gap above */
+  padding-top: 2.2rem !important;
   border-top: 1px solid var(--border-color) !important;
 }
 
 .related-content-plain .related-title {
   font-family: var(--sans-ui) !important;
-  font-size: 0.85rem !important;
+  font-size: 0.78rem !important;          /* ← slightly smaller */
   font-weight: 700 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.14em !important;
   color: #777777 !important;
   text-transform: uppercase !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.4rem !important;
 }
 
 .related-content-plain .related-article-list {
@@ -599,17 +599,17 @@ aside.related-contents,
 
 .related-content-plain .related-image-link img {
   width: 100% !important;
-  max-height: 380px !important;
+  max-height: 340px !important;           /* slightly tighter image */
   object-fit: cover !important;
   display: block !important;
-  margin-bottom: 0.8rem !important;
+  margin-bottom: 0.7rem !important;
 }
 
 .related-content-plain .related-article-title a {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.8rem !important;
+  font-size: 1.55rem !important;          /* ← reduced from 1.8rem */
   font-weight: 400 !important;
-  line-height: 1.25 !important;
+  line-height: 1.3 !important;
   color: #111111 !important;
   text-decoration: none !important;
   display: block !important;
@@ -617,15 +617,13 @@ aside.related-contents,
 
 .related-content-plain .related-article-time {
   font-family: var(--sans-ui) !important;
-  font-size: 0.75rem !important;
+  font-size: 0.72rem !important;          /* ← slightly smaller */
   color: #777777 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
-  margin-top: 0.4rem !important;
+  margin-top: 0.35rem !important;
   display: block !important;
 }
-
-
 
 /* --- 8. Footer --- */
 .site-footer,
