@@ -16,8 +16,8 @@ categories:
 ---
 
 
-# In Space, Boiling Water Does the Opposite. And That’s a Problem for Rockets.
-On Earth when you boil water, bubbles go up. In space there IS no up.
+### In Space, Boiling Water Does the Opposite. And That’s a Problem for Rockets.
+<p class="has-dropcap"> On Earth when you boil water, bubbles go up. In space there IS no up. </p>
 
 Scientists have been trying to figure out what that means for rockets and space computers. They use super cold liquids to stay cool, but nobody really knew what boiling looks like in zero gravity.
 
