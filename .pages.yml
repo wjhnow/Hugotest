@@ -41,16 +41,14 @@ content:
 
       - name: tags
         label: Tags
-        type: list
-        field:
-          type: string
+        type: string
+        list: true
         required: false
 
       - name: categories
         label: Categories
-        type: list
-        field:
-          type: string
+        type: string
+        list: true
         required: false
 
       - name: body
