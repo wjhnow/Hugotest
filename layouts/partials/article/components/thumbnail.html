@@ -2,7 +2,11 @@
 {{ if $image }}
     <div class="article-image">
         <a href="{{ .RelPermalink }}">
-            <img src="{{ $image | absURL }}" loading="lazy" alt="{{ .Title }}" />
+            {{ if hasPrefix $image "/" }}
+                <img src="{{ strings.TrimPrefix "/" $image | absURL }}" loading="lazy" alt="{{ .Title }}" />
+            {{ else }}
+                <img src="{{ $image | absURL }}" loading="lazy" alt="{{ .Title }}" />
+            {{ end }}
         </a>
     </div>
 {{ end }}
