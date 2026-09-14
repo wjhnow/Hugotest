@@ -19,7 +19,7 @@ categories:
 
 ### I Tried To Figure Out If Bilibili Pays. It’s Weird.
 
-<p class="has-dropcap"> I downloaded Bilibili at 2am last Tuesday because I saw a meme about it on Reddit.</p>
+<p class="has-dropcap">I downloaded Bilibili at 2am last Tuesday because I saw a meme about it on Reddit.</p>
 "China YouTube" they said. "They’re paying creators now."
 
 Figured I’d waste 20 minutes. Ended up wasting 2 hours.
