@@ -338,14 +338,16 @@ h1.entry-title,
 .article-header .categories,
 .article-categories {
   background: transparent !important;
-  border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 0 1.2rem 0 !important;
-  width: auto !important;
+  border-top: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding: 11px 0 !important;
+  margin: 1rem 0 1.5rem 0 !important;
+  width: 100% !important;
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 8px 10px !important;
+  align-items: center !important;
 }
 
 .article-header .category a,
