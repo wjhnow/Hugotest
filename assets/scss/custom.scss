@@ -491,7 +491,7 @@ figcaption,
   padding-left: 0.7rem !important;
 }
 
-/* Tags */
+/* Tags & Softened Category Bar */
 .article-tags,
 .post-tags,
 .tags {
@@ -512,17 +512,17 @@ figcaption,
 .taxonomy-term,
 .badge,
 a[href*="/categories/"] {
-  background-color: #1a2b3c !important;
-  color: #ffffff !important;
-  padding: 6px 13px !important;
-  border-radius: 4px !important;
-  font-size: 0.76rem !important;
+  background-color: #efeee9 !important;      /* ← Softened subtle tone */
+  color: #222222 !important;                  /* ← Crisp readable dark text */
+  padding: 5px 12px !important;
+  border-radius: 3px !important;
+  font-size: 0.74rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.07em !important;
-  border: none !important;
+  letter-spacing: 0.08em !important;
+  border: 1px solid #e0ded8 !important;      /* ← Very faint refined edge */
   text-decoration: none !important;
-  transition: background-color 0.2s ease !important;
+  transition: all 0.2s ease !important;
   display: inline-block !important;
 }
 
@@ -530,8 +530,9 @@ a[href*="/categories/"] {
 .post-tags a:hover,
 .tags a:hover,
 a[href*="/categories/"]:hover {
-  background-color: #000000 !important;
+  background-color: #111111 !important;
   color: #ffffff !important;
+  border-color: #111111 !important;
 }
 
 /* Author Card */
@@ -559,7 +560,7 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
-/* --- 7. Related Content (Updated) --- */
+/* --- 7. Custom Related Content (Direct Class Targeting) --- */
 
 /* Silence the theme's native related widget */
 .related-contents,
@@ -569,60 +570,43 @@ aside.related-contents,
   display: none !important;
 }
 
-/* Your clean custom related section */
-.related-content-plain {
+/* Custom Live Section Overrides */
+aside.my-custom-related-block,
+.my-custom-related-block {
   display: block !important;
-  margin-top: 5.75rem !important;          /* ← more breathing room */
-  padding-top: 2.4rem !important;
+  margin-top: 4.5rem !important;             /* ← Generous gap above section */
+  padding-top: 2rem !important;
   border-top: 1px solid var(--border-color) !important;
 }
 
-.related-content-plain .related-title {
+.my-custom-related-block h2 {
   font-family: var(--sans-ui) !important;
-  font-size: 0.76rem !important;
+  font-size: 0.85rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.14em !important;
-  color: #777777 !important;
+  letter-spacing: 0.12em !important;
+  color: #555555 !important;
   text-transform: uppercase !important;
-  margin-bottom: 1.35rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
-.related-content-plain .related-article-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 2rem !important;
-}
-
-.related-content-plain .related-card-flat {
-  display: block !important;
-}
-
-.related-content-plain .related-image-link img {
+.my-custom-related-block a img {
   width: 100% !important;
-  max-height: 290px !important;           /* ← shorter image */
+  max-height: 280px !important;             /* ← Capped image height */
+  height: 280px !important;
   object-fit: cover !important;
+  border-radius: 4px !important;
   display: block !important;
-  margin-bottom: 0.65rem !important;
 }
 
-.related-content-plain .related-article-title a {
-  font-family: var(--serif-editorial) !important;
-  font-size: 1.4rem !important;           /* ← slightly smaller title */
-  font-weight: 400 !important;
-  line-height: 1.3 !important;
+.my-custom-related-block h3,
+.my-custom-related-block h3 a {
+  font-family: var(--sans-ui) !important;
+  font-size: 1.25rem !important;             /* ← Refined title sizing */
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
   color: #111111 !important;
   text-decoration: none !important;
-  display: block !important;
-}
-
-.related-content-plain .related-article-time {
-  font-family: var(--sans-ui) !important;
-  font-size: 0.72rem !important;
-  color: #777777 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  margin-top: 0.35rem !important;
-  display: block !important;
+  margin-top: 0.5rem !important;
 }
 
 /* --- 8. Footer --- */
@@ -797,17 +781,20 @@ img.author-inline-avatar {
     font-size: 1rem !important;
   }
 
-  /* Related Content mobile tightening */
-  .related-content-plain {
-    margin-top: 4.5rem !important;
+  /* Custom Related Content mobile adjustments */
+  aside.my-custom-related-block,
+  .my-custom-related-block {
+    margin-top: 3.5rem !important;
   }
 
-  .related-content-plain .related-image-link img {
-    max-height: 240px !important;
+  .my-custom-related-block a img {
+    max-height: 220px !important;
+    height: 220px !important;
   }
 
-  .related-content-plain .related-article-title a {
-    font-size: 1.3rem !important;
+  .my-custom-related-block h3,
+  .my-custom-related-block h3 a {
+    font-size: 1.15rem !important;
   }
 }
 
