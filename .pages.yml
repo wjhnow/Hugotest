@@ -42,17 +42,15 @@ content:
       - name: tags
         label: Tags
         type: list
-        fields:
-          - name: tag
-            type: string
+        field:
+          type: string
         required: false
 
       - name: categories
         label: Categories
         type: list
-        fields:
-          - name: category
-            type: string
+        field:
+          type: string
         required: false
 
       - name: body
