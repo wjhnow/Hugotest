@@ -853,3 +853,17 @@ img.author-inline-avatar {
     padding: 4px 9px !important;
   }
 }
+
+/* Remove divider line above article footer */
+.article-footer {
+  border-top: none !important;
+  box-shadow: none !important;
+  padding-top: 0 !important;
+}
+
+.article-footer::before {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  height: 0 !important;
+}
