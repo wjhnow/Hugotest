@@ -4,7 +4,7 @@ date: 2026-09-06
 description: Google’s viral list of 10 free AI courses is real — but one of them
   isn’t actually free. Here’s what each course covers, how long they take, and
   whether they’re worth your time in 2026.
-image: /img/2026-09-06_AI_course.jpeg
+image: /img/googletalk.jpeg
 author: Mr Wnow
 tags:
   - "Google AI courses "
@@ -14,10 +14,9 @@ tags:
 categories:
   - AI & Technology
 ---
-
 ### 10 Free Google AI Courses Everyone's Sharing Online (And Whether They're Actually Worth Your Time)
 
-<p class="has-dropcap"> You've probably seen the post. "Google is quietly giving away 10 AI courses for free" with a screenshot and zero context. </p>
+You've probably seen the post. "Google is quietly giving away 10 AI courses for free" with a screenshot and zero context.
 
 I went and actually checked what's in it. And — refreshingly — this one holds up. It's real, it's free, and it's a solid way to go from "I use ChatGPT sometimes" to actually understanding what's happening under the hood.
 
@@ -26,46 +25,54 @@ The list comes from Google's own Generative AI Learning Path. Two tracks: beginn
 And???
 
 ## The Beginner Track
+
 No technical background needed. This is for marketing, HR, sales, or just the curious ones. Zero coding required.
 
-_Introduction to Generative AI_: Roughly 45 minutes. What generative AI actually is and how it's different from traditional machine learning.
+*Introduction to Generative AI*: Roughly 45 minutes. What generative AI actually is and how it's different from traditional machine learning.
 
-_Introduction to Large Language Models_: About an hour. How LLMs work, common use cases, and the basics of prompt tuning.
+*Introduction to Large Language Models*: About an hour. How LLMs work, common use cases, and the basics of prompt tuning.
 
-_Introduction to Responsible AI_: Google's principles around bias, fairness, and transparency. The stuff that matters once you start actually deploying these tools.
+*Introduction to Responsible AI*: Google's principles around bias, fairness, and transparency. The stuff that matters once you start actually deploying these tools.
 
 Complete all three and Google gives you a free "Generative AI Fundamentals" skill badge.
 
 ## The Catch
-_To note down_ here is this one course that often gets lumped in the list: **Google AI Essentials**
+
+*To note down* here is this one course that often gets lumped in the list: **Google AI Essentials**
 
 But. Big but. It's not actually free.  
 You can preview all the video lectures on Coursera at no cost. But the graded assignments and the certificate sit behind a $49-a-month subscription. There's a 7-day free trial if you want to blitz through it.
 
 ## Applied AI and Prototyping
+
 This is where things start getting hands-on.
 
-_Introduction to Image Generation:_ Fundamentals of diffusion models.<br>
+*Introduction to Image Generation:* Fundamentals of diffusion models.  
+
 How AI turns a text prompt into a picture.
 
-_Introduction to Generative AI Studio:_ Walkthrough of Google's Vertex AI platform.<br>
+*Introduction to Generative AI Studio:* Walkthrough of Google's Vertex AI platform.  
+
 Prompt engineering and basic model customization.
 
-_Create Image Captioning Models:_ Computer vision.<br>
+*Create Image Captioning Models:* Computer vision.  
+
 How deep learning pipelines generate descriptive text from images.
 
 ## The Architecture Deep Dive
+
 The last three courses. This is where the beginner-friendly framing drops off.
 
 Google flags prior knowledge of Python and ML as helpful here.
 
-_Transformer Models and BERT Model_: The neural network architecture that underpins basically all modern NLP.
+*Transformer Models and BERT Model*: The neural network architecture that underpins basically all modern NLP.
 
-_Attention Mechanism_: A short course — genuinely just a few minutes — on how models weigh different parts of an input.
+*Attention Mechanism*: A short course — genuinely just a few minutes — on how models weigh different parts of an input.
 
-_Encoder-Decoder Architecture_: Mechanics behind sequence-to-sequence tasks like translation and summarization.
+*Encoder-Decoder Architecture*: Mechanics behind sequence-to-sequence tasks like translation and summarization.
 
 ## Is It Actually Worth Doing?
+
 I haven't taken these myself. But going through what's actually in them, the viral hype matches reality.
 
 What needs to be considered here is: it's not a shortcut to becoming an AI engineer.  
