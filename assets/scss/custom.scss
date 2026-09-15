@@ -443,7 +443,7 @@ h1.entry-title,
 .post-content p,
 .article-content p {
   font-family: Georgia, "Times New Roman", Book Antiqua, serif !important;
-  font-size: 1.42rem !important;
+  font-size: 1.55rem !important;          /* ← increased */
   line-height: 1.8 !important;
   color: #222222 !important;
   margin-bottom: 1.7rem !important;
@@ -455,7 +455,7 @@ h1.entry-title,
   .entry-content p,
   .post-content p,
   .article-content p {
-    font-size: 1.48rem !important;
+    font-size: 1.62rem !important;        /* ← increased */
   }
 }
 
@@ -693,7 +693,7 @@ footer.site-footer,
 }
 
 .live-updates strong {
-  font-size: 0.84rem !important;
+  font-size: 0.92rem !important;          /* ← increased */
   font-weight: 700 !important;
   letter-spacing: 0.1em !important;
   text-transform: uppercase !important;
@@ -701,7 +701,7 @@ footer.site-footer,
 }
 
 .live-updates a {
-  font-size: 0.84rem !important;
+  font-size: 0.92rem !important;          /* ← increased */
   font-weight: 600 !important;
   letter-spacing: 0.06em !important;
   color: #222 !important;
@@ -718,7 +718,7 @@ footer.site-footer,
 }
 
 .site-footer .copyright {
-  font-size: 0.95rem !important;
+  font-size: 1.05rem !important;          /* ← increased */
   color: #333 !important;
   margin-bottom: 0.6rem !important;
   font-weight: 500 !important;
@@ -727,7 +727,7 @@ footer.site-footer,
 .footer-domain,
 .site-footer small,
 .site-footer .footer-info {
-  font-size: 0.82rem !important;
+  font-size: 0.90rem !important;          /* ← increased */
   color: #777 !important;
   letter-spacing: 0.03em !important;
 }
@@ -793,7 +793,7 @@ img.author-inline-avatar {
   .article-body p,
   .entry-content p,
   .article-content p {
-    font-size: 1.25rem !important;
+    font-size: 1.35rem !important;        /* ← increased */
   }
 
   .article-body h2,
