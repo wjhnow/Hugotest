@@ -21,7 +21,12 @@
         <div style="display: flex; flex-direction: column; gap: 0.5rem;">
             {{ if .Params.image }}
             <a href="{{ .RelPermalink }}" style="display: block; width: 100%; overflow: hidden; border-radius: 8px;">
-                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+                {{ $img := .Params.image }}
+                {{ if hasPrefix $img "/" }}
+                    <img src="{{ strings.TrimPrefix "/" $img | absURL }}" alt="{{ .Title }}" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+                {{ else }}
+                    <img src="{{ $img | absURL }}" alt="{{ .Title }}" loading="lazy" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+                {{ end }}
             </a>
             {{ end }}
             <div>
