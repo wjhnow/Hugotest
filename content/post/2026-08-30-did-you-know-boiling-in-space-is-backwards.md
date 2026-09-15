@@ -5,16 +5,12 @@ description: Ok this space boiling thing is actually insane
 image: /img/boiling.jpeg
 author: Mr. JH
 tags:
-  - Cybersecurity
-  - "Android "
-  - "Tech news "
-  - "India "
-  - "Online safety "
-  - Malware
-  - Data theft
+  - Space
   - wjhnow
+  - Physics
+  - Microgravity
 categories:
-  - "Technology "
+  - Science
 ---
 ### In Space, Boiling Water Does the Opposite. And That’s a Problem for Rockets.
 
