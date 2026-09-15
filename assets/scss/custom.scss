@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap');
 
 /* ==========================================================================
-   WJH.now / Hugotest – Complete Master Stylesheet (cleaned)
+   WJH.now / Hugotest – Complete Master Stylesheet
+   Updated: Logo sizing + Masthead/Subtitle cleanup + Header harmony
    ========================================================================== */
 :root {
   --body-background: #f4efe6;
@@ -13,6 +14,7 @@
   --accent-bar: #1a2b3c;
   --max-width: 1080px;
 }
+
 
 /* --- 1. Global Reset & Layout --- */
 body {
@@ -62,7 +64,8 @@ body {
   }
 }
 
-/* --- 2. Header (consolidated) --- */
+
+/* --- 2. Header (consolidated + improved logo sizing) --- */
 .ad-header {
   position: relative !important;
   width: 100% !important;
@@ -130,18 +133,18 @@ body {
 
     .logo-title {
       font-family: var(--serif-editorial) !important;
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.35rem !important;          /* ~21.6px – improved presence */
+      font-weight: 700 !important;
       line-height: 1.1;
       color: #111 !important;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.03em !important;
     }
 
     .logo-tagline {
       font-family: var(--sans-ui) !important;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      font-size: 0.62rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.12em !important;
       text-transform: uppercase;
       color: #555 !important;
       opacity: 0.85;
@@ -160,9 +163,9 @@ body {
 
     .logo-img {
       display: block;
-      width: auto;
-      height: 40px;
-      max-height: 48px;
+      width: auto !important;
+      height: 52px !important;                 /* improved from 46px */
+      max-height: 52px !important;
       object-fit: contain;
     }
   }
@@ -179,8 +182,8 @@ body {
 }
 
 .logo-img {
-  width: 46px !important;
-  height: 46px !important;
+  width: 52px !important;
+  height: 52px !important;
   object-fit: contain !important;
   flex-shrink: 0 !important;
   display: block !important;
@@ -195,7 +198,7 @@ body {
 
 .logo-title {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;
+  font-size: 1.35rem !important;
   font-weight: 700 !important;
   color: #111 !important;
   letter-spacing: -0.03em !important;
@@ -205,21 +208,22 @@ body {
 
 .logo-tagline {
   font-family: var(--sans-ui) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.62rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
   color: #555 !important;
   line-height: 1.2 !important;
   display: block !important;
 }
 
-/* --- 3. Masthead Tagline (unified) --- */
+
+/* --- 3. Masthead Tagline (cleaned & refined) --- */
 .site-masthead-tagline {
   max-width: var(--max-width);
-  margin: 0 auto 1.8rem auto !important;
-  padding: 0.9rem 0 1.3rem !important;
-  border-bottom: 1px solid var(--border-color) !important;
+  margin: 0 auto 1.4rem auto !important;
+  padding: 0.6rem 0 1.1rem !important;
+  border-bottom: 1px solid var(--border-color);
   text-align: left;
 }
 
@@ -228,22 +232,25 @@ body {
 }
 
 .site-masthead-tagline .tagline-text {
-  font-style: italic;
   font-family: var(--sans-ui) !important;
-  font-size: 0.95rem;
-  line-height: 1.35;
-  color: var(--text-muted) !important;
-  letter-spacing: 0.03em;
+  font-size: 0.8125rem !important;           /* 13px – quieter on mobile */
+  line-height: 1.45 !important;
+  font-weight: 400 !important;
+  font-style: italic;
+  color: #6b6560 !important;                 /* softer muted tone */
+  letter-spacing: 0.01em;
   margin: 0;
-  opacity: 0.9;
+  opacity: 0.88;
+  max-width: 640px;
 }
 
-/* Nested under header when structure places it inside .ad-header */
+/* When the tagline sits inside the header */
 .ad-header .site-masthead-tagline {
-  padding: 4px 16px 16px;
-  margin-top: -4px;
+  padding: 2px 16px 12px;
+  margin-top: -2px;
   border-bottom: none;
 }
+
 
 /* --- 4. Navigation Drawer --- */
 .nav-drawer {
@@ -311,6 +318,7 @@ body {
 .drawer-social-links a:hover {
   color: #666 !important;
 }
+
 
 /* --- 5. Article List (Homepage) --- */
 .article-list article {
@@ -419,6 +427,7 @@ h1.entry-title,
   color: #222 !important;
   margin: 0 0 1.5rem 0 !important;
 }
+
 
 /* --- 6. Single Post --- */
 
@@ -698,6 +707,7 @@ a[href*="/categories/"]:hover {
   color: #444444 !important;
 }
 
+
 /* --- 7. Custom Related Content --- */
 .related-contents,
 aside.related-contents,
@@ -743,6 +753,7 @@ aside.my-custom-related-block,
   text-decoration: none !important;
   margin-top: 0.5rem !important;
 }
+
 
 /* --- 8. Footer --- */
 .site-footer,
@@ -825,6 +836,7 @@ footer.site-footer,
   text-decoration: none !important;
 }
 
+
 /* --- 9. About page --- */
 .about-authors-container {
   display: flex !important;
@@ -852,19 +864,16 @@ img.author-inline-avatar {
   border: 1.5px solid #e5e5e5 !important;
 }
 
-/* --- 10. Mobile Responsive Adjustments --- */
+
+/* --- 10. Mobile + Desktop Responsive Adjustments --- */
 @media (max-width: 768px) {
   .site-masthead-tagline {
-    padding: 1.1rem 0 1.3rem !important;
-    margin-bottom: 1.5rem !important;
+    padding: 0.5rem 0 1rem !important;
+    margin-bottom: 1.2rem !important;
   }
 
   .site-masthead-tagline .tagline-text {
-    font-size: 17px !important;
-  }
-
-  .ad-logo {
-    font-size: 2.2rem !important;
+    font-size: 0.8125rem !important;       /* 13px */
   }
 
   .article-title,
@@ -932,6 +941,33 @@ img.author-inline-avatar {
   }
 }
 
+/* Desktop logo refinement */
+@media (min-width: 769px) {
+  .site-masthead-tagline .tagline-text {
+    font-size: 0.875rem !important;        /* 14px on desktop */
+  }
+
+  .ad-header {
+    .logo-title {
+      font-size: 1.5rem !important;        /* ~24px */
+    }
+
+    .logo-img {
+      height: 56px !important;
+      max-height: 56px !important;
+    }
+  }
+
+  .logo-title {
+    font-size: 1.5rem !important;
+  }
+
+  .logo-img {
+    width: 56px !important;
+    height: 56px !important;
+  }
+}
+
 @media (max-width: 480px) {
   .article-tags a,
   .post-tags a,
@@ -940,6 +976,7 @@ img.author-inline-avatar {
     padding: 4px 9px !important;
   }
 }
+
 
 /* Remove divider line above article footer */
 .article-footer {
