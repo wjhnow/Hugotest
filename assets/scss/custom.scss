@@ -70,8 +70,8 @@ body {
   background-color: #ffffff !important;
   border-bottom: 1px solid var(--border-color);
   z-index: 1000 !important;
-  padding: 0.75rem 1rem 0.5rem !important;
-  display: block !important; /* Ensure main container acts as a block */
+  padding: 0.65rem 1.25rem 0.5rem !important;
+  display: block !important;
 }
 
 .header-container {
@@ -106,6 +106,16 @@ body {
   transform-origin: center !important;
 }
 
+.hamburger-menu.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg) !important;
+}
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0 !important;
+}
+.hamburger-menu.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg) !important;
+}
+
 /* Compact logo block */
 .ad-logo {
   display: flex !important;
@@ -114,12 +124,11 @@ body {
   text-decoration: none !important;
   color: inherit !important;
   line-height: 1 !important;
-  margin-right: auto !important; /* Keeps logo locked next to burger or centered */
 }
 
 .logo-img {
-  width: 42px !important;
-  height: 42px !important;
+  width: 46px !important;
+  height: 46px !important;
   object-fit: contain !important;
   flex-shrink: 0 !important;
   display: block !important;
@@ -129,12 +138,12 @@ body {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  gap: 2px !important;
+  gap: 1px !important;
 }
 
 .logo-title {
   font-family: var(--serif-editorial) !important;
-  font-size: 1.55rem !important;
+  font-size: 1.65rem !important;
   font-weight: 700 !important;
   color: #111 !important;
   letter-spacing: -0.01em !important;
@@ -144,7 +153,7 @@ body {
 
 .logo-tagline {
   font-family: var(--sans-ui) !important;
-  font-size: 0.65rem !important;
+  font-size: 0.70rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
@@ -155,13 +164,12 @@ body {
 
 /* --- 3. Masthead Tagline --- */
 .site-masthead-tagline {
-  display: block !important; /* Force out of top flex row */
+  display: block !important;
   clear: both !important;
   width: 100% !important;
   max-width: var(--max-width);
-  margin: 0.6rem auto 0 auto !important;
-  padding: 8px 0 6px 0 !important;
-  border-top: 1px solid var(--border-color) !important;
+  margin: 0 auto 1.8rem auto !important;
+  padding: 4px 16px 6px !important;
   border-bottom: 1px solid var(--border-color) !important;
   text-align: left !important;
 
@@ -173,17 +181,15 @@ body {
     font-style: normal !important;
     font-family: var(--sans-ui) !important;
     font-size: 0.6875rem !important; /* 11px micro-scale */
-    line-height: 1.45 !important;
+    line-height: 1.3 !important;
     color: var(--text-muted) !important;
     letter-spacing: 0.03em !important;
     text-transform: uppercase !important;
     margin: 0 !important;
-    opacity: 0.85 !important;
-    white-space: normal !important; /* Allow natural sentence wrapping */
+    opacity: 0.8 !important;
     display: block !important;
   }
 }
-
 
 /* --- 4. Navigation Drawer --- */
 .nav-drawer {
@@ -639,8 +645,6 @@ a[href*="/categories/"]:hover {
 }
 
 /* --- 7. Custom Related Content --- */
-
-/* Silence the theme's native related widget */
 .related-contents,
 aside.related-contents,
 .related-content-section,
@@ -648,7 +652,6 @@ aside.related-contents,
   display: none !important;
 }
 
-/* Custom Live Section Overrides */
 aside.my-custom-related-block,
 .my-custom-related-block {
   display: block !important;
@@ -798,7 +801,7 @@ img.author-inline-avatar {
 /* --- 10. Mobile Responsive Adjustments --- */
 @media (max-width: 768px) {
   .site-masthead-tagline {
-    padding: 2px 16px 6px !important;
+    padding: 4px 16px 6px !important;
     margin-bottom: 1.5rem !important;
   }
 
@@ -855,7 +858,6 @@ img.author-inline-avatar {
     font-size: 1rem !important;
   }
 
-  /* Custom Related Content mobile adjustments */
   aside.my-custom-related-block,
   .my-custom-related-block {
     margin-top: 3.5rem !important;
@@ -881,7 +883,7 @@ img.author-inline-avatar {
   }
 }
 
-/* Remove divider line above article footer */
+/* Footer Dividers Removal */
 .article-footer {
   border-top: none !important;
   box-shadow: none !important;
@@ -895,7 +897,6 @@ img.author-inline-avatar {
   height: 0 !important;
 }
 
-/* Remove top line above main site footer */
 footer,
 .site-footer,
 #site-footer,
