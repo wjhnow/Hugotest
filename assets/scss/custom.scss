@@ -540,12 +540,11 @@ span.dropcap,
   display: inline !important;
 }
 
-/* Explicit Manual Drop Cap */
+/* Explicit Manual Drop Cap - Cinzel Roman Style */
 p.has-dropcap::first-letter,
 .article-body > p.intro::first-letter,
 p.has-dropcap .first-letter {
-  /* Pick your preferred font stack below */
-  font-family: "Playfair Display", "Baskerville", "Georgia", serif !important;
+  font-family: "Cinzel", "Times New Roman", "Baskerville", serif !important;
   font-size: 4.1rem !important;
   float: left !important;
   line-height: 0.75 !important;
@@ -554,6 +553,7 @@ p.has-dropcap .first-letter {
   color: #000 !important;
   font-weight: 700 !important;
 }
+
 
 
 /* Captions */
