@@ -4,6 +4,7 @@ date: 2026-09-15
 description: "Two AI CEOs gave separate interviews the same week — and both
   landed on the same warning. Not outsiders this time. The builders themselves
   are asking for guardrails. "
+image: /img/2026-09-15_AI_warning.jpeg
 author: Mr Wnow
 tags:
   - AI safety
@@ -16,7 +17,7 @@ categories:
   - Technology
   - Tech Commentary
 ---
-<p class="has-dropcap"> Two CEOs, two interviews, same week. And weirdly they both landed in the same place: what happens if this stuff actually goes wrong. </p>
+Two CEOs, two interviews, same week. And weirdly they both landed in the same place: what happens if this stuff actually goes wrong.
 
 I'll be honest, my first reaction was "sure, another AI doom cycle." We've had a few of these already. But this one's different for a dumb, simple reason — it's not outsiders this time. It's not academics or watchdog groups yelling from the sidelines like usual. It's the two guys actually running the companies. The ones cashing the checks. That changes how I read it, at least.
 
