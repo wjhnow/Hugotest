@@ -17,7 +17,7 @@ categories:
   - Technology
   - Tech Commentary
 ---
-Two CEOs, two interviews, same week. And weirdly they both landed in the same place: what happens if this stuff actually goes wrong.
+<p class="has-dropcap"> Two CEOs, two interviews, same week. And weirdly they both landed in the same place: what happens if this stuff actually goes wrong.</p>
 
 I'll be honest, my first reaction was "sure, another AI doom cycle." We've had a few of these already. But this one's different for a dumb, simple reason — it's not outsiders this time. It's not academics or watchdog groups yelling from the sidelines like usual. It's the two guys actually running the companies. The ones cashing the checks. That changes how I read it, at least.
 
