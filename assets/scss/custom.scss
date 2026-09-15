@@ -161,28 +161,28 @@ body {
 /* --- 3. Masthead Tagline (tightened) --- */
 .site-masthead-tagline {
   max-width: var(--max-width);
-  margin: 0 auto 1.6rem auto !important;
-  padding: 1rem 0 1.2rem !important;
+  margin: 0 auto 1.8rem auto !important;
+  padding: 0.9rem 0 1.3rem !important;
   border-bottom: 1px solid var(--border-color) !important;
   text-align: left;
 }
 
 .site-masthead-tagline .tagline-title {
-  display: none !important; /* moved into the logo block */
+  display: none !important;
 }
 
 .site-masthead-tagline p,
 .site-masthead-tagline .tagline-text {
   font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-size: 18px !important;
+  font-size: 19px !important;
   font-style: italic !important;
-  line-height: 1.45 !important;
-  color: #444 !important;
+  line-height: 1.5 !important;
+  color: #3f3f3f !important;
   font-weight: 400 !important;
   margin: 0 !important;
-  max-width: 720px !important;
+  max-width: 780px !important;
+  padding-left: 0 !important; /* ensures it doesn’t shift */
 }
-
 /* --- 4. Navigation Drawer --- */
 .nav-drawer {
   display: none !important;
