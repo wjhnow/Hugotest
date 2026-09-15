@@ -173,20 +173,22 @@ body {
 }
 
   .site-masthead-tagline {
-    padding: 2px 16px 8px;
+    padding: 2px 16px 6px;
     margin-top: 0;
 
     .tagline-text {
       font-style: normal !important;
       font-family: var(--sans-ui) !important;
-      font-size: 0.75rem !important;        /* Drops size down to standard UI meta scale */
-      line-height: 1.35;
-      color: var(--text-muted);
-      letter-spacing: 0.02em;
+      font-size: 0.6875rem !important; /* 11px micro-scale */
+      line-height: 1.3 !important;
+      color: var(--text-muted) !important;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;         /* Optional: gives a clean, ultra-compact masthead feel */
       margin: 0;
-      opacity: 0.85;                        /* Lightens visual weight slightly */
+      opacity: 0.8;
     }
   }
+  
 
 
 /* --- 4. Navigation Drawer --- */
