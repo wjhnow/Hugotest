@@ -932,3 +932,74 @@ footer hr,
   border: none !important;
   height: 0 !important;
 }
+
+.ad-header {
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ad-logo-text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+
+    .logo-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .logo-tagline {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    .ad-logo-img {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      display: block;
+      width: auto;
+      height: 40px;
+      max-height: 48px;
+      object-fit: contain;
+    }
+  }
+
+  .site-masthead-tagline {
+    padding: 4px 16px 16px;
+    margin-top: -4px;
+
+    .tagline-text {
+      font-style: italic;
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      opacity: 0.9;
+    }
+  }
+}
