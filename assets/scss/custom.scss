@@ -68,13 +68,13 @@ body {
   background-color: #ffffff !important;
   border-bottom: 1px solid var(--border-color);
   z-index: 1000 !important;
-  padding: 0.7rem 1.25rem;
+  padding: 0.65rem 1.25rem 0.5rem;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -90,6 +90,7 @@ body {
   height: 15px !important;
   padding: 0 !important;
   z-index: 1001 !important;
+  flex-shrink: 0;
 }
 
 .hamburger-menu span {
@@ -111,48 +112,75 @@ body {
   transform: translateY(-6.5px) rotate(-45deg) !important;
 }
 
+/* New compact logo block */
 .ad-logo {
-  font-family: var(--serif-editorial) !important;
-  font-size: 2.6rem !important;
-  font-weight: 700 !important;
-  color: #000 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
   text-decoration: none !important;
-  letter-spacing: -0.06em !important;
-  line-height: 0.85 !important;
-  display: inline-block;
-  margin-top: -1px;
+  color: inherit !important;
+  line-height: 1 !important;
 }
 
-/* --- 3. Masthead Tagline --- */
+.logo-img {
+  width: 46px !important;
+  height: 46px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.logo-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 1px !important;
+}
+
+.logo-title {
+  font-family: var(--serif-editorial) !important;
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #111 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.1 !important;
+  display: block !important;
+}
+
+.logo-tagline {
+  font-family: var(--sans-ui) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #555 !important;
+  line-height: 1.2 !important;
+  display: block !important;
+}
+
+/* --- 3. Masthead Tagline (tightened) --- */
 .site-masthead-tagline {
   max-width: var(--max-width);
-  margin: 0 auto 2rem auto !important;
-  padding: 1.4rem 0 1.6rem !important;
+  margin: 0 auto 1.6rem auto !important;
+  padding: 1rem 0 1.2rem !important;
   border-bottom: 1px solid var(--border-color) !important;
   text-align: left;
 }
 
 .site-masthead-tagline .tagline-title {
-  font-family: var(--sans-ui) !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.18em !important;
-  color: #111 !important;
-  margin-bottom: 6px !important;
-  display: block !important;
+  display: none !important; /* moved into the logo block */
 }
 
 .site-masthead-tagline p,
 .site-masthead-tagline .tagline-text {
   font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
   font-style: italic !important;
   line-height: 1.45 !important;
   color: #444 !important;
   font-weight: 400 !important;
   margin: 0 !important;
-  max-width: 780px !important;
+  max-width: 720px !important;
 }
 
 /* --- 4. Navigation Drawer --- */
