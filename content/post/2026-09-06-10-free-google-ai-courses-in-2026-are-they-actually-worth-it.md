@@ -17,7 +17,7 @@ categories:
 ---
 ### 10 Free Google AI Courses Everyone's Sharing Online (And Whether They're Actually Worth Your Time)
 
-You've probably seen the post. "Google is quietly giving away 10 AI courses for free" with a screenshot and zero context.
+<p class="has-dropcap"> You've probably seen the post. "Google is quietly giving away 10 AI courses for free" with a screenshot and zero context. </p>
 
 I went and actually checked what's in it. And — refreshingly — this one holds up. It's real, it's free, and it's a solid way to go from "I use ChatGPT sometimes" to actually understanding what's happening under the hood.
 
