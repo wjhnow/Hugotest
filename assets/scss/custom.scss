@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap');
+
 /* ==========================================================================
    WJH.now / Hugotest – Complete Master Stylesheet
    ========================================================================== */
+
 
 
 :root {
@@ -8,11 +11,12 @@
   --text-main: #1f1d1a;        /* Softened dark charcoal to avoid harsh contrast on cream */
   --text-muted: #635e57;
   --border-color: #e0d9cd;      /* Warm border to complement paper tone */
-  --serif-editorial: "Didot", "Bodoni MT", "Cormorant Garamond", "Playfair Display", "Georgia", serif;
+  --serif-editorial: "Cinzel", "Didot", "Bodoni MT", "Cormorant Garamond", "Playfair Display", "Georgia", serif;
   --sans-ui: "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   --accent-bar: #1a2b3c;
   --max-width: 1080px;
 }
+
 
 /* --- 1. Global Reset & Layout --- */
 body {
