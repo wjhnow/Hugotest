@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://www.wjhnow.com/Hugotest/sitemap.xml
+Sitemap: https://www.wjhnow.com/sitemap.xml
