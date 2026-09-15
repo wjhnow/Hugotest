@@ -176,9 +176,13 @@ body {
     padding: 4px 16px 12px;
     margin-top: 2px;
 
+  .site-masthead-tagline {
+    padding: 4px 16px 12px;
+    margin-top: 2px;
+
     .tagline-text {
-      font-style: normal;
-      font-family: var(--sans-ui);
+      font-style: normal !important;
+      font-family: var(--sans-ui) !important;
       font-size: 0.825rem;
       line-height: 1.4;
       color: var(--text-muted);
@@ -186,7 +190,7 @@ body {
       margin: 0;
     }
   }
-
+    
 
 
 
