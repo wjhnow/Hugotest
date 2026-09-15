@@ -172,18 +172,22 @@ body {
   display: none !important;
 }
 
-.site-masthead-tagline p,
-.site-masthead-tagline .tagline-text {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-size: 19px !important;
-  font-style: italic !important;
-  line-height: 1.5 !important;
-  color: #3f3f3f !important;
-  font-weight: 400 !important;
-  margin: 0 !important;
-  max-width: 780px !important;
-  padding-left: 0 !important; /* ensures it doesn’t shift */
-}
+  .site-masthead-tagline {
+    padding: 4px 16px 12px;
+    margin-top: 2px;
+
+    .tagline-text {
+      font-style: normal;
+      font-family: var(--sans-ui);
+      font-size: 0.825rem;
+      line-height: 1.4;
+      color: var(--text-muted);
+      letter-spacing: 0.01em;
+      margin: 0;
+    }
+  }
+
+
 
 
 /* --- 4. Navigation Drawer --- */
