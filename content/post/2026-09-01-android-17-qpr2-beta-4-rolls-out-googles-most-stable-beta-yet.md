@@ -13,6 +13,7 @@ tags:
   - QPR2
   - Tech News
   - "Smartphones "
+  - wjhnow
 categories:
   - Technoloy
 ---
