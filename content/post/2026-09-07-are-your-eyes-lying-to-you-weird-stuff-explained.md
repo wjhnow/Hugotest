@@ -20,7 +20,7 @@ categories:
 
 Here's a weird one for you.
 
-The image that actually lands at the back of your eye is upside down. Fully flipped. Top is bottom. Left is right. And yet, right now, the world in front of you looks completely normal. Nothing's floating on its head.
+<p class="has-dropcap"> The image that actually lands at the back of your eye is upside down. Fully flipped. Top is bottom. Left is right. And yet, right now, the world in front of you looks completely normal. Nothing's floating on its head. </p>
 
 So what's going on?
 
