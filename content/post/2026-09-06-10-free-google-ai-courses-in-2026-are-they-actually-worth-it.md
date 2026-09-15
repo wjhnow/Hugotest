@@ -11,6 +11,7 @@ tags:
   - AI for beginners
   - Google AI Essentials
   - free AI certification
+  - wjhnow
 categories:
   - AI & Technology
 ---
