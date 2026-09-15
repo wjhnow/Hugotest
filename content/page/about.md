@@ -37,7 +37,7 @@ Email us at info@wjhnow.com — we read everything.
 
 ### Who Writes This
 
-<img src="/wjhnow/img/mr-jh.png" alt="Mr. JH" class="author-inline-avatar">
+<img src="{{ .Site.BaseURL }}/img/mr-jh.png" alt="Mr. JH" class="author-inline-avatar">
 
 <div class="author-title">1. Mr. JH</div>
 
