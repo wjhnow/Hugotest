@@ -2,6 +2,7 @@
    WJH.now / Hugotest – Complete Master Stylesheet
    ========================================================================== */
 
+
 :root {
   --body-background: #faf9f7;
   --text-main: #111111;
@@ -12,7 +13,6 @@
   --accent-bar: #1a2b3c;
   --max-width: 1080px;
 }
-
 /* --- 1. Global Reset & Layout --- */
 body {
   background-color: var(--body-background) !important;
